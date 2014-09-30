@@ -11,6 +11,7 @@ namespace Project2
     class Player
     {
         Physics playerPhysics;
+        Game game;
         
         Vector2 spawnPosition;
         public Vector2 position;
@@ -33,8 +34,9 @@ namespace Project2
             get { return playerTexture.Height; }
         }
 
-        public Player(int X, int Y, Texture2D playerTexture)
+        public Player(int X, int Y, Texture2D playerTexture, Game1 g)
         {
+            game = g;
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
             direction = new Vector2(0, 0);
@@ -121,6 +123,24 @@ namespace Project2
 
             //UpdateVelocity();
             UpdatePosition();
+
+            StayWithinBounds();
+        }
+
+        /* Player stays within the bounds of the game screen */
+        public void StayWithinBounds()
+        {
+            if (position.X <= 0)
+                position.X = 0;
+
+            if (position.X >= game.GraphicsDevice.Viewport.Width - playerTexture.Width)
+                position.X = game.GraphicsDevice.Viewport.Width - playerTexture.Width;
+
+            if (position.Y <= 0)
+                position.Y = 0;
+
+            if (position.Y >= game.GraphicsDevice.Viewport.Height - playerTexture.Height)
+                position.Y = game.GraphicsDevice.Viewport.Height - playerTexture.Height;
         }
 
         public void UpdatePosition()
