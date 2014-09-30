@@ -53,64 +53,80 @@ namespace Project2
 
         }
 
-        public void UpdateVelocity()
-        {
-            if (xvelocity < maxVelocity)
-            {
-                if (xvelocity < 0)
-                {
-                    xvelocity = 0;
-                }
-                xvelocity = deltax;
-            }
-            if (yvelocity < maxVelocity)
-            {
-                if (yvelocity < 0)
-                {
-                    yvelocity = 0;
-                }
-                yvelocity = deltay;
-            }
-        }
+        //public void UpdateVelocity()
+        //{
+        //    //if idle and decelerating
+
+        //    //if moving and not decelerating
+        //    if (deltax > 0)
+        //    {
+        //        if (xvelocity < maxVelocity)
+        //        {
+        //        }
+        //    }
+
+        //    if (deltay > 0)
+        //    {
+        //        if (yvelocity < maxVelocity)
+        //        {
+        //        }
+        //    }
+            
+        //}
+
+            //        /* Starts the game */
+            //if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
+
         public void Update(GameTime gameTime, KeyboardState keyboard)
         {
-            deltax = 0;
-            deltay = 0;
+            if (deltax > 0)
+            {
+                deltax -= 1;
+            }
+            if (deltay > 0)
+            {
+                deltay -= 1;
+            }
 
             if (keyboard.IsKeyDown(Keys.Right))
             {
-                deltax = 1;
+                deltax += 3;
                 direction.X = 1;
                 //accelerate left
             }
             if (keyboard.IsKeyDown(Keys.Left))
             {
-                deltax = 1;
+                deltax += 3;
                 direction.X = -1;
                 //accelerate right
             }
             if (keyboard.IsKeyDown(Keys.Down))
             {
-                deltay = 1;
+                //do nothing?
                 direction.Y = 1;
                 //accelerate up
             }
 
             if (keyboard.IsKeyDown(Keys.Up))
             {
-                deltay = 1;
-                direction.Y = -1;
+                //jump!
+                if (deltay == 0)
+                {
+                    deltay += 10;
+                    direction.Y = -1;
+
+                }
                 //accelerate up
             }
 
-            UpdateVelocity();
+            //UpdateVelocity();
             UpdatePosition();
         }
 
         public void UpdatePosition()
         {
-            position.X += xvelocity * direction.X;
-            position.Y += yvelocity * direction.Y;
+            position.X += deltax * direction.X;
+            position.Y += deltay * direction.Y;
         }
 
         public void Draw(SpriteBatch spriteBatch)
