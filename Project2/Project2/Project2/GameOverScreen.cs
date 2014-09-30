@@ -17,7 +17,7 @@ namespace Project2
         private Game1 game;
         private KeyboardState lastState;
         private Texture2D texture; /* Place holder if you want to have a picture for the start game screen */
-        private SpriteFont font; /* Place holder if you want to have text display instructions */
+       // private SpriteFont font; /* Place holder if you want to have text display instructions */
 
         public GameOverScreen(Game1 game)
         {

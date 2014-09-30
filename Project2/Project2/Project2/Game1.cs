@@ -62,7 +62,7 @@ namespace Project2
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            //gameWorld.LoadContent(Content);
             // TODO: use this.Content to load your game content here
         }
 
@@ -126,6 +126,7 @@ namespace Project2
                 case Screen.World:
                     if (gameWorld != null)
                         gameWorld.Draw(spriteBatch);
+                      
                     break;
                 case Screen.GameOverScreen:
                     gameOverScreen.Draw(spriteBatch);
