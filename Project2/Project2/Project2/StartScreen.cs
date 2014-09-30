@@ -32,14 +32,11 @@ namespace Project2
 
             /* Starts the game */
             if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
-            {
                 game.StartGame();
-            }
+
             /* Exits the game */
             else if (keyboardState.IsKeyDown(Keys.Escape) && lastState.IsKeyUp(Keys.Escape))
-            {
                 game.Exit();
-            }
 
             lastState = keyboardState;
         }
@@ -57,7 +54,7 @@ namespace Project2
                Color.Black); 
 
             // Used if you want to draw the instructions on 
-             spriteBatch.DrawString(font, "PRESS [ENTER] TO START \n(Warning: does not do anything) \n PRESS [ESC] TO EXIT",
+             spriteBatch.DrawString(font, "PRESS [ENTER] TO START \n PRESS [ESC] TO EXIT",
                 new Vector2(game.GraphicsDevice.Viewport.Width / 3 - 7, game.GraphicsDevice.Viewport.Height - 100),
                 Color.GhostWhite); 
         }

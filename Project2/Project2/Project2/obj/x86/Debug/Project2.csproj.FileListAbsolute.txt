@@ -14,3 +14,5 @@ C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.pdb
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb

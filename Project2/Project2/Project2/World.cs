@@ -42,15 +42,22 @@ namespace Project2
             playerTexture = Content.Load<Texture2D>("triangle");
             tileTexture = Content.Load<Texture2D>("cube");
 
-
+            // i = 25 covers the entire floor of current screen. 
             for (int i = 0; i < 20; i++)
             {
+                /* Use to build upwards to cover the entire level space*/
+                //for (int j = 0; j < 15; j++)
+                    //mapTiles.Add(new MapTile(i, j, tileTexture, game));
 
-                mapTiles.Add(new MapTile(i, 0, tileTexture, game));
+                    mapTiles.Add(new MapTile(i, 0, tileTexture, game));
+
                 //Console.Write("'n New Maptile at: (" + i + ", " + 0 + ")\n"); 
             }
 
-            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height / 2, playerTexture);
+            /* So the player will begin on top of the blocks*/
+            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height - 2*tileTexture.Height, playerTexture);
+
+//            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height / 2, playerTexture);
             // Do stuff 
         }
 
@@ -67,6 +74,11 @@ namespace Project2
             UpdateCollisions();
             player.Update(gametime, currentKeyboardState);
             // Do stuff 
+
+            // For convenience when testing, press [ESC] key to leave the game 
+            if (currentKeyboardState.IsKeyDown(Keys.Escape))
+                game.Exit();
+
         }
 
         public void UpdateCollisions()
