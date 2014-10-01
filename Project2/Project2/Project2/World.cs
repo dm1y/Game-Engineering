@@ -55,7 +55,7 @@ namespace Project2
             }
 
             /* So the player will begin on top of the blocks*/
-            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height - 2*tileTexture.Height, playerTexture, game);
+            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height - 3*tileTexture.Height, playerTexture, game);
 
 //            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height / 2, playerTexture);
             // Do stuff 
@@ -95,9 +95,8 @@ namespace Project2
                     tile.Width, tile.Height);
                 if (playerHitBox.Intersects(terrainHitBox))
                 {
-                    Console.Write("Collided");
-                    player.setXVelocity(0);
-                    player.setYVelocity(0);
+                    //Console.Write("Collided");
+                    player.hasLanded = true;
                     //do more stuff
                 }
             }

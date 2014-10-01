@@ -12,16 +12,18 @@ namespace Project2
     {
         Physics playerPhysics;
         Game game;
-        
+
+        public Boolean hasLanded;
         Vector2 spawnPosition;
         public Vector2 position;
         Texture2D playerTexture;
-        
-        float maxVelocity;
+
+        float max_x_velocity = 300;
+        float max_y_velocity = 400;
 
         Vector2 velocity;
-        Vector2 slowdown = new Vector2(20f, 0);
-        Vector2 gravity = new Vector2(0, -9.8f);
+        Vector2 slowdown = new Vector2(15, 0);
+        Vector2 gravity = new Vector2(0, 25);
 
         public int Width
         {
@@ -35,12 +37,13 @@ namespace Project2
 
         public Player(int X, int Y, Texture2D playerTexture, Game1 g)
         {
+
             game = g;
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
             this.playerTexture = playerTexture;
-            maxVelocity = 10;
-            //this.gameTime = gameTime;
+            hasLanded = false;
+            //maxVelocity = 10;
 
         }
 
@@ -53,37 +56,72 @@ namespace Project2
 
         }
 
+        //private void ArchingFlight(GameTime timePassed)
+        //{
+        //    prevPos = pos;
+        //    // accumulate overall time
+        //    totalTimePassed += (float)timePassed.ElapsedGameTime.Milliseconds / 4096.0f;
+
+        //    // flight path where y-coordinate is additionally effected by gravity
+        //    pos = pos + velocity * ((float)timePassed.ElapsedGameTime.Milliseconds / 90.0f);
+        //    pos.Y = pos.Y - 0.5f * GRAVITY * totalTimePassed * totalTimePassed;
+        //}
+
         public void Update(GameTime gameTime, KeyboardState keyboard)
         {
             //if moving positively in X direction, change slowdown acceleration to negative
 
-
+            Console.Write("\n V-Y: " + velocity.Y); 
             
             // Update:
             float time = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            velocity.Y += gravity.Y * time;
+            if (velocity.Y < max_y_velocity)
+            {
+                velocity.Y += gravity.Y;
+            }
+            if (velocity.Y > max_y_velocity)
+            {
+                velocity.Y = max_y_velocity;
+            }
 
             //if velocity < 0, add to velocity until it reaches 0
             // if velocity > 0, subtract until it reaches 0
+            if (velocity.X < 25 && velocity.X >= 0)
+            {
+                velocity.X = 0;
+            }
             if (velocity.X > 0 )
             {
-                velocity.X -= slowdown.X * time;
+        
+                velocity.X -= slowdown.X;
             }
             else
             {
-                velocity.X += slowdown.X * time;
+                velocity.X += slowdown.X;
             }
 
-            position += velocity * time;
+            if (velocity.X < 25 && velocity.X >= 0)
+            {
+                velocity.X = 0;
+            }
+
+                position += velocity * time;
+
 
             if (keyboard.IsKeyDown(Keys.Right))
             {
-                velocity.X += 10;
+                if (Math.Abs(velocity.X) < max_x_velocity)
+                {
+                    velocity.X += 50;
+                }
             }
             if (keyboard.IsKeyDown(Keys.Left))
             {
-                velocity.X -= 10;
-                //accelerate right
+
+                if (Math.Abs(velocity.X) < max_x_velocity)
+                {
+                    velocity.X -= 50;
+                }
             }
             if (keyboard.IsKeyDown(Keys.Down))
             {
@@ -93,7 +131,12 @@ namespace Project2
             if (keyboard.IsKeyDown(Keys.Up))
             {
                 //jump!
-                velocity.Y -= 20;
+                if (Math.Abs(velocity.Y) <= max_y_velocity) 
+                {
+                    
+                    velocity.Y -= 300;
+                }
+
                 //accelerate up
             }
 
