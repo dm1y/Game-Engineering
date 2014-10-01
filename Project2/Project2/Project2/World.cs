@@ -94,6 +94,8 @@ namespace Project2
 
             playerHitBox = new Rectangle((int)player.position.X, (int)player.position.Y, player.Width, player.Height);
 
+            player.isOnPlatform = false; 
+
             foreach (MapTile tile in mapTiles)
             {
                 terrainHitBox = new Rectangle((int)(tile.mapPosition.X),
@@ -101,15 +103,12 @@ namespace Project2
                     tile.Width, tile.Height);
                 if (playerHitBox.Intersects(terrainHitBox))
                 {
-                    player.isJumping = false;
+                    player.isFalling = false;
                     player.setYVelocity(0);
-
-                    //Console.Write("Collided");
-                    //player.hasLanded = true;
-                    //do more stuff
+                    player.isOnPlatform = true;
                 }
             }
-            //player.isJumping = true;
+
         }
         public void Draw(SpriteBatch sb)
         {

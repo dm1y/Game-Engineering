@@ -14,6 +14,7 @@ namespace Project2
         Game game;
 
         public Boolean isFalling;
+        public Boolean isOnPlatform;
         Vector2 spawnPosition;
         public Vector2 position;
         Texture2D playerTexture;
@@ -44,6 +45,7 @@ namespace Project2
             position = new Vector2(X, Y);
             this.playerTexture = playerTexture;
             isFalling = true;
+            isOnPlatform = false;
 
         }
 
@@ -69,7 +71,10 @@ namespace Project2
 
         public void Update(GameTime gameTime, KeyboardState keyboard)
         {
-            
+            if (!isOnPlatform)
+            {
+                isFalling = true;
+            }
             // Update:
             float time = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -127,11 +132,11 @@ namespace Project2
 
             if (keyboard.IsKeyDown(Keys.Up))
             {
-                if (!isJumping)
+                if (!isFalling)
                 {
                     if (Math.Abs(velocity.Y) <= max_y_velocity)
                     {
-                        isJumping = true;
+                        isFalling = true;
                         velocity.Y -= 600;
                     }
                 }
@@ -159,7 +164,7 @@ namespace Project2
 
         public void UpdatePosition(float time)
         {
-            if (!isJumping)
+            if (!isFalling)
             {
                 position.X += velocity.X * time;
             }
