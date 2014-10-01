@@ -175,6 +175,15 @@ namespace Project2
 
         }
 
+        public void CheckCollisionSide(Rectangle player, Rectangle tile)
+        {
+            if (player.Intersects(tile))
+            {
+                isFalling = false;
+                setYVelocity(0);
+                isOnPlatform = true;
+            }
+        }
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(playerTexture, new Rectangle((int)position.X,

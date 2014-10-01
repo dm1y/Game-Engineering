@@ -99,14 +99,11 @@ namespace Project2
             foreach (MapTile tile in mapTiles)
             {
                 terrainHitBox = new Rectangle((int)(tile.mapPosition.X),
-                    (int)tile.mapPosition.Y,
+                      (int)tile.mapPosition.Y,
                     tile.Width, tile.Height);
-                if (playerHitBox.Intersects(terrainHitBox))
-                {
-                    player.isFalling = false;
-                    player.setYVelocity(0);
-                    player.isOnPlatform = true;
-                }
+
+                player.CheckCollisionSide(playerHitBox, terrainHitBox);
+
             }
 
         }
