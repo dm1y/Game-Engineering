@@ -46,14 +46,20 @@ namespace Project2
             for (int i = 0; i < 20; i++)
             {
                 /* Use to build upwards to cover the entire level space*/
-                //for (int j = 0; j < 15; j++)
-                    //mapTiles.Add(new MapTile(i, j, tileTexture, game));
-
                     mapTiles.Add(new MapTile(i, 0, tileTexture, game));
-
-                //Console.Write("'n New Maptile at: (" + i + ", " + 0 + ")\n"); 
             }
 
+            for (int i = 7; i < 12; i++)
+            {
+                /* Use to build upwards to cover the entire level space*/
+                mapTiles.Add(new MapTile(i, 3, tileTexture, game));
+            }
+
+            for (int i = 13; i < 15; i++)
+            {
+                /* Use to build upwards to cover the entire level space*/
+                mapTiles.Add(new MapTile(i, 6, tileTexture, game));
+            }
             /* So the player will begin on top of the blocks*/
             player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height - 3*tileTexture.Height, playerTexture, game);
 
@@ -95,11 +101,15 @@ namespace Project2
                     tile.Width, tile.Height);
                 if (playerHitBox.Intersects(terrainHitBox))
                 {
+                    player.isJumping = false;
+                    player.setYVelocity(0);
+
                     //Console.Write("Collided");
-                    player.hasLanded = true;
+                    //player.hasLanded = true;
                     //do more stuff
                 }
             }
+            //player.isJumping = true;
         }
         public void Draw(SpriteBatch sb)
         {

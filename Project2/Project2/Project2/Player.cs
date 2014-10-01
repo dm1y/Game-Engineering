@@ -13,13 +13,14 @@ namespace Project2
         Physics playerPhysics;
         Game game;
 
-        public Boolean hasLanded;
+        public Boolean isFalling;
         Vector2 spawnPosition;
         public Vector2 position;
         Texture2D playerTexture;
 
         float max_x_velocity = 300;
         float max_y_velocity = 400;
+        int max_jump_height = 600;
 
         Vector2 velocity;
         Vector2 slowdown = new Vector2(15, 0);
@@ -42,8 +43,7 @@ namespace Project2
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
             this.playerTexture = playerTexture;
-            hasLanded = false;
-            //maxVelocity = 10;
+            isFalling = true;
 
         }
 
@@ -53,7 +53,7 @@ namespace Project2
         }
         public void setYVelocity(float velocity)
         {
-
+            this.velocity.Y = velocity;
         }
 
         //private void ArchingFlight(GameTime timePassed)
@@ -69,12 +69,11 @@ namespace Project2
 
         public void Update(GameTime gameTime, KeyboardState keyboard)
         {
-            //if moving positively in X direction, change slowdown acceleration to negative
-
-            Console.Write("\n V-Y: " + velocity.Y); 
             
             // Update:
             float time = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+
             if (velocity.Y < max_y_velocity)
             {
                 velocity.Y += gravity.Y;
@@ -84,6 +83,7 @@ namespace Project2
                 velocity.Y = max_y_velocity;
             }
 
+
             //if velocity < 0, add to velocity until it reaches 0
             // if velocity > 0, subtract until it reaches 0
             if (velocity.X < 25 && velocity.X >= 0)
@@ -92,7 +92,7 @@ namespace Project2
             }
             if (velocity.X > 0 )
             {
-        
+                
                 velocity.X -= slowdown.X;
             }
             else
@@ -104,8 +104,6 @@ namespace Project2
             {
                 velocity.X = 0;
             }
-
-                position += velocity * time;
 
 
             if (keyboard.IsKeyDown(Keys.Right))
@@ -125,24 +123,21 @@ namespace Project2
             }
             if (keyboard.IsKeyDown(Keys.Down))
             {
-                //velocity.Y -= 20;
             }
 
             if (keyboard.IsKeyDown(Keys.Up))
             {
-                //jump!
-                if (Math.Abs(velocity.Y) <= max_y_velocity) 
+                if (!isJumping)
                 {
-                    
-                    velocity.Y -= 300;
+                    if (Math.Abs(velocity.Y) <= max_y_velocity)
+                    {
+                        isJumping = true;
+                        velocity.Y -= 600;
+                    }
                 }
 
-                //accelerate up
             }
-
-            //UpdateVelocity();
-            UpdatePosition();
-
+            UpdatePosition(time);
             StayWithinBounds();
         }
 
@@ -162,10 +157,17 @@ namespace Project2
                 position.Y = game.GraphicsDevice.Viewport.Height - playerTexture.Height;
         }
 
-        public void UpdatePosition()
+        public void UpdatePosition(float time)
         {
-            //position.X += deltax * direction.X;
-            //position.Y += deltay * direction.Y;
+            if (!isJumping)
+            {
+                position.X += velocity.X * time;
+            }
+            else
+            {
+                position += velocity * time;
+            }
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
