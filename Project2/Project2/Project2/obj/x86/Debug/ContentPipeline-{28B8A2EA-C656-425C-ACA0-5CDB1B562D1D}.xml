@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2014-09-24T21:34:01.8142199-07:00</Time>
+      <Output>C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2014-09-30T10:41:33.9639264-07:00</Time>
     </Item>
     <Item>
       <Source>cube.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb</Output>
-      <Time>2014-09-30T00:25:36.1852877-07:00</Time>
+      <Output>C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb</Output>
+      <Time>2014-09-30T10:41:33.9639264-07:00</Time>
     </Item>
     <Item>
       <Source>triangle.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb</Output>
-      <Time>2014-09-30T00:25:36.2083085-07:00</Time>
+      <Output>C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb</Output>
+      <Time>2014-09-30T10:41:33.9769271-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -35,10 +35,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -66,8 +66,8 @@
         <Value>2011-09-01T16:22:30-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-08-20T19:48:32.1591695-07:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-08-26T14:56:06.0260484-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

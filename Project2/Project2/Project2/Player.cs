@@ -15,14 +15,13 @@ namespace Project2
         
         Vector2 spawnPosition;
         public Vector2 position;
-        Vector2 direction;
         Texture2D playerTexture;
-        //GameTime gameTime;
+        
         float maxVelocity;
-        float xvelocity;
-        float yvelocity;
-        int deltax;
-        int deltay;
+
+        Vector2 velocity;
+        Vector2 slowdown = new Vector2(20f, 0);
+        Vector2 gravity = new Vector2(0, -9.8f);
 
         public int Width
         {
@@ -39,9 +38,8 @@ namespace Project2
             game = g;
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
-            direction = new Vector2(0, 0);
             this.playerTexture = playerTexture;
-            maxVelocity = 5;
+            maxVelocity = 10;
             //this.gameTime = gameTime;
 
         }
@@ -55,69 +53,47 @@ namespace Project2
 
         }
 
-        //public void UpdateVelocity()
-        //{
-        //    //if idle and decelerating
-
-        //    //if moving and not decelerating
-        //    if (deltax > 0)
-        //    {
-        //        if (xvelocity < maxVelocity)
-        //        {
-        //        }
-        //    }
-
-        //    if (deltay > 0)
-        //    {
-        //        if (yvelocity < maxVelocity)
-        //        {
-        //        }
-        //    }
-            
-        //}
-
-            //        /* Starts the game */
-            //if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
-
         public void Update(GameTime gameTime, KeyboardState keyboard)
         {
-            if (deltax > 0)
+            //if moving positively in X direction, change slowdown acceleration to negative
+
+
+            
+            // Update:
+            float time = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            velocity.Y += gravity.Y * time;
+
+            //if velocity < 0, add to velocity until it reaches 0
+            // if velocity > 0, subtract until it reaches 0
+            if (velocity.X > 0 )
             {
-                deltax -= 1;
+                velocity.X -= slowdown.X * time;
             }
-            if (deltay > 0)
+            else
             {
-                deltay -= 1;
+                velocity.X += slowdown.X * time;
             }
+
+            position += velocity * time;
 
             if (keyboard.IsKeyDown(Keys.Right))
             {
-                deltax += 3;
-                direction.X = 1;
-                //accelerate left
+                velocity.X += 10;
             }
             if (keyboard.IsKeyDown(Keys.Left))
             {
-                deltax += 3;
-                direction.X = -1;
+                velocity.X -= 10;
                 //accelerate right
             }
             if (keyboard.IsKeyDown(Keys.Down))
             {
-                //do nothing?
-                direction.Y = 1;
-                //accelerate up
+                //velocity.Y -= 20;
             }
 
             if (keyboard.IsKeyDown(Keys.Up))
             {
                 //jump!
-                if (deltay == 0)
-                {
-                    deltay += 10;
-                    direction.Y = -1;
-
-                }
+                velocity.Y -= 20;
                 //accelerate up
             }
 
@@ -145,8 +121,8 @@ namespace Project2
 
         public void UpdatePosition()
         {
-            position.X += deltax * direction.X;
-            position.Y += deltay * direction.Y;
+            //position.X += deltax * direction.X;
+            //position.Y += deltay * direction.Y;
         }
 
         public void Draw(SpriteBatch spriteBatch)
