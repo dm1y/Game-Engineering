@@ -49,6 +49,11 @@ namespace Project2
                     mapTiles.Add(new MapTile(i, 0, tileTexture, game));
             }
 
+            for (int j = 0; j < 4; j++)
+            {
+                mapTiles.Add(new MapTile(7, j, tileTexture, game));
+            }
+
             for (int i = 7; i < 12; i++)
             {
                 /* Use to build upwards to cover the entire level space*/
