@@ -14,20 +14,13 @@ namespace Project2
         Game game;
 
         public Boolean isFalling;
-        private Boolean isCollidingLeft;
-        private Boolean isCollidingRight;
-        private Boolean isCollidingTop;
-        private Boolean isCollidingBottom;
-
         public Boolean isOnPlatform;
         Vector2 spawnPosition;
         public Vector2 position;
         Texture2D playerTexture;
 
         float max_x_velocity = 300;
-        float max_y_velocity = 600;
-        float min_y_velocity = -1000;
-        int max_jump_height = 600;
+        float max_y_velocity = 300;
 
         Vector2 velocity;
         Vector2 slowdown = new Vector2(15, 0);
@@ -106,7 +99,7 @@ namespace Project2
 
             if (keyboard.IsKeyDown(Keys.Right))
             {
-                if (Math.Abs(velocity.X) < max_x_velocity)
+                if ((Math.Abs(velocity.X) < max_x_velocity))
                 {
                     velocity.X += 50;
                 }
@@ -114,7 +107,7 @@ namespace Project2
             if (keyboard.IsKeyDown(Keys.Left))
             {
 
-                if (Math.Abs(velocity.X) < max_x_velocity)
+                if ((Math.Abs(velocity.X) < max_x_velocity))
                 {
                     velocity.X -= 50;
                 }
@@ -126,8 +119,9 @@ namespace Project2
             if (keyboard.IsKeyDown(Keys.Up))
             {
                 if(isOnPlatform) {
-                    Console.Write("\nVelocity Y: " + velocity.Y);
-                    velocity.Y += -1000;
+                    
+                    velocity.Y += -500;
+                    isOnPlatform = false;
                     }
  
 
@@ -165,25 +159,26 @@ namespace Project2
 
             if (player.Intersects(tile))
             {
-                //check if player is to the left, right, top, or below the box
                 int ydiff = (int)(tile.Y - player.Y);
                 int xdiff = (int)(tile.X - player.X);
                 int min_translation;
-                //check where it's intersecting from. in order: bottom, top, left, right
+                
                 
                 //if -x, +y - topRight
                 //if -x, -y - bottomright
                 //if +x, +y - topLeft
                 //if +x, -y - bottomleft
-                //Console.Write("\nIntersecting X:" + xdiff + " Y:" + ydiff);
+
                 if (xdiff >= 0 && ydiff >= 0)
                 {
-                    //Console.Write("\nIntersect Top Left");
+
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Top - tile.Top))
                     {
+                        //Shift min_translation to left
                         min_translation = player.Right - tile.Left;
                         position.X -= min_translation;
-                        //Shift min_translation to left
+                        velocity.X = 0;
+                        
                     }
                     else
                     {
@@ -191,22 +186,29 @@ namespace Project2
                         min_translation = player.Bottom - tile.Top;
                         position.Y -= min_translation;
                         isOnPlatform = true;
+                        velocity.Y = 0;
+                        
                     }
                 }
                 else if (xdiff <= 0 && ydiff >= 0)
                 {
-                    if (Math.Abs(player.Right - tile.Right) > Math.Abs(player.Top - tile.Top))
+                    
+                    if (Math.Abs(player.Right - tile.Right) < Math.Abs(player.Top - tile.Top))
                     {
-                        //Shift min_translation to right
-                        min_translation = player.Left - tile.Right;
-                        position.X -= min_translation;
-                    }
-                    else
-                    {
+
                         //Shift min_translation up
                         min_translation = player.Bottom - tile.Top;
                         position.Y -= min_translation;
                         isOnPlatform = true;
+                        velocity.Y = 0;
+                        
+                    }
+                    else
+                    {
+                        //Shift min_translation to right
+                        min_translation = player.Left - tile.Right;
+                        position.X -= min_translation;
+                        velocity.X = 0;
                     }
                 }
                 else if (xdiff >= 0 && ydiff <= 0)
@@ -215,12 +217,14 @@ namespace Project2
                     {
                         min_translation = player.Right - tile.Left;
                         position.X -= min_translation;
+                        velocity.X = 0;
                         //Shift min_translation to left
                     }
                     else
                     {
                         min_translation = player.Top - tile.Bottom;
                         position.Y -= min_translation;
+                        velocity.Y = 0;
                         //Shift min translation down
                     }
                 }
@@ -231,87 +235,22 @@ namespace Project2
                         //Shift min_translation to the right
                         min_translation = player.Left - tile.Right;
                         position.X -= min_translation;
+                        velocity.X = 0;
                     }
                     else
                     {
                         min_translation = player.Top - tile.Bottom;
                         position.Y -= min_translation;
+                        velocity.Y = 0;
                         //Shift min translation down
                     }
                 }
-
-                ////Shifting up
-                //if (collidingBottom(player, tile)) {
-                //        min_translation = player.Bottom - tile.Top;
-                //        position.Y -= min_translation;
-                //        isOnPlatform = true;
-                //}
-
-                ////Shifting down
-                //else if (collidingTop(player, tile))
-                //{
-                //    //player's pos is smaller than tile's, 
-                //    min_translation = player.Top - tile.Bottom;
-                //    position.Y -= min_translation;
-                //}
-
-                ////Shifting right
-                //else if (collidingLeft(player, tile))
-                //{
-                //    min_translation = player.Left - tile.Right;
-                //    position.X -= min_translation;
-                //}
-
-                ////Shifting left
-                //else if (collidingRight(player, tile))
-                //{
-                //    min_translation = player.Right - tile.Left;
-                //    position.X -= min_translation;
-                //}
             }
         }
 
-        private void resetCollisions()
+        public Vector2 GetPosition()
         {
-            isCollidingBottom = false;
-            isCollidingLeft = false;
-            isCollidingRight = false;
-            isCollidingTop = false;
-        }
-        private Boolean collidingLeft(Rectangle A, Rectangle B)
-        {
-            if (A.Left <= B.Right && A.Right > B.Right)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private Boolean collidingRight(Rectangle A, Rectangle B)
-        {
-            if (A.Right >= B.Left && A.Left < B.Left)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private Boolean collidingTop(Rectangle A, Rectangle B)
-        {
-            if (A.Top <= B.Bottom && A.Bottom > B.Bottom)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private Boolean collidingBottom(Rectangle A, Rectangle B)
-        {
-            if (A.Bottom >= B.Top && A.Top < B.Top) 
-            {
-                return true;
-            }
-            return false;
+            return position;
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -319,7 +258,6 @@ namespace Project2
             spriteBatch.Draw(playerTexture, new Rectangle((int)position.X,
                 (int)position.Y,
                 playerTexture.Width, playerTexture.Height), Color.White);
-            resetCollisions();
         }
 
     }
