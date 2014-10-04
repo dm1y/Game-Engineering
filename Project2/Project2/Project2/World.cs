@@ -82,8 +82,9 @@ namespace Project2
             currentKeyboardState = Keyboard.GetState();
             //currentGamePadState = GamePad.GetState(PlayerIndex.One);
 
-            UpdateCollisions();
+            
             player.Update(gametime, currentKeyboardState);
+            UpdateCollisions();
             // Do stuff 
 
             // For convenience when testing, press [ESC] key to leave the game 

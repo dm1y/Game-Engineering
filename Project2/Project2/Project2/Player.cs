@@ -51,7 +51,6 @@ namespace Project2
             this.playerTexture = playerTexture;
             isFalling = true;
             isOnPlatform = false;
-            isColliding = false;
 
         }
 
@@ -79,10 +78,7 @@ namespace Project2
         {
             if (!isOnPlatform)
             {
-                if (!isColliding)
-                {
-                    isFalling = true;
-                }
+                isFalling = true;
                 //isFalling = true;
             }
             // Update:
@@ -174,24 +170,7 @@ namespace Project2
 
         public void UpdatePosition(float time)
         {
-            if (!isFalling)
-            {
-               //if it is not falling, it must be colliding with something
-                if (isCollidingRight)
-                {
-                    //do not let position increase
-                }
-                if (isCollidingLeft)
-                {
-                    //do not let position decrease
-                }
-               position.X += velocity.X * time;
-            }
-            else
-            {
                 position += velocity * time;
-            }
-
         }
 
         public void CheckCollisionSide(Rectangle player, Rectangle tile)
@@ -199,48 +178,30 @@ namespace Project2
 
             if (player.Intersects(tile))
             {
+                int min_translation;
+                //check where it's intersecting from. in order: bottom, top, left, right
+                if (collidingBottom(player, tile)) {
+                    min_translation = player.Bottom - tile.Top;
+                    position.Y -= min_translation + 1;
+                    isFalling = false;
+                }
+                else if (collidingTop(player, tile))
+                {
+                    //player's pos is smaller than tile's, 
+                    min_translation = player.Top - tile.Bottom;
+                    position.Y -= min_translation + 1;
+                }
+                else if (collidingLeft(player, tile))
+                {
+                    min_translation = player.Left - tile.Right;
+                    position.X -= min_translation + 1;
+                }
+                else if (collidingRight(player, tile))
+                {
+                    min_translation = player.Right - tile.Left;
+                    position.X -= min_translation + 1;
+                }
             }
-            //{
-
-            //    if (collidingBottom(player, tile)) {
-            //        //player is simply landing on platform
-            //        isFalling = false;
-            //        player.Y -= 5;
-            //        setYVelocity(0);
-            //        isOnPlatform = true;
-            //    }
-            //    //if player's top Y coordinate is above tile bottom's y and player's bottom Y is lower than tile's bottom
-            //    else if (collidingTop(player, tile))
-            //    {
-            //        Console.Write("\n Collide Top ");
-            //        //hitting head
-
-            //        isFalling = true;
-            //        setYVelocity(-10);
-            //        isOnPlatform = false;
-            //    }
-            //    //coming in from the left
-            //    // if player's left's X is smaller than tile's X and player's right is bigger than tile's right
-            //    else if (collidingLeft(player, tile))
-            //    {
-            //        //if player is touching by bottom, it will not fall
-            //        Console.Write("\n Collide Left ");
-            //        //player collided on left-hand side
-            //        isColliding = true;
-            //        setXVelocity(0);
-            //        isOnPlatform = false;
-            //    }
-
-            //    else if (collidingRight(player, tile))
-            //    {
-            //        //if player is touching by bottom, it will not fall
-            //        Console.Write("\n Collide Right ");
-            //        //player collided on left-hand side
-            //        isColliding = true;
-            //        setXVelocity(0);
-            //        isOnPlatform = false;
-            //    }
-            //}
         }
 
         private Boolean collidingLeft(Rectangle A, Rectangle B)
