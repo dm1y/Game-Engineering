@@ -95,10 +95,10 @@ namespace Project2
 
         public void UpdateCollisions()
         {
-            Rectangle playerHitBox;
+            //Rectangle playerHitBox;
             Rectangle terrainHitBox;
 
-            playerHitBox = new Rectangle((int)player.position.X, (int)player.position.Y, player.Width, player.Height);
+            //playerHitBox = new Rectangle((int)player.position.X, (int)player.position.Y, player.Width, player.Height);
 
             player.isOnPlatform = false; 
 
@@ -108,7 +108,7 @@ namespace Project2
                       (int)tile.mapPosition.Y,
                     tile.Width, tile.Height);
 
-                player.CheckCollisionSide(playerHitBox, terrainHitBox);
+                player.CheckCollisionSide(terrainHitBox);
 
             }
 
