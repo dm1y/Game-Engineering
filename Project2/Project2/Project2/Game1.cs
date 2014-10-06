@@ -35,10 +35,15 @@ namespace Project2
         World gameWorld;
         Camera camera;
 
+        private const int width = 960;
+        private const int height = 640;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = height;
+            graphics.PreferredBackBufferWidth = width;
         }
 
         /// <summary>
