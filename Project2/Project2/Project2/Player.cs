@@ -8,10 +8,11 @@ using System.Text;
 
 namespace Project2
 {
-    class Player
+   public class Player
     {
         Physics playerPhysics;
         Game game;
+        
 
         public Boolean isFalling;
         public Boolean isOnPlatform;
@@ -127,7 +128,8 @@ namespace Project2
 
             }
             UpdatePosition(time);
-            StayWithinBounds();
+            //StayWithinBounds();
+            
         }
 
         /* Player stays within the bounds of the game screen */

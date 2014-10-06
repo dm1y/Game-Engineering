@@ -23,27 +23,35 @@ namespace Project2
         //GamePadState currentGamePadState;
        // GamePadState previousGamePadState;
 
-        Player player;
+       Player player;
+       public Camera camera;
+       
+        Viewport newView;
 
         List<MapTile> mapTiles;
         Texture2D playerTexture;
         Texture2D tileTexture;
 
-        public World(Game1 game)
+        public World(Game1 game,Viewport view, Camera camera)  //Added Viewport
         {
             this.game = game;
             mapTiles = new List<MapTile>();
+            newView = view;
+            //this.camera = new Camera(newView);
+            this.camera = camera;
+            
             
             // Do stuff 
         }
 
         public void LoadContent(ContentManager Content)
         {
+            
             playerTexture = Content.Load<Texture2D>("triangle");
             tileTexture = Content.Load<Texture2D>("cube");
 
             // i = 25 covers the entire floor of current screen. 
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 100; i++)
             {
                 /* Use to build upwards to cover the entire level space*/
                     mapTiles.Add(new MapTile(i, 0, tileTexture, game));
@@ -70,6 +78,7 @@ namespace Project2
 
 //            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height / 2, playerTexture);
             // Do stuff 
+
         }
 
         public void Update(GameTime gametime)
@@ -86,6 +95,8 @@ namespace Project2
             player.Update(gametime, currentKeyboardState);
             UpdateCollisions();
             // Do stuff 
+            camera.Update(gametime, player); //check Update Camera
+           
 
             // For convenience when testing, press [ESC] key to leave the game 
             if (currentKeyboardState.IsKeyDown(Keys.Escape))
@@ -122,6 +133,8 @@ namespace Project2
             }
             player.Draw(sb);
             // Do stuff
+            
+
         }
 
     }

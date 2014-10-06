@@ -25,3 +25,12 @@ C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Pro
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.exe
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.pdb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.csprojResolveAssemblyReference.cache
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.exe
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Project2.exe
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Project2.pdb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.pdb
