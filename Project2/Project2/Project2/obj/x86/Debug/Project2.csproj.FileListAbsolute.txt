@@ -34,3 +34,6 @@ C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Project2.exe
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Project2.pdb
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.pdb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\WindowsGameLibrary1.dll
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\WindowsGameLibrary1.pdb

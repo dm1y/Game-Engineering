@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+  <!-- TODO: replace this Asset with your own XML asset data. -->
+  <Asset Type="Project2.MapTileData[]">
+    <Item>
+      <tileTexture>cube</tileTexture>
+        <isSpecial>false</isSpecial>
+      <mapPosition>0 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>1 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>2 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>3 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>4 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>5 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>6 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>7 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>8 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>9 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>10 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>11 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>12 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>13 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>17 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>18 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>19 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>20 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>21 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>22 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>23 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>24 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>25 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>26 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>27 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>28 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>29 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>30 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>10 1</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>10 2</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>10 3</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>13 6</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>14 6</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>15 6</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>7 3</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>8 3</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>9 3</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>10 3</mapPosition>
+    </Item>
+  </Asset>
+</XnaContent>
