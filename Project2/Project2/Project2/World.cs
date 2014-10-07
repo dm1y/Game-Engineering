@@ -24,7 +24,7 @@ namespace Project2
        // GamePadState previousGamePadState;
 
        Player player;
-       public Camera camera;
+       public Camera camera { get; private set; }
        
         Viewport newView;
 
@@ -32,15 +32,13 @@ namespace Project2
         Texture2D playerTexture;
         Texture2D tileTexture;
 
-        public World(Game1 game,Viewport view, Camera camera)  //Added Viewport
+        public World(Game1 game,Viewport view)  
         {
             this.game = game;
             mapTiles = new List<MapTile>();
             newView = view;
-            //this.camera = new Camera(newView);
-            this.camera = camera;
-            
-            
+            this.camera = new Camera(newView);
+
             // Do stuff 
         }
 
@@ -51,7 +49,7 @@ namespace Project2
             tileTexture = Content.Load<Texture2D>("cube");
 
             // i = 25 covers the entire floor of current screen. 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i <= newView.Width/32; i++)  //modified this based on the sprite's width  32 is currently a "magic" number
             {
                 /* Use to build upwards to cover the entire level space*/
                     mapTiles.Add(new MapTile(i, 0, tileTexture, game));
@@ -95,7 +93,7 @@ namespace Project2
             player.Update(gametime, currentKeyboardState);
             UpdateCollisions();
             // Do stuff 
-            camera.Update(gametime, player); //check Update Camera
+            camera.Update(gametime, player); //Update Camera
            
 
             // For convenience when testing, press [ESC] key to leave the game 

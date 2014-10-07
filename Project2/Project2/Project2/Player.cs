@@ -23,7 +23,7 @@ namespace Project2
         float max_x_velocity = 300;
         float max_y_velocity = 300;
 
-        Vector2 velocity;
+       public Vector2 velocity;
         Vector2 slowdown = new Vector2(15, 0);
         Vector2 gravity = new Vector2(0, 20);
 
@@ -138,7 +138,7 @@ namespace Project2
             if (position.X <= 0)
                 position.X = 0;
 
-            if (position.X >= game.GraphicsDevice.Viewport.Width - playerTexture.Width)
+            if (position.X >= game.GraphicsDevice.Viewport.Width - playerTexture.Width)  
                 position.X = game.GraphicsDevice.Viewport.Width - playerTexture.Width;
 
             if (position.Y <= 0)

@@ -24,16 +24,17 @@ namespace Project2
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
+        public GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
        
 
         Screen currentScreen;
         StartScreen startScreen;
         GameOverScreen gameOverScreen;
+        Viewport viewPort;
+        
 
         World gameWorld;
-        Camera camera;
 
         private const int width = 960;
         private const int height = 640;
@@ -44,6 +45,12 @@ namespace Project2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = height;
             graphics.PreferredBackBufferWidth = width;
+            graphics.ApplyChanges();
+            viewPort = GraphicsDevice.Viewport;
+            viewPort.Width = width;
+            viewPort.Height = height;
+            GraphicsDevice.Viewport = viewPort;
+            
         }
 
         /// <summary>
@@ -55,8 +62,11 @@ namespace Project2
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            camera = new Camera(GraphicsDevice.Viewport);
-            gameWorld = new World(this, GraphicsDevice.Viewport, camera);  //Added viewport
+           
+            
+            
+
+            gameWorld = new World(this, GraphicsDevice.Viewport); 
             gameWorld.LoadContent(this.Content);
 
             base.Initialize();
@@ -126,10 +136,8 @@ namespace Project2
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            //spriteBatch.Begin();
             
-           
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.transform); //doesn't work because camera hasn't been instantiated since startGame() has not been called.
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, gameWorld.camera.transform); 
             gameWorld.Draw(spriteBatch);
             //switch (currentScreen)
             //{
@@ -155,7 +163,7 @@ namespace Project2
 
         public void StartGame()
         {
-            gameWorld = new World(this,GraphicsDevice.Viewport, camera);  //Added viewport
+           // gameWorld = new World(this,viewPort);  //Added viewport //was GraphicsDevice.Viewport
             gameWorld.LoadContent(this.Content);
 
             currentScreen = Screen.World;
