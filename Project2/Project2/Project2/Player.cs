@@ -12,8 +12,9 @@ namespace Project2
     {
         Physics playerPhysics;
         Game game;
-        
 
+        int mapWidth;
+        int mapHeight;
         public Boolean isFalling;
         public Boolean isOnPlatform;
         Vector2 spawnPosition;
@@ -35,6 +36,17 @@ namespace Project2
         public int Height
         {
             get { return playerTexture.Height; }
+        }
+
+        public void setBoundaries(int mapWidth, int mapHeight)
+        {
+            this.mapHeight = mapHeight;
+            this.mapWidth = mapWidth;
+        }
+
+        public Vector2 getBoundaries()
+        {
+            return new Vector2(mapWidth, mapHeight);
         }
 
         public Player(int X, int Y, Texture2D playerTexture, Game1 g)
@@ -128,7 +140,7 @@ namespace Project2
 
             }
             UpdatePosition(time);
-            //StayWithinBounds();
+            StayWithinBounds();
             
         }
 
@@ -138,14 +150,14 @@ namespace Project2
             if (position.X <= 0)
                 position.X = 0;
 
-            if (position.X >= game.GraphicsDevice.Viewport.Width - playerTexture.Width)  
-                position.X = game.GraphicsDevice.Viewport.Width - playerTexture.Width;
+            if (position.X >= mapWidth - playerTexture.Width)  
+                position.X = mapWidth - playerTexture.Width;
 
             if (position.Y <= 0)
                 position.Y = 0;
 
-            if (position.Y >= game.GraphicsDevice.Viewport.Height - playerTexture.Height)
-                position.Y = game.GraphicsDevice.Viewport.Height - playerTexture.Height;
+            if (position.Y >= mapHeight - playerTexture.Height)
+                position.Y = mapHeight - playerTexture.Height;
         }
 
         public void UpdatePosition(float time)
