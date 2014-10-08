@@ -23,8 +23,6 @@ namespace Project2
         //GamePadState currentGamePadState;
        // GamePadState previousGamePadState;
 
-        SpriteFont font;
-
        Player player;
        public Camera camera { get; private set; }
        
@@ -50,7 +48,7 @@ namespace Project2
             
             playerTexture = Content.Load<Texture2D>("triangle");
             tileTexture = Content.Load<Texture2D>("cube");
-            font = Content.Load<SpriteFont>("SpriteFont1");
+
             /* So the player will begin on top of the blocks*/
             player = new Player(playerTexture.Width, newView.Height - 3 * tileTexture.Height, playerTexture, game);
             
@@ -132,14 +130,7 @@ namespace Project2
             }
             player.Draw(sb);
             // Do stuff
-
-            sb.DrawString(font, "LIVES: " + player.lives, new Vector2(game.GraphicsDevice.Viewport.TitleSafeArea.X + 100,
-                game.GraphicsDevice.Viewport.TitleSafeArea.Y + 300), Color.Black);
-            if (player.lives <= 0)
-            {
-                sb.DrawString(font, "how are you still playing?? you're supposed to be dead", new Vector2(game.GraphicsDevice.Viewport.TitleSafeArea.X + 100,
-                game.GraphicsDevice.Viewport.TitleSafeArea.Y + 330), Color.Black);
-            }
+            
 
         }
 
