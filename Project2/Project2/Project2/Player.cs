@@ -9,27 +9,34 @@ using System.Text;
 namespace Project2
 {
 
-
    public class Player
     {
-        //Gameplay Mechanics//
-        public Boolean isDead;
-        public int lives;
+       public Game game;
 
-        public Game game;
+       //Gameplay Mechanics//
 
         int mapWidth;
         int mapHeight;
+
+       /* Player states and attributes */
+        Texture2D playerTexture;
+
         public Boolean isFalling;
         public Boolean isOnPlatform;
+        public Boolean isDead;
+
+
+       /* Player lives. Can be moved to HUD class if we create one. */
+        public int lives;
+
+       /* Player positions */
         Vector2 spawnPosition;
         public Vector2 position;
-        Texture2D playerTexture;
 
         float max_x_velocity = 300;
         float max_y_velocity = 300;
 
-       public Vector2 velocity;
+        public Vector2 velocity;
         Vector2 slowdown = new Vector2(15, 0);
         Vector2 gravity = new Vector2(0, 20);
 
@@ -190,16 +197,11 @@ namespace Project2
         {
             if (player.Intersects(tile))
             {
-                if (mapTile.isCake)
-                {
-                    end = true;
-                    return;
-                }
+                checkTile(mapTile);
 
                 int ydiff = (int)(tile.Y - player.Y);
                 int xdiff = (int)(tile.X - player.X);
                 int min_translation;
-                
                 
                 //if -x, +y - topRight
                 //if -x, -y - bottomright
@@ -283,6 +285,28 @@ namespace Project2
                     }
                 }
             }
+        }
+
+        private void checkTile(MapTile mapTile)
+        {
+            if (mapTile.isCake)
+            {
+                end = true;
+                return;
+            }
+
+            if (mapTile.isBouncy)
+            { 
+            }
+
+            if (mapTile.isBreakable)
+            { 
+            }
+
+            if (mapTile.isTrap)
+            { 
+            }
+
         }
 
         public Vector2 GetPosition()

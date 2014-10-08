@@ -54,7 +54,6 @@ namespace Project2
             
             player.setBoundaries(960, 640);
 
-
             /* TODO: Probably create a LevelManager/Builder class to move all of this logic and whatnot */
             MapTileData[] data = Content.Load<MapTileData[]>("LevelTester");
 
