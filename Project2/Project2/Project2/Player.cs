@@ -12,7 +12,10 @@ namespace Project2
 
    public class Player
     {
-        Physics playerPhysics;
+        //Gameplay Mechanics//
+        public Boolean isDead;
+        public int lives;
+
         public Game game;
 
         int mapWidth;
@@ -56,7 +59,8 @@ namespace Project2
 
         public Player(int X, int Y, Texture2D playerTexture, Game1 g)
         {
-
+            lives = 3;
+            isDead = false;
             game = g;
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
@@ -178,9 +182,9 @@ namespace Project2
             return new Rectangle((int)position.X, (int)position.Y, Width, Height);
         }
 
+       //Check bug when player jumps first, then moves right/left. 
         public void CheckCollisionSide(Rectangle player, Rectangle tile, MapTile mapTile)
         {
-
             if (player.Intersects(tile))
             {
                 if (mapTile.isCake)
