@@ -2,6 +2,6 @@ Content\SpriteFont1.xnb
 Content\cube.xnb
 Content\triangle.xnb
 Content\cake.xnb
-Content\LevelTester.xnb
 Content\startscreen.xnb
+Content\LevelTester.xnb
 Content\LevelTester2.xnb

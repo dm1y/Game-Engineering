@@ -167,7 +167,10 @@ namespace Project2
                 position.Y = 0;
 
             if (position.Y >= mapHeight - playerTexture.Height)
-                position.Y = mapHeight - playerTexture.Height;
+            {
+                position.X = spawnPosition.X;
+                position.Y = spawnPosition.Y;
+            }
         }
 
         public void UpdatePosition(float time)

@@ -51,6 +51,7 @@ namespace Project2
 
             /* So the player will begin on top of the blocks*/
             player = new Player(playerTexture.Width, newView.Height - 3 * tileTexture.Height, playerTexture, game);
+            
             player.setBoundaries(960, 640);
 
 
