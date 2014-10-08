@@ -170,6 +170,8 @@ namespace Project2
             {
                 position.X = spawnPosition.X;
                 position.Y = spawnPosition.Y;
+                lives -= 1;
+                
             }
         }
 
