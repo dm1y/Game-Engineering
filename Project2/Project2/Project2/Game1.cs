@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 namespace Project2
 {
 
-    enum Screen
+    public enum Screen
     {
         StartScreen,
         World, /* This will be the GamePlayScreen */

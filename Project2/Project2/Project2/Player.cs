@@ -8,10 +8,12 @@ using System.Text;
 
 namespace Project2
 {
+
+
    public class Player
     {
         Physics playerPhysics;
-        Game game;
+        public Game game;
 
         int mapWidth;
         int mapHeight;
@@ -38,6 +40,9 @@ namespace Project2
             get { return playerTexture.Height; }
         }
 
+        public Boolean end; 
+
+
         public void setBoundaries(int mapWidth, int mapHeight)
         {
             this.mapHeight = mapHeight;
@@ -58,7 +63,7 @@ namespace Project2
             this.playerTexture = playerTexture;
             isFalling = true;
             isOnPlatform = false;
-
+            end = false;
         }
 
         public void setXVelocity(float velocity)
@@ -142,6 +147,7 @@ namespace Project2
             UpdatePosition(time);
             StayWithinBounds();
             
+            
         }
 
         /* Player stays within the bounds of the game screen */
@@ -175,7 +181,8 @@ namespace Project2
             {
                 if (mapTile.isCake)
                 {
-                    // Move onto the next level. 
+                    end = true;
+                    return;
                 }
 
                 int ydiff = (int)(tile.Y - player.Y);

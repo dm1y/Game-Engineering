@@ -103,6 +103,12 @@ namespace Project2
 
             }
 
+            /* If player touches the cake, transition to new level / end the game */
+            /* Commented out due to the blank screen for EndGame() */
+            //if (player.end)
+            //    game.EndGame();
+
+
         }
         public void Draw(SpriteBatch sb)
         {
