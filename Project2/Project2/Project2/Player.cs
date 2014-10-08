@@ -203,25 +203,29 @@ namespace Project2
                 int xdiff = (int)(tile.X - player.X);
                 int min_translation;
                 
-                //if -x, +y - topRight
-                //if -x, -y - bottomright
-                //if +x, +y - topLeft
-                //if +x, -y - bottomleft
+                //if -x, +y - player is topRight
+                //if -x, -y - player is bottomright
+                //if +x, +y - player is topLeft
+                //if +x, -y - player is bottomleft
 
+                /* If player is colliding with the top left corner of tile*/
                 if (xdiff >= 0 && ydiff >= 0)
                 {
-
+                    /* If player's difference from left of tile is greater than difference from top of tile,
+                     * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Top - tile.Top))
                     {
-                        //Shift min_translation to left
+                        
                         min_translation = player.Right - tile.Left;
                         position.X -= min_translation;
                         velocity.X = 0;
                         
                     }
+                    /* If player's difference from top of tile is greater than difference from left of tile,
+                     * shift upwards */
                     else
                     {
-                        //Shift min_translation up
+                        
                         min_translation = player.Bottom - tile.Top;
                         position.Y -= min_translation;
                         isOnPlatform = true;
@@ -229,59 +233,71 @@ namespace Project2
                         
                     }
                 }
+                /* If player is colliding with top right corner of tile*/
                 else if (xdiff <= 0 && ydiff >= 0)
                 {
-                    
+                    /* If player's difference from right of tile is smaller than difference from top of tile,
+                     * shift upwards*/
                     if (Math.Abs(player.Right - tile.Right) < Math.Abs(player.Top - tile.Top))
                     {
-
-                        //Shift min_translation up
                         min_translation = player.Bottom - tile.Top;
                         position.Y -= min_translation;
                         isOnPlatform = true;
                         velocity.Y = 0;
                         
                     }
+                    /* If player's difference from right of tile is greater than difference from top of tile,
+                     * shift to the right*/
                     else
                     {
-                        //Shift min_translation to right
+                        
                         min_translation = player.Left - tile.Right;
                         position.X -= min_translation;
                         velocity.X = 0;
                     }
                 }
+                /* If player is colliding with bottom-left corner of tile*/
                 else if (xdiff >= 0 && ydiff <= 0)
                 {
+                    /* If player's difference from left of tile is greater than difference from bottom of tile,
+                     * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Bottom - tile.Bottom))
                     {
                         min_translation = player.Right - tile.Left;
                         position.X -= min_translation;
                         velocity.X = 0;
-                        //Shift min_translation to left
+                        
                     }
+                    /* If player's difference from left of tile is less than difference from bottom of tile,
+                     * shift downwards*/
                     else
                     {
                         min_translation = player.Top - tile.Bottom;
                         position.Y -= min_translation;
                         velocity.Y = 0;
-                        //Shift min translation down
+                        
                     }
                 }
+                /* If player is colliding with bottom-right corner of tile*/
                 else if (xdiff <= 0 && ydiff <= 0)
                 {
+                    /* If player's difference from right of tile is greater than difference from bottom of tile,
+                     * shift to the right*/
                     if (Math.Abs(player.Right - tile.Right) > Math.Abs(player.Bottom - tile.Bottom))
                     {
-                        //Shift min_translation to the right
+                        
                         min_translation = player.Left - tile.Right;
                         position.X -= min_translation;
                         velocity.X = 0;
                     }
+                    /* If player's difference from right of tile is smaller than difference from bottom of tile,
+                     * shift downwards*/
                     else
                     {
                         min_translation = player.Top - tile.Bottom;
                         position.Y -= min_translation;
                         velocity.Y = 0;
-                        //Shift min translation down
+                        
                     }
                 }
             }
