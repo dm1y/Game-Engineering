@@ -167,12 +167,17 @@ namespace Project2
             position.Y += (int)(velocity.Y * time);
         }
 
-        public void CheckCollisionSide(Rectangle tile)
+        public void CheckCollisionSide(Rectangle tile, MapTile mapTile)
         {
             Rectangle player = new Rectangle((int)position.X, (int)position.Y, Width, Height);
 
             if (player.Intersects(tile))
             {
+                if (mapTile.isCake)
+                {
+                    // Move onto the next level. 
+                }
+
                 int ydiff = (int)(tile.Y - player.Y);
                 int xdiff = (int)(tile.X - player.X);
                 int min_translation;

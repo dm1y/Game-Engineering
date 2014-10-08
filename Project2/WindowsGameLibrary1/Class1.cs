@@ -14,7 +14,10 @@ namespace Project2
     public class MapTileData
     {
         public String tileTexture;
-        public Boolean isSpecial;
+        public Boolean isTrap;
+        public Boolean isBouncy;
+        public Boolean isBreakable;
+        public Boolean isCake;
         public Vector2 mapPosition;
     }
 }

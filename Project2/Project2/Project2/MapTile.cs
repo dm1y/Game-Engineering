@@ -18,7 +18,8 @@ namespace Project2
         /* The different tile attributes */
         public Boolean isTrap;
         public Boolean isBouncy;
-        public Boolean isPassable;
+        public Boolean isBreakable;
+        public Boolean isCake;
 
         public int Width
         {
@@ -30,16 +31,18 @@ namespace Project2
             get { return tileTexture.Height; }
         }
 
-        public MapTile(int X, int Y, Texture2D tileTexture, Game game)
+        public MapTile(int X, int Y, Texture2D tileTexture, Game game, Boolean bounce, 
+            Boolean br, Boolean trap, Boolean cake)
         {
             this.game = game;
             this.tileTexture = tileTexture;
-            mapPositions = new Vector2((X * Width), (game.GraphicsDevice.Viewport.Height - (Y * Height) - Height));
+            mapPositions = new Vector2((X * Width), (game.GraphicsDevice.Viewport.Height 
+                - (Y * Height) - Height));
 
-            isBouncy = false;
-            isPassable = false;
-            isTrap = false;
-
+            isBouncy = bounce;
+            isBreakable = br;
+            isTrap = trap;
+            isCake = cake;
             //Console.Write("Game Window Width:" + game.GraphicsDevice.Viewport.Width + "\nGame Window Height:" + game.GraphicsDevice.Viewport.Height);
         }
 

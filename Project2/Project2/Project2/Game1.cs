@@ -26,13 +26,11 @@ namespace Project2
     {
         public GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-       
 
         Screen currentScreen;
         StartScreen startScreen;
         GameOverScreen gameOverScreen;
-        Viewport viewPort;
-        
+        Camera camera; 
 
         World gameWorld;
 
@@ -45,11 +43,6 @@ namespace Project2
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferHeight = height;
             graphics.PreferredBackBufferWidth = width;
-            graphics.ApplyChanges();
-            viewPort = GraphicsDevice.Viewport;
-            viewPort.Width = width;
-            viewPort.Height = height;
-            GraphicsDevice.Viewport = viewPort;
             
         }
 
@@ -62,16 +55,18 @@ namespace Project2
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-           
             
-            
+            // Unnecessary Code 
+            //gameWorld = new World(this); 
+            //gameWorld.LoadContent(this.Content);
 
-            gameWorld = new World(this, GraphicsDevice.Viewport); 
-            gameWorld.LoadContent(this.Content);
+            camera = new Camera(this.graphics.GraphicsDevice.Viewport);
 
             base.Initialize();
             startScreen = new StartScreen(this);
-            currentScreen = Screen.StartScreen;
+            StartGame();
+
+            //currentScreen = Screen.StartScreen;
         }
 
         /// <summary>
@@ -84,6 +79,7 @@ namespace Project2
             spriteBatch = new SpriteBatch(GraphicsDevice);
             
             //gameWorld.LoadContent(Content);
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -106,23 +102,25 @@ namespace Project2
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-            gameWorld.Update(gameTime);
+            
+            // gameWorld.Update(gameTime);
             // TODO: Add your update logic here
-            //switch (currentScreen)
-            //{
-            //    case Screen.StartScreen:
-            //        if (startScreen != null)
-            //            startScreen.Update();
-            //        break;
-            //    case Screen.World:
-            //        if (gameWorld != null)
-            //            gameWorld.Update(gameTime);
-            //        break;
-            //    case Screen.GameOverScreen:
-            //        if (gameOverScreen != null)
-            //            gameOverScreen.Update();
-            //        break;
-            //}
+            
+            switch (currentScreen)
+            {
+                case Screen.StartScreen:
+                    if (startScreen != null)
+                        startScreen.Update();
+                    break;
+                case Screen.World:
+                    if (gameWorld != null)
+                        gameWorld.Update(gameTime);
+                    break;
+                case Screen.GameOverScreen:
+                    if (gameOverScreen != null)
+                        gameOverScreen.Update();
+                    break;
+            }
 
             base.Update(gameTime);
         }
@@ -137,24 +135,27 @@ namespace Project2
 
             // TODO: Add your drawing code here
             
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, gameWorld.camera.transform); 
-            gameWorld.Draw(spriteBatch);
-            //switch (currentScreen)
-            //{
-            //    case Screen.StartScreen:
-            //        if (startScreen != null)
-            //            startScreen.Draw(spriteBatch);
-            //        break;
-            //    case Screen.World:
-            //        if (gameWorld != null)
-            //            gameWorld.Draw(spriteBatch);
-                      
-            //        break;
-            //    case Screen.GameOverScreen:
-            //        gameOverScreen.Draw(spriteBatch);
-            //        break;
-            //}
+            //spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.transform); 
 
+            //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, gameWorld.camera.transform); 
+            //gameWorld.Draw(spriteBatch);
+
+            switch (currentScreen)
+            {
+                case Screen.StartScreen:
+                    if (startScreen != null)
+                        startScreen.Draw(spriteBatch);
+                    break;
+                case Screen.World:
+                    if (gameWorld != null)
+                        gameWorld.Draw(spriteBatch);
+
+                    break;
+                case Screen.GameOverScreen:
+                    gameOverScreen.Draw(spriteBatch);
+                    break;
+            }
 
             spriteBatch.End();
            
@@ -164,6 +165,8 @@ namespace Project2
         public void StartGame()
         {
            // gameWorld = new World(this,viewPort);  //Added viewport //was GraphicsDevice.Viewport
+
+            gameWorld = new World(this, camera);
             gameWorld.LoadContent(this.Content);
 
             currentScreen = Screen.World;

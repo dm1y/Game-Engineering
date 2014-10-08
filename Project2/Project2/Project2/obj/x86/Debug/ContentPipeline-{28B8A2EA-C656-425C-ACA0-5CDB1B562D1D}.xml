@@ -44,7 +44,16 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester.xnb</Output>
-      <Time>2014-10-07T17:12:16.6505728-07:00</Time>
+      <Time>2014-10-07T17:30:52.8288292-07:00</Time>
+    </Item>
+    <Item>
+      <Source>startscreen.png</Source>
+      <Name>startscreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\startscreen.xnb</Output>
+      <Time>2014-10-07T19:01:19.5723221-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -61,7 +70,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.dll</Key>
-        <Value>2014-10-07T17:11:10.7105347-07:00</Value>
+        <Value>2014-10-07T17:43:59.3460576-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>

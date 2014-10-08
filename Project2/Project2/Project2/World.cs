@@ -32,14 +32,13 @@ namespace Project2
         Texture2D playerTexture;
         Texture2D tileTexture;
 
-        public World(Game1 game,Viewport view)  
+        public World(Game1 game, Camera camera)  
         {
             this.game = game;
             mapTiles = new List<MapTile>();
-            newView = view;
-            this.camera = new Camera(game.GraphicsDevice.Viewport);
-
-            // Do stuff 
+            newView = game.GraphicsDevice.Viewport;
+            //this.camera = new Camera(game.GraphicsDevice.Viewport);
+            this.camera = camera;
         }
 
         public void LoadContent(ContentManager Content)
@@ -51,40 +50,14 @@ namespace Project2
 
             foreach (MapTileData d in data)
             {
-                mapTiles.Add(new MapTile((int) d.mapPosition.X, (int) d.mapPosition.Y, Content.Load<Texture2D>(d.tileTexture), game));
+                mapTiles.Add(new MapTile((int) d.mapPosition.X, (int) d.mapPosition.Y, 
+                    Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, d.isCake));
             }
 
-            // foreach for loop 
-
-            // i = 25 covers the entire floor of current screen. 
-            //for (int i = 0; i <= game.GraphicsDevice.Viewport.Width/32; i++)  //modified this based on the sprite's width  32 is currently a "magic" number
-            //{
-                /* Use to build upwards to cover the entire level space*/
-            //        mapTiles.Add(new MapTile(i, 0, tileTexture, game));
-            //}
-
-            //for (int j = 0; j < 4; j++)
-            //{
-            //    mapTiles.Add(new MapTile(7, j, tileTexture, game));
-            //}
-
-            //for (int i = 7; i < 12; i++)
-            //{
-            //    /* Use to build upwards to cover the entire level space*/
-             //   mapTiles.Add(new MapTile(i, 3, tileTexture, game));
-            //}
-
-            //for (int i = 13; i < 15; i++)
-            //{
-                /* Use to build upwards to cover the entire level space*/
-            //    mapTiles.Add(new MapTile(i, 6, tileTexture, game));
-            //}
 
             /* So the player will begin on top of the blocks*/
-            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height - 3*tileTexture.Height, playerTexture, game);
+            player = new Player(playerTexture.Width, newView.Height - 3*tileTexture.Height, playerTexture, game);
             player.setBoundaries(960, 640);
-//            player = new Player(playerTexture.Width, game.GraphicsDevice.Viewport.Height / 2, playerTexture);
-            // Do stuff 
 
         }
 
@@ -126,7 +99,7 @@ namespace Project2
                       (int)tile.mapPositions.Y,
                     tile.Width, tile.Height);
 
-                player.CheckCollisionSide(terrainHitBox);
+                player.CheckCollisionSide(terrainHitBox, tile);
 
             }
 
