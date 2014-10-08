@@ -173,9 +173,13 @@ namespace Project2
             position.Y += (int)(velocity.Y * time);
         }
 
-        public void CheckCollisionSide(Rectangle tile, MapTile mapTile)
+        public Rectangle getHitBox()
         {
-            Rectangle player = new Rectangle((int)position.X, (int)position.Y, Width, Height);
+            return new Rectangle((int)position.X, (int)position.Y, Width, Height);
+        }
+
+        public void CheckCollisionSide(Rectangle player, Rectangle tile, MapTile mapTile)
+        {
 
             if (player.Intersects(tile))
             {
