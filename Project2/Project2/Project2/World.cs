@@ -55,7 +55,7 @@ namespace Project2
 
 
             /* TODO: Probably create a LevelManager/Builder class to move all of this logic and whatnot */
-            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester1");
+            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester");
 
             foreach (MapTileData d in data)
             {
