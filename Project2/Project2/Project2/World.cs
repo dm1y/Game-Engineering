@@ -32,6 +32,8 @@ namespace Project2
         Texture2D playerTexture;
         Texture2D tileTexture;
 
+        MapTileData[] data2;
+
         public World(Game1 game, Camera camera)  
         {
             this.game = game;
@@ -46,18 +48,26 @@ namespace Project2
             
             playerTexture = Content.Load<Texture2D>("triangle");
             tileTexture = Content.Load<Texture2D>("cube");
-            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester");
+
+            /* So the player will begin on top of the blocks*/
+            player = new Player(playerTexture.Width, newView.Height - 3 * tileTexture.Height, playerTexture, game);
+            player.setBoundaries(960, 640);
+
+
+            /* TODO: Probably create a LevelManager/Builder class to move all of this logic and whatnot */
+            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester1");
 
             foreach (MapTileData d in data)
             {
-                mapTiles.Add(new MapTile((int) d.mapPosition.X, (int) d.mapPosition.Y, 
+                mapTiles.Add(new MapTile((int)d.mapPosition.X, (int)d.mapPosition.Y,
                     Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, d.isCake));
             }
 
+            /* TODO, possibly have a switch screen to ask if the player is ready to begin the next level. So 
+             * then the world will be reloaded again, and depending on the booleans stated in future LevelManager/Builder class, 
+             * loads the current level */
 
-            /* So the player will begin on top of the blocks*/
-            player = new Player(playerTexture.Width, newView.Height - 3*tileTexture.Height, playerTexture, game);
-            player.setBoundaries(960, 640);
+            // data2 = Content.Load<MapTileData[]>("LevelTester2");
 
         }
 

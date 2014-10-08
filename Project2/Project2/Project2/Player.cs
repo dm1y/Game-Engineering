@@ -40,7 +40,7 @@ namespace Project2
             get { return playerTexture.Height; }
         }
 
-        public Boolean end; 
+        public Boolean end = false; 
 
 
         public void setBoundaries(int mapWidth, int mapHeight)

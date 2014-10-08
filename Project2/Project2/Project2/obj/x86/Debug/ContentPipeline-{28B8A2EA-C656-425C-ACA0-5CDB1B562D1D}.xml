@@ -55,6 +55,15 @@
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\startscreen.xnb</Output>
       <Time>2014-10-07T19:01:19.5723221-07:00</Time>
     </Item>
+    <Item>
+      <Source>LevelTester2.xml</Source>
+      <Name>LevelTester2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
+      <Time>2014-10-07T20:36:23.9230024-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{28B8A2EA-C656-425C-ACA0-5CDB1B562D1D}</ContentProjectGUID>
