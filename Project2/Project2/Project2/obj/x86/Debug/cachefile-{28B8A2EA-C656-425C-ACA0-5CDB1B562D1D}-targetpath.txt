@@ -1,4 +1,5 @@
 Content\SpriteFont1.xnb
 Content\cube.xnb
 Content\triangle.xnb
+Content\cake.xnb
 Content\LevelTester.xnb

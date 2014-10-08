@@ -122,8 +122,8 @@ namespace Project2
 
             foreach (MapTile tile in mapTiles)
             {
-                terrainHitBox = new Rectangle((int)(tile.mapCoordinates.X),
-                      (int)tile.mapCoordinates.Y,
+                terrainHitBox = new Rectangle((int)(tile.mapPositions.X),
+                      (int)tile.mapPositions.Y,
                     tile.Width, tile.Height);
 
                 player.CheckCollisionSide(terrainHitBox);

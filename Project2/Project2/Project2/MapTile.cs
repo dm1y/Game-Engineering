@@ -10,12 +10,15 @@ namespace Project2
 
     public class MapTile
     {
-        public Texture2D tileTexture;
-        //public Vector2 arrayPosition;
-        public Boolean isSpecial;
-        public Vector2 mapCoordinates;
-
         Game game;
+        
+        public Texture2D tileTexture;
+        public Vector2 mapPositions;
+        
+        /* The different tile attributes */
+        public Boolean isTrap;
+        public Boolean isBouncy;
+        public Boolean isPassable;
 
         public int Width
         {
@@ -29,15 +32,14 @@ namespace Project2
 
         public MapTile(int X, int Y, Texture2D tileTexture, Game game)
         {
-            isSpecial = false;
-            this.tileTexture = tileTexture;
-            //arrayPosition = new Vector2(X, Y);
             this.game = game;
-            mapCoordinates = new Vector2((int)(X * Width),
-            (int)(game.GraphicsDevice.Viewport.Height - (Y * Height) - Height));
+            this.tileTexture = tileTexture;
+            mapPositions = new Vector2((X * Width), (game.GraphicsDevice.Viewport.Height - (Y * Height) - Height));
 
-//            mapPosition = new Vector2((int)(arrayPosition.X * Width),
-//                (int)(game.GraphicsDevice.Viewport.Height - (arrayPosition.Y * Height) - Height));
+            isBouncy = false;
+            isPassable = false;
+            isTrap = false;
+
             //Console.Write("Game Window Width:" + game.GraphicsDevice.Viewport.Width + "\nGame Window Height:" + game.GraphicsDevice.Viewport.Height);
         }
 
@@ -46,7 +48,7 @@ namespace Project2
             //Console.Write("draw");
             //Console.Write("\n CurrentX: " + position.X + " X coordinate:" + position.X * Width);
            
-            spriteBatch.Draw(tileTexture, new Rectangle((int)mapCoordinates.X, (int)mapCoordinates.Y,
+            spriteBatch.Draw(tileTexture, new Rectangle((int)mapPositions.X, (int)mapPositions.Y,
                 tileTexture.Width, tileTexture.Height), Color.White);
         }
     }

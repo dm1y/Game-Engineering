@@ -2,6 +2,7 @@
 <XnaContent>
   <!-- TODO: replace this Asset with your own XML asset data. -->
   <Asset Type="Project2.MapTileData[]">
+    <!-- Blocks for the ground  -->
     <Item>
       <tileTexture>cube</tileTexture>
         <isSpecial>false</isSpecial>
@@ -142,6 +143,7 @@
       <isSpecial>false</isSpecial>
       <mapPosition>30 0</mapPosition>
     </Item>
+    <!-- Blocks for the vertical ledge  -->
     <Item>
       <tileTexture>cube</tileTexture>
       <isSpecial>false</isSpecial>
@@ -157,6 +159,7 @@
       <isSpecial>false</isSpecial>
       <mapPosition>10 3</mapPosition>
     </Item>
+    <!-- Blocks for the sky ledges  -->
     <Item>
       <tileTexture>cube</tileTexture>
       <isSpecial>false</isSpecial>
@@ -172,6 +175,39 @@
       <isSpecial>false</isSpecial>
       <mapPosition>15 6</mapPosition>
     </Item>
+    <!-- Blocks for the sky ledge number 2  -->
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>18 8</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>19 8</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>20 8</mapPosition>
+    </Item>
+    <!-- Blocks for the sky ledge #3  -->
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>23 6</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>24 6</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>cube</tileTexture>
+      <isSpecial>false</isSpecial>
+      <mapPosition>25 6</mapPosition>
+    </Item>
+    <!-- Blocks for the horizontal ledge  -->
     <Item>
       <tileTexture>cube</tileTexture>
       <isSpecial>false</isSpecial>
@@ -191,6 +227,12 @@
       <tileTexture>cube</tileTexture>
       <isSpecial>false</isSpecial>
       <mapPosition>10 3</mapPosition>
+    </Item>
+    <!-- Cake is a lie -->
+    <Item>
+      <tileTexture>cake</tileTexture>
+      <isSpecial>true</isSpecial>
+      <mapPosition>29 1</mapPosition>
     </Item>
   </Asset>
 </XnaContent>
