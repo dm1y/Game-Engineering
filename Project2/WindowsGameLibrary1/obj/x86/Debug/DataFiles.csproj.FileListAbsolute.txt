@@ -10,3 +10,9 @@ C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Win
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.dll
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.pdb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.dll
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.pdb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\DataFiles.csprojResolveAssemblyReference.cache
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.dll
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.pdb

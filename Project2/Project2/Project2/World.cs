@@ -80,6 +80,19 @@ namespace Project2
                 game.EndGame();
         }
 
+        private void PlayMusic(Song song)
+        {
+            try
+            {
+                MediaPlayer.Play(song);
+
+
+                // Loop the song
+                MediaPlayer.IsRepeating = true;
+            }
+            catch { }
+        }
+
 
         public void Update(GameTime gametime)
         {
