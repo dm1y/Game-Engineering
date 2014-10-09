@@ -211,6 +211,13 @@ namespace Project2
                 /* If player is colliding with the top left corner of tile*/
                 if (xdiff >= 0 && ydiff >= 0)
                 {
+
+                    /* Implement this where the player hits the tile */
+                    if (mapTile.isBouncy)
+                    {
+                        // TODO: Increase the velocity or something? 
+                    }
+
                     /* If player's difference from left of tile is greater than difference from top of tile,
                      * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Top - tile.Top))
@@ -236,6 +243,13 @@ namespace Project2
                 /* If player is colliding with top right corner of tile*/
                 else if (xdiff <= 0 && ydiff >= 0)
                 {
+
+                    /* Implement this where the player hits the tile */
+                    if (mapTile.isBouncy)
+                    {
+                        // TODO: Increase the velocity or something? 
+                    }
+
                     /* If player's difference from right of tile is smaller than difference from top of tile,
                      * shift upwards*/
                     if (Math.Abs(player.Right - tile.Right) < Math.Abs(player.Top - tile.Top))
@@ -259,6 +273,13 @@ namespace Project2
                 /* If player is colliding with bottom-left corner of tile*/
                 else if (xdiff >= 0 && ydiff <= 0)
                 {
+
+                    /* Implement this where the player hits the tile */
+                    if (mapTile.isBreakable)
+                    {
+                        // TODO: Have the player phase through the tile when colliding from the bottom
+                    }
+
                     /* If player's difference from left of tile is greater than difference from bottom of tile,
                      * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Bottom - tile.Bottom))
@@ -281,6 +302,13 @@ namespace Project2
                 /* If player is colliding with bottom-right corner of tile*/
                 else if (xdiff <= 0 && ydiff <= 0)
                 {
+
+
+                    /* Implement this where the player hits the tile */
+                    if (mapTile.isBreakable)
+                    {
+                        // TODO: Have the player phase through the tile when colliding from the bottom
+                    }
 
                     /* If player's difference from right of tile is greater than difference from bottom of tile,
                      * shift to the right*/
@@ -312,16 +340,10 @@ namespace Project2
                 return;
             }
 
-            if (mapTile.isBouncy)
-            { 
-            }
-
-            if (mapTile.isBreakable)
-            { 
-            }
-
             if (mapTile.isTrap)
-            { 
+            {
+                position.X = spawnPosition.X;
+                position.Y = spawnPosition.Y;
             }
 
         }
