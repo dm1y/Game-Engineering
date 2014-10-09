@@ -49,8 +49,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelTester.xml">
-      <Name>LevelTester</Name>
+    <Compile Include="LevelTester0.xml">
+      <Name>LevelTester0</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <SubType>Designer</SubType>
@@ -77,8 +77,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelTester2.xml">
-      <Name>LevelTester2</Name>
+    <Compile Include="LevelTester1.xml">
+      <Name>LevelTester1</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
@@ -101,8 +101,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelTester3.xml">
-      <Name>LevelTester3</Name>
+    <Compile Include="LevelTester2.xml">
+      <Name>LevelTester2</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>

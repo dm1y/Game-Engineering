@@ -3,9 +3,9 @@ Content\cube.xnb
 Content\triangle.xnb
 Content\cake.xnb
 Content\startscreen.xnb
-Content\LevelTester.xnb
 Content\LevelTester2.xnb
 Content\bounce.xnb
 Content\passable.xnb
 Content\trap.xnb
-Content\LevelTester3.xnb
+Content\LevelTester1.xnb
+Content\LevelTester0.xnb

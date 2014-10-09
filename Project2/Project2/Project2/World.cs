@@ -28,11 +28,11 @@ namespace Project2
        
         Viewport newView;
 
-        List<MapTile> mapTiles;
         Texture2D playerTexture;
         Texture2D tileTexture;
 
-        MapTileData[] data2;
+        List<MapTile> mapTiles;
+        int level_counter = 0; 
 
         public World(Game1 game, Camera camera)  
         {
@@ -41,6 +41,7 @@ namespace Project2
             newView = game.GraphicsDevice.Viewport;
             //this.camera = new Camera(game.GraphicsDevice.Viewport);
             this.camera = camera;
+            //level = new LevelManager(game);
         }
 
         public void LoadContent(ContentManager Content)
@@ -48,27 +49,37 @@ namespace Project2
             
             playerTexture = Content.Load<Texture2D>("triangle");
             tileTexture = Content.Load<Texture2D>("cube");
-
-            /* So the player will begin on top of the blocks*/
-            player = new Player(playerTexture.Width, newView.Height - 3 * tileTexture.Height, playerTexture, game);
             
-            player.setBoundaries(960, 640);
+            LoadMap(0);
+        }
 
-            /* TODO: Probably create a LevelManager/Builder class to move all of this logic and whatnot */
-            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester3");
+        public void LoadMap(int i)
+        {
+            MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
 
             foreach (MapTileData d in data)
             {
                 mapTiles.Add(new MapTile((int)d.mapPosition.X, (int)d.mapPosition.Y,
-                    Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, d.isCake));
+                    game.Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, d.isCake));
             }
 
-            /* TODO, possibly have a switch screen to ask if the player is ready to begin the next level. So 
-             * then the world will be reloaded again, and depending on the booleans stated in future LevelManager/Builder class, 
-             * loads the current level */
-
+            /* So the player will begin on top of the blocks*/
+            player = new Player(playerTexture.Width, newView.Height - 3 * tileTexture.Height, playerTexture, game);
+            player.setBoundaries(960*3, 640);
 
         }
+
+        public void changeLevel()
+        {
+            level_counter++;
+
+            /* If the level is not the last level*/
+            if (level_counter < 3)
+                LoadMap(level_counter); 
+            else 
+                game.EndGame();
+        }
+
 
         public void Update(GameTime gametime)
         {
@@ -83,6 +94,7 @@ namespace Project2
             
             player.Update(gametime, currentKeyboardState);
             UpdateCollisions();
+            
             // Do stuff 
             camera.Update(gametime, player); //Update Camera
            
@@ -93,7 +105,11 @@ namespace Project2
 
             /* If player touches the cake, transition to new level / end the game */
             if (player.end)
-                game.EndGame();
+            {
+                player.end = false;
+                mapTiles.Clear();
+                changeLevel();
+            }
 
         }
 
@@ -117,6 +133,7 @@ namespace Project2
             }
         }
 
+
         public void Draw(SpriteBatch sb)
         {
             foreach (MapTile tile in mapTiles)
@@ -124,10 +141,10 @@ namespace Project2
                 //Console.Write("drawing");
                 tile.Draw(sb);
             }
+
             player.Draw(sb);
             // Do stuff
             
-
         }
 
     }

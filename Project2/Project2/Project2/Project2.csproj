@@ -74,8 +74,6 @@
   <ItemGroup>
     <Compile Include="Camera.cs" />
     <Compile Include="GameOverScreen.cs" />
-    <Compile Include="Level.cs" />
-    <Compile Include="LevelManager.cs" />
     <Compile Include="MapTile.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -47,22 +47,13 @@
       <Time>2014-10-07T19:01:19.5723221-07:00</Time>
     </Item>
     <Item>
-      <Source>LevelTester.xml</Source>
-      <Name>LevelTester</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester.xnb</Output>
-      <Time>2014-10-08T16:41:30.3790571-07:00</Time>
-    </Item>
-    <Item>
       <Source>LevelTester2.xml</Source>
       <Name>LevelTester2</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
-      <Time>2014-10-07T20:36:23.9230024-07:00</Time>
+      <Time>2014-10-08T19:20:37.9031219-07:00</Time>
     </Item>
     <Item>
       <Source>bounce.png</Source>
@@ -92,13 +83,22 @@
       <Time>2014-10-08T18:04:52.0062285-07:00</Time>
     </Item>
     <Item>
-      <Source>LevelTester3.xml</Source>
-      <Name>LevelTester3</Name>
+      <Source>LevelTester1.xml</Source>
+      <Name>LevelTester1</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester3.xnb</Output>
-      <Time>2014-10-08T19:20:37.9031219-07:00</Time>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb</Output>
+      <Time>2014-10-07T20:36:23.9230024-07:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelTester0.xml</Source>
+      <Name>LevelTester0</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb</Output>
+      <Time>2014-10-08T16:41:30.3790571-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
