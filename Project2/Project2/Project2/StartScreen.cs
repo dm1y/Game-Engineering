@@ -43,9 +43,10 @@ namespace Project2
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             if (texture != null)
                 spriteBatch.Draw(texture, new Vector2(spriteBatch.GraphicsDevice.Viewport.X, spriteBatch.GraphicsDevice.Viewport.Y), Color.White);
-
+            spriteBatch.End();
             // Used as placeholders 
 
             // Used if you want to draw the instructions on 

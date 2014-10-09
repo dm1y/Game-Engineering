@@ -64,9 +64,9 @@ namespace Project2
 
             base.Initialize();
             startScreen = new StartScreen(this);
-            StartGame();
+            //StartGame();
 
-            //currentScreen = Screen.StartScreen;
+            currentScreen = Screen.StartScreen;
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Project2
             // TODO: Add your drawing code here
             
             //spriteBatch.Begin();
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.transform); 
+            //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.transform); 
 
             //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, gameWorld.camera.transform); 
             //gameWorld.Draw(spriteBatch);
@@ -149,15 +149,16 @@ namespace Project2
                     break;
                 case Screen.World:
                     if (gameWorld != null)
+                    {
+                        spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.transform);
                         gameWorld.Draw(spriteBatch);
-
+                        spriteBatch.End();
+                    }
                     break;
                 case Screen.GameOverScreen:
                     gameOverScreen.Draw(spriteBatch);
                     break;
             }
-
-            spriteBatch.End();
            
             base.Draw(gameTime);
         }
@@ -181,6 +182,7 @@ namespace Project2
             currentScreen = Screen.GameOverScreen;
 
             gameWorld = null;
+            startScreen = null;
         }
     }
 }

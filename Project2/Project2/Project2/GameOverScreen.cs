@@ -17,14 +17,14 @@ namespace Project2
         private Game1 game;
         private KeyboardState lastState;
         private Texture2D texture; /* Place holder if you want to have a picture for the start game screen */
-       // private SpriteFont font; /* Place holder if you want to have text display instructions */
+        private SpriteFont font; /* Place holder if you want to have text display instructions */
 
         public GameOverScreen(Game1 game)
         {
             this.game = game;
             lastState = Keyboard.GetState();
             //texture = game.Content.Load<Texture2D>("");
-            //font = game.Content.Load<SpriteFont>("");
+            font = game.Content.Load<SpriteFont>("SpriteFont1");
         }
 
         public void Update()
@@ -45,13 +45,16 @@ namespace Project2
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin();
             if (texture != null)
                 spriteBatch.Draw(texture, new Vector2(0f, 0f), Color.White);
 
             // Used if you want to draw the instructions on 
-            /* spriteBatch.DrawString(font, "PRESS [ENTER] TO START \n PRESS [ESC] TO EXIT",
+             spriteBatch.DrawString(font, "PRESS [ENTER] TO START \n PRESS [ESC] TO EXIT",
                 new Vector2(game.GraphicsDevice.Viewport.Width / 3 - 7, game.GraphicsDevice.Viewport.Height - 63),
-                Color.GhostWhite); */
+                Color.GhostWhite);
+
+             spriteBatch.End();
         }
     }
 }

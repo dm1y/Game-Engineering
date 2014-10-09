@@ -55,7 +55,7 @@ namespace Project2
             player.setBoundaries(960, 640);
 
             /* TODO: Probably create a LevelManager/Builder class to move all of this logic and whatnot */
-            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester3");
+            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester");
 
             foreach (MapTileData d in data)
             {
@@ -91,6 +91,10 @@ namespace Project2
             if (currentKeyboardState.IsKeyDown(Keys.Escape))
                 game.Exit();
 
+            /* If player touches the cake, transition to new level / end the game */
+            if (player.end)
+                game.EndGame();
+
         }
 
         public void UpdateCollisions()
@@ -111,14 +115,8 @@ namespace Project2
                 player.CheckCollisionSide(playerHitBox, terrainHitBox, tile);
 
             }
-
-            /* If player touches the cake, transition to new level / end the game */
-            /* Commented out due to the blank screen for EndGame() */
-            //if (player.end)
-            //    game.EndGame();
-
-
         }
+
         public void Draw(SpriteBatch sb)
         {
             foreach (MapTile tile in mapTiles)
