@@ -281,6 +281,7 @@ namespace Project2
                 /* If player is colliding with bottom-right corner of tile*/
                 else if (xdiff <= 0 && ydiff <= 0)
                 {
+
                     /* If player's difference from right of tile is greater than difference from bottom of tile,
                      * shift to the right*/
                     if (Math.Abs(player.Right - tile.Right) > Math.Abs(player.Bottom - tile.Bottom))

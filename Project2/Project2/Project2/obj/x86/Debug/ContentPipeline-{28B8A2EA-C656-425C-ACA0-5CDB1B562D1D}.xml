@@ -53,7 +53,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester.xnb</Output>
-      <Time>2014-10-07T17:30:52.8288292-07:00</Time>
+      <Time>2014-10-08T16:41:30.3790571-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester2.xml</Source>
@@ -63,6 +63,42 @@
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
       <Time>2014-10-07T20:36:23.9230024-07:00</Time>
+    </Item>
+    <Item>
+      <Source>bounce.png</Source>
+      <Name>bounce</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\bounce.xnb</Output>
+      <Time>2014-10-08T18:05:19.2831874-07:00</Time>
+    </Item>
+    <Item>
+      <Source>passable.png</Source>
+      <Name>passable</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\passable.xnb</Output>
+      <Time>2014-10-08T18:05:38.5752936-07:00</Time>
+    </Item>
+    <Item>
+      <Source>trap.png</Source>
+      <Name>trap</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\trap.xnb</Output>
+      <Time>2014-10-08T18:04:52.0062285-07:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelTester3.xml</Source>
+      <Name>LevelTester3</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester3.xnb</Output>
+      <Time>2014-10-08T18:23:29.3934537-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

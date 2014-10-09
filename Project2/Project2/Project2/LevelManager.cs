@@ -32,5 +32,13 @@ namespace Project2
 
         }
 
+        public void MoveToNextLevel()
+        { 
+        }
+
+        public void RestartLevel()
+        { 
+        }
+
     }
 }

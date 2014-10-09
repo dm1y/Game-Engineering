@@ -55,7 +55,7 @@ namespace Project2
             player.setBoundaries(960, 640);
 
             /* TODO: Probably create a LevelManager/Builder class to move all of this logic and whatnot */
-            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester");
+            MapTileData[] data = Content.Load<MapTileData[]>("LevelTester3");
 
             foreach (MapTileData d in data)
             {
@@ -67,7 +67,6 @@ namespace Project2
              * then the world will be reloaded again, and depending on the booleans stated in future LevelManager/Builder class, 
              * loads the current level */
 
-            // data2 = Content.Load<MapTileData[]>("LevelTester2");
 
         }
 
