@@ -56,7 +56,7 @@ namespace Project2
         public void setBoundaries(int mapWidth, int mapHeight)
         {
             this.mapHeight = mapHeight;
-            this.mapWidth = mapWidth;
+            this.mapWidth = mapWidth * 3;
         }
 
         public Vector2 getBoundaries()
