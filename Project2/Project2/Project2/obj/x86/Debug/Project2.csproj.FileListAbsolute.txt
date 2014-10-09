@@ -60,3 +60,6 @@ C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\WindowsGameLibrary1.dll
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\WindowsGameLibrary1.pdb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary0.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary1.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary2.xnb

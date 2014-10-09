@@ -34,14 +34,12 @@ namespace Project2
         List<MapTile> mapTiles;
         int level_counter = 0; 
 
-        public World(Game1 game, Camera camera)  
+        public World(Game1 g, Camera c)  
         {
-            this.game = game;
+            game = g;
+            camera = c;
+            newView = g.GraphicsDevice.Viewport;
             mapTiles = new List<MapTile>();
-            newView = game.GraphicsDevice.Viewport;
-            //this.camera = new Camera(game.GraphicsDevice.Viewport);
-            this.camera = camera;
-            //level = new LevelManager(game);
         }
 
         public void LoadContent(ContentManager Content)
@@ -56,6 +54,7 @@ namespace Project2
         public void LoadMap(int i)
         {
             MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
+            Boundaries boundaries = game.Content.Load<Boundaries>("LevelBoundary" + i);
 
             foreach (MapTileData d in data)
             {
@@ -64,9 +63,9 @@ namespace Project2
             }
 
             /* So the player will begin on top of the blocks*/
-            player = new Player(playerTexture.Width, newView.Height - 3 * tileTexture.Height, playerTexture, game);
+            player = new Player(0, newView.Height - 3 * tileTexture.Height, playerTexture, game);
 
-            player.setBoundaries(960*3, 640);
+            player.setBoundaries(boundaries.x, boundaries.y);
         }
 
         public void changeLevel()

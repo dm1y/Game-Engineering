@@ -11,6 +11,12 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Project2
 {
+    public class Boundaries
+    {
+        public int x;
+        public int y;
+    }
+
     public class MapTileData
     {
         public String tileTexture;
