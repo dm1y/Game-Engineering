@@ -1,0 +1,55 @@
+Author: Diana Ly
+CS420 - Game Engineering
+Additional stuff we do not need
+
+README 
+
+This is a very hard coded way to build an XML file from a text file. 
+This will probably only be used to create levels for our Project 2 only.  
+
+Note to group members: 
+Height of the game screen is 20 boxes so account for each line for the height.
+Width is 30, but you can exceed that to have the scroll effect. 
+Actually just double it by a lot. Build it so it actually looks like the level.
+(See below for more details).
+
+       ---------LEGEND --------
+       | x = normal blocks    | 
+       | c = cake             |
+       | t = trap blocks      |
+       | p = passable blocks  |
+       | d = bouncy blocks    |
+       ------------------------
+
+Any character not stated above represents a space.  
+We can also add more attributes later -- like moving platforms, visible/nonvisible 
+spikes/etc. 
+
+Here is the current conversion from our tiles to our game window (width x height) : 
+                      (30 x 20) = 960 x 640. 
+If you want a bigger map, repeat it so the math will be simple for the setBoundaries method.
+Example: In the LevelTester2, I made it so it's (960*3 x 640).
+Or I can just tweak this code to account for the setBoundaries -- we'll discuss this later. 
+
+Example of the text file (30x20 -- standard game window size): 
+
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+---------------------pp-------
+--------------pp--------------
+--------xxxx-------------pp---
+--------xx----------pp--------
+-------dxx-----------------c--
+xxxxxxxxxxxxx--xxttxxxxxxxxxxx
+xxxxxxxxxxxxx--xxxxxxxxxxxxxxx
+xxxxxxxxxxxxx--xxxxxxxxxxxxxxx
