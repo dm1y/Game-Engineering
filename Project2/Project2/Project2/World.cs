@@ -32,7 +32,9 @@ namespace Project2
         Texture2D tileTexture;
 
         List<MapTile> mapTiles;
-        int level_counter = 0; 
+        int level_counter = 0;
+
+        public Boundaries boundaries { get; private set; }
 
         public World(Game1 g, Camera c)  
         {
@@ -54,7 +56,7 @@ namespace Project2
         public void LoadMap(int i)
         {
             MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
-            Boundaries boundaries = game.Content.Load<Boundaries>("LevelBoundary" + i);
+            boundaries = game.Content.Load<Boundaries>("LevelBoundary" + i);
 
             foreach (MapTileData d in data)
             {
