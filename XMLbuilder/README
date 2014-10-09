@@ -53,3 +53,7 @@ Example of the text file (30x20 -- standard game window size):
 xxxxxxxxxxxxx--xxttxxxxxxxxxxx
 xxxxxxxxxxxxx--xxxxxxxxxxxxxxx
 xxxxxxxxxxxxx--xxxxxxxxxxxxxxx
+
+More examples: 
+test.txt for the input file (30*3 x 20 aka 960*3 x 640)
+LevelOutput.XML for the generated XML file. 
