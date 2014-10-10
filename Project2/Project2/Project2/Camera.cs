@@ -22,7 +22,6 @@ namespace Project2
             view = newView;
             Origin = new Vector2(newView.X / 2, newView.Y / 2);
             Zoom = 1.0f;
-
         }
 
         public Vector2 Origin { get; set; }
@@ -41,7 +40,7 @@ namespace Project2
             return Matrix.CreateTranslation(new Vector3(-Position * 0.5f, 0.0f)) *
                 
                 Matrix.CreateTranslation(new Vector3(-Origin, 0.0f)) *
-                Matrix.CreateRotationZ(Rotation) *
+                //Matrix.CreateRotationZ(Rotation) *   //Rotation don't think this is necessary
                 Matrix.CreateScale(Zoom, Zoom, 1) *
                 Matrix.CreateTranslation(new Vector3(Origin, 0.0f));
         }
@@ -69,7 +68,7 @@ namespace Project2
 
         public void LookAt(Vector2 position)
         {
-            Position = position - Origin;
+            Position = position - new Vector2(view.X/2, view.Y);
         }
 
         //public Rectangle? Limits
@@ -103,24 +102,47 @@ namespace Project2
 
         public void Update(GameTime gameTime, Player player)
         {
-            
 
             playerPositionInWorldSpace = player.position;
 
-            if (playerPositionInWorldSpace.X >= boundaries.X/2)
+            if (view.Width < boundaries.X)
             {
-                Position = playerPositionInWorldSpace* new Vector2(2, 1);
+                if (playerPositionInWorldSpace.X >= view.Width / 2)
+                {
+                    if (playerPositionInWorldSpace.X <= boundaries.X - view.Width)
+                    {
+                        Position = playerPositionInWorldSpace * new Vector2(1.7f, 0);
+                        //LookAt(playerPositionInWorldSpace * new Vector2(2,0));
+                    }
+                }
+                else if (playerPositionInWorldSpace.Y <= boundaries.Y)
+                {
+                    ResetCamera();
+
+                }
             }
+        }
+
+        //public void Update(GameTime gameTime, Player player)
+        //{
             
-            else if (playerPositionInWorldSpace.Y <= boundaries.Y)
-            {
-                ResetCamera();
+
+        //    playerPositionInWorldSpace = player.position;
+
+        //    if (playerPositionInWorldSpace.X >= boundaries.X/2)
+        //    {
+        //        Position = playerPositionInWorldSpace* new Vector2(2, 1);
+        //    }
+            
+        //    else if (playerPositionInWorldSpace.Y <= boundaries.Y)
+        //    {
+        //        ResetCamera();
                 
-            }
+        //    }
         
             
             
-        }
+        //}
     }
 }
          
