@@ -21,11 +21,11 @@ namespace Project2
         KeyboardState currentKeyboardState;
         KeyboardState previousKeyboardState;
         //GamePadState currentGamePadState;
-       // GamePadState previousGamePadState;
+        // GamePadState previousGamePadState;
 
-       Player player;
-       public Camera camera { get; private set; }
-       
+        Player player;
+        public Camera camera { get; private set; }
+
         Viewport newView;
 
         Texture2D playerTexture;
@@ -36,7 +36,7 @@ namespace Project2
 
         public Boundaries boundaries { get; private set; }
 
-        public World(Game1 g, Camera c)  
+        public World(Game1 g, Camera c)
         {
             game = g;
             camera = c;
@@ -46,10 +46,10 @@ namespace Project2
 
         public void LoadContent(ContentManager Content)
         {
-            
+
             playerTexture = Content.Load<Texture2D>("triangle");
             tileTexture = Content.Load<Texture2D>("cube");
-            
+
             LoadMap(0);
         }
 
@@ -77,8 +77,8 @@ namespace Project2
 
             /* If the level is not the last level*/
             if (level_counter < 3)
-                LoadMap(level_counter); 
-            else 
+                LoadMap(level_counter);
+            else
                 game.EndGame();
         }
 
@@ -106,15 +106,15 @@ namespace Project2
             currentKeyboardState = Keyboard.GetState();
             //currentGamePadState = GamePad.GetState(PlayerIndex.One);
 
-            
+
             player.Update(gametime, currentKeyboardState);
             UpdateCollisions();
-            
+
             // Do stuff 
 
             //camera.Limits = new Rectangle(0, 0, newView.X / 2, newView.Y / 2);
             camera.Update(gametime, player); //Update Camera
-           
+
 
             // For convenience when testing, press [ESC] key to leave the game 
             if (currentKeyboardState.IsKeyDown(Keys.Escape))
@@ -133,11 +133,11 @@ namespace Project2
 
         public void UpdateCollisions()
         {
-            
+
             Rectangle terrainHitBox;
             Rectangle playerHitBox;
-            
-            player.isOnPlatform = false; 
+
+            player.isOnPlatform = false;
 
             foreach (MapTile tile in mapTiles)
             {
@@ -162,7 +162,7 @@ namespace Project2
 
             player.Draw(sb);
             // Do stuff
-            
+
         }
 
     }

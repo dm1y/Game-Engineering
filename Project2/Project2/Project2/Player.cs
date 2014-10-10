@@ -9,19 +9,19 @@ using System.Text;
 namespace Project2
 {
 
-   public class Player
+    public class Player
     {
-       public Game game;
+        public Game game;
 
-       //Gameplay Mechanics//
+        //Gameplay Mechanics//
 
         int mapWidth;
         int mapHeight;
 
-       /* Player states and attributes */
+        /* Player states and attributes */
         Texture2D playerTexture;
 
-       /* Use animation instead of texture*/
+        /* Use animation instead of texture*/
         Animation idleAnimation;
         Animation movingRightAnimation;
         Animation movingLeftAnimation;
@@ -33,10 +33,10 @@ namespace Project2
         public Boolean isDead;
 
 
-       /* Player lives. Can be moved to HUD class if we create one. */
+        /* Player lives. Can be moved to HUD class if we create one. */
         public int lives;
 
-       /* Player positions */
+        /* Player positions */
         public Vector2 spawnPosition;  //changed to public..might change back
         public Vector2 position;
 
@@ -57,7 +57,7 @@ namespace Project2
             get { return playerTexture.Height; }
         }
 
-        public Boolean end = false; 
+        public Boolean end = false;
 
 
         public void setBoundaries(int mapWidth, int mapHeight)
@@ -128,9 +128,9 @@ namespace Project2
             {
                 velocity.X = 0;
             }
-            if (velocity.X > 0 )
+            if (velocity.X > 0)
             {
-                
+
                 velocity.X -= slowdown.X;
             }
             else
@@ -165,18 +165,19 @@ namespace Project2
 
             if (keyboard.IsKeyDown(Keys.Up))
             {
-                if(isOnPlatform) {
-                    
+                if (isOnPlatform)
+                {
+
                     velocity.Y += -500;
                     isOnPlatform = false;
-                    }
- 
+                }
+
 
             }
             UpdatePosition(time);
             StayWithinBounds();
-            
-            
+
+
         }
 
         /* Player stays within the bounds of the game screen */
@@ -185,7 +186,7 @@ namespace Project2
             if (position.X <= 0)
                 position.X = 0;
 
-            if (position.X >= mapWidth - playerTexture.Width)  
+            if (position.X >= mapWidth - playerTexture.Width)
                 position.X = mapWidth - playerTexture.Width;
 
             if (position.Y <= 0)
@@ -200,7 +201,7 @@ namespace Project2
 
         public void UpdatePosition(float time)
         {
-                  
+
             position.X += (int)(velocity.X * time);
             position.Y += (int)(velocity.Y * time);
         }
@@ -210,7 +211,7 @@ namespace Project2
             return new Rectangle((int)position.X, (int)position.Y, Width, Height);
         }
 
-       //Check bug when player jumps first, then moves right/left. 
+        //Check bug when player jumps first, then moves right/left. 
         public void CheckCollisionSide(Rectangle player, Rectangle tile, MapTile mapTile)
         {
             if (player.Intersects(tile))
@@ -220,7 +221,7 @@ namespace Project2
                 int ydiff = (int)(tile.Y - player.Y);
                 int xdiff = (int)(tile.X - player.X);
                 int min_translation;
-                
+
                 //if -x, +y - player is topRight
                 //if -x, -y - player is bottomright
                 //if +x, +y - player is topLeft
@@ -240,8 +241,8 @@ namespace Project2
                             position.X -= min_translation;
                             velocity.X = 0;
                         }
-                        
-                        
+
+
                     }
                     /* If player's difference from top of tile is greater than difference from left of tile,
                      * shift upwards */
@@ -255,12 +256,12 @@ namespace Project2
                         }
 
                         else
-                        {                        
+                        {
                             min_translation = player.Bottom - tile.Top;
                             position.Y -= min_translation;
                             isOnPlatform = true;
                             velocity.Y = 0;
-                        
+
                         }
 
                     }
@@ -285,7 +286,7 @@ namespace Project2
                             isOnPlatform = true;
                             velocity.Y = 0;
                         }
-                        
+
                     }
                     /* If player's difference from right of tile is greater than difference from top of tile,
                      * shift to the right*/
@@ -297,7 +298,7 @@ namespace Project2
                             position.X -= min_translation;
                             velocity.X = 0;
                         }
-                        
+
                     }
                 }
                 /* If player is colliding with bottom-left corner of tile*/

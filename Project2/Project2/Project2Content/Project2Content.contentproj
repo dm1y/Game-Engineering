@@ -101,13 +101,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelTester2.xml">
-      <Name>LevelTester2</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="LevelBoundary0.xml">
       <Name>LevelBoundary0</Name>
       <Importer>XmlImporter</Importer>
@@ -124,6 +117,13 @@
   <ItemGroup>
     <Compile Include="LevelBoundary2.xml">
       <Name>LevelBoundary2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LevelTester2.xml">
+      <Name>LevelTester2</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
