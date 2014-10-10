@@ -2,7 +2,7 @@
 <XnaContent>
   <!-- TODO: replace this Asset with your own XML asset data. -->
   <Asset Type="Project2.Boundaries">
-    <x>960</x>
+    <x>2880</x>
     <y>640</y>
   </Asset>
 </XnaContent>
