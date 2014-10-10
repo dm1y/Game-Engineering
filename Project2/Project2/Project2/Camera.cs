@@ -111,7 +111,7 @@ namespace Project2
                 {
                     if (playerPositionInWorldSpace.X <= boundaries.X - view.Width)
                     {
-                        Position = playerPositionInWorldSpace * new Vector2(1.7f, 0);
+                        Position = playerPositionInWorldSpace * new Vector2(2, 0);
                         //LookAt(playerPositionInWorldSpace * new Vector2(2,0));
                     }
                 }
