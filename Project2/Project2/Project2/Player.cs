@@ -212,91 +212,103 @@ namespace Project2
                 if (xdiff >= 0 && ydiff >= 0)
                 {
 
-                    /* Implement this where the player hits the tile */
-                    if (mapTile.isBouncy)
-                    {
-                        // TODO: Increase the velocity or something? 
-                    }
-
                     /* If player's difference from left of tile is greater than difference from top of tile,
                      * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Top - tile.Top))
                     {
+                        if (!mapTile.isBreakable)
+                        {
+                            min_translation = player.Right - tile.Left;
+                            position.X -= min_translation;
+                            velocity.X = 0;
+                        }
                         
-                        min_translation = player.Right - tile.Left;
-                        position.X -= min_translation;
-                        velocity.X = 0;
                         
                     }
                     /* If player's difference from top of tile is greater than difference from left of tile,
                      * shift upwards */
                     else
                     {
+
+                        /* Implement this where the player hits the tile */
+                        if (mapTile.isBouncy)
+                        {
+                            velocity.Y += -1000;
+                        }
+
+                        else
+                        {                        
+                            min_translation = player.Bottom - tile.Top;
+                            position.Y -= min_translation;
+                            isOnPlatform = true;
+                            velocity.Y = 0;
                         
-                        min_translation = player.Bottom - tile.Top;
-                        position.Y -= min_translation;
-                        isOnPlatform = true;
-                        velocity.Y = 0;
-                        
+                        }
+
                     }
                 }
                 /* If player is colliding with top right corner of tile*/
                 else if (xdiff <= 0 && ydiff >= 0)
                 {
 
-                    /* Implement this where the player hits the tile */
-                    if (mapTile.isBouncy)
-                    {
-                        // TODO: Increase the velocity or something? 
-                    }
 
                     /* If player's difference from right of tile is smaller than difference from top of tile,
                      * shift upwards*/
                     if (Math.Abs(player.Right - tile.Right) < Math.Abs(player.Top - tile.Top))
                     {
-                        min_translation = player.Bottom - tile.Top;
-                        position.Y -= min_translation;
-                        isOnPlatform = true;
-                        velocity.Y = 0;
+                        if (mapTile.isBouncy)
+                        {
+                            velocity.Y += -1000;
+                        }
+                        else
+                        {
+                            min_translation = player.Bottom - tile.Top;
+                            position.Y -= min_translation;
+                            isOnPlatform = true;
+                            velocity.Y = 0;
+                        }
                         
                     }
                     /* If player's difference from right of tile is greater than difference from top of tile,
                      * shift to the right*/
                     else
                     {
+                        if (!mapTile.isBreakable)
+                        {
+                            min_translation = player.Left - tile.Right;
+                            position.X -= min_translation;
+                            velocity.X = 0;
+                        }
                         
-                        min_translation = player.Left - tile.Right;
-                        position.X -= min_translation;
-                        velocity.X = 0;
                     }
                 }
                 /* If player is colliding with bottom-left corner of tile*/
                 else if (xdiff >= 0 && ydiff <= 0)
                 {
 
-                    /* Implement this where the player hits the tile */
-                    if (mapTile.isBreakable)
+                    if (!mapTile.isBreakable)
                     {
-                        // TODO: Have the player phase through the tile when colliding from the bottom
-                    }
 
-                    /* If player's difference from left of tile is greater than difference from bottom of tile,
-                     * shift to the left*/
-                    if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Bottom - tile.Bottom))
-                    {
-                        min_translation = player.Right - tile.Left;
-                        position.X -= min_translation;
-                        velocity.X = 0;
-                        
-                    }
-                    /* If player's difference from left of tile is less than difference from bottom of tile,
-                     * shift downwards*/
-                    else
-                    {
-                        min_translation = player.Top - tile.Bottom;
-                        position.Y -= min_translation;
-                        velocity.Y = 0;
-                        
+                        /* If player's difference from left of tile is greater than difference from bottom of tile,
+                         * shift to the left*/
+                        if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Bottom - tile.Bottom))
+                        {
+                            min_translation = player.Right - tile.Left;
+                            position.X -= min_translation;
+                            velocity.X = 0;
+
+                        }
+                        /* If player's difference from left of tile is less than difference from bottom of tile,
+                         * shift downwards*/
+                        else
+                        {
+                            /* Implement this where the player hits the tile */
+                            min_translation = player.Top - tile.Bottom;
+                            position.Y -= min_translation;
+                            velocity.Y = 0;
+                            // TODO: Have the player phase through the tile when colliding from the bottom
+
+                        }
                     }
                 }
                 /* If player is colliding with bottom-right corner of tile*/
@@ -305,28 +317,27 @@ namespace Project2
 
 
                     /* Implement this where the player hits the tile */
-                    if (mapTile.isBreakable)
+                    if (!mapTile.isBreakable)
                     {
-                        // TODO: Have the player phase through the tile when colliding from the bottom
-                    }
+                        /* If player's difference from right of tile is greater than difference from bottom of tile,
+                        * shift to the right*/
+                        if (Math.Abs(player.Right - tile.Right) > Math.Abs(player.Bottom - tile.Bottom))
+                        {
 
-                    /* If player's difference from right of tile is greater than difference from bottom of tile,
-                     * shift to the right*/
-                    if (Math.Abs(player.Right - tile.Right) > Math.Abs(player.Bottom - tile.Bottom))
-                    {
-                        
-                        min_translation = player.Left - tile.Right;
-                        position.X -= min_translation;
-                        velocity.X = 0;
-                    }
-                    /* If player's difference from right of tile is smaller than difference from bottom of tile,
-                     * shift downwards*/
-                    else
-                    {
-                        min_translation = player.Top - tile.Bottom;
-                        position.Y -= min_translation;
-                        velocity.Y = 0;
-                        
+                            min_translation = player.Left - tile.Right;
+                            position.X -= min_translation;
+                            velocity.X = 0;
+                        }
+                        /* If player's difference from right of tile is smaller than difference from bottom of tile,
+                         * shift downwards*/
+                        else
+                        {
+                            min_translation = player.Top - tile.Bottom;
+                            position.Y -= min_translation;
+                            velocity.Y = 0;
+
+                        }
+                        // TODO: Have the player phase through the tile when colliding from the bottom
                     }
                 }
             }
