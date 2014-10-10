@@ -21,6 +21,13 @@ namespace Project2
        /* Player states and attributes */
         Texture2D playerTexture;
 
+       /* Use animation instead of texture*/
+        Animation idleAnimation;
+        Animation movingRightAnimation;
+        Animation movingLeftAnimation;
+        Animation deathAnimation;
+        Animation jumpingAnimation;
+
         public Boolean isFalling;
         public Boolean isOnPlatform;
         public Boolean isDead;
@@ -64,17 +71,28 @@ namespace Project2
             return new Vector2(mapWidth, mapHeight);
         }
 
-        public Player(int X, int Y, Texture2D playerTexture, Game1 g)
+        public Player(int X, int Y, Game1 g, Texture2D idleTexture, Texture2D moveRight, Texture2D moveLeft, Texture2D jump, Texture2D death)
         {
             lives = 3;
             isDead = false;
             game = g;
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
-            this.playerTexture = playerTexture;
+            playerTexture = idleTexture;
             isFalling = true;
             isOnPlatform = false;
             end = false;
+
+            Animation idleAnimation = new Animation();
+            Animation movingRightAnimation = new Animation();
+            Animation movingLeftAnimation = new Animation();
+            Animation deathAnimation = new Animation();
+            Animation jumpingAnimation = new Animation();
+            // Initialize Animations here
+            // Animation arguments -- Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount,
+            //int frametime, Color color, float scale, bool looping)
+
+            //playerAnimation.Initialize(playerTexture, Vector2.Zero, 32, 32, 
         }
 
         public void setXVelocity(float velocity)

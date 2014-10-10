@@ -65,7 +65,7 @@ namespace Project2
             }
 
             /* So the player will begin on top of the blocks*/
-            player = new Player(0, newView.Height - 3 * tileTexture.Height, playerTexture, game);
+            player = new Player(0, newView.Height - 3 * tileTexture.Height, game, playerTexture, null, null, null, null);
 
             player.setBoundaries(boundaries.x, boundaries.y);
             camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
