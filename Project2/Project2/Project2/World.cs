@@ -68,6 +68,7 @@ namespace Project2
             player = new Player(0, newView.Height - 3 * tileTexture.Height, playerTexture, game);
 
             player.setBoundaries(boundaries.x, boundaries.y);
+            camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
         }
 
         public void changeLevel()
@@ -110,6 +111,8 @@ namespace Project2
             UpdateCollisions();
             
             // Do stuff 
+
+            //camera.Limits = new Rectangle(0, 0, newView.X / 2, newView.Y / 2);
             camera.Update(gametime, player); //Update Camera
            
 
@@ -121,6 +124,7 @@ namespace Project2
             if (player.end)
             {
                 player.end = false;
+                camera.ResetCamera(); //Testing
                 mapTiles.Clear();
                 changeLevel();
             }

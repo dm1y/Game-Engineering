@@ -59,11 +59,12 @@ namespace Project2
             // Unnecessary Code 
             //gameWorld = new World(this); 
             //gameWorld.LoadContent(this.Content);
-
             camera = new Camera(this.graphics.GraphicsDevice.Viewport);
+            
 
             base.Initialize();
             startScreen = new StartScreen(this);
+            
             //StartGame();
 
             currentScreen = Screen.StartScreen;
@@ -150,7 +151,7 @@ namespace Project2
                 case Screen.World:
                     if (gameWorld != null)
                     {
-                        spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.transform);
+                        spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
                         gameWorld.Draw(spriteBatch);
                         spriteBatch.End();
                     }
@@ -168,6 +169,7 @@ namespace Project2
            // gameWorld = new World(this,viewPort);  //Added viewport //was GraphicsDevice.Viewport
 
             gameWorld = new World(this, camera);
+            
             gameWorld.LoadContent(this.Content);
 
             currentScreen = Screen.World;

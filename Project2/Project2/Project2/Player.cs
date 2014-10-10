@@ -30,7 +30,7 @@ namespace Project2
         public int lives;
 
        /* Player positions */
-        Vector2 spawnPosition;
+        public Vector2 spawnPosition;  //changed to public..might change back
         public Vector2 position;
 
         float max_x_velocity = 300;
