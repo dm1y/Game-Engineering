@@ -19,19 +19,23 @@ namespace Project2
         int mapHeight;
 
         /* Player states and attributes */
-        Texture2D playerTexture;
-
         /* Use animation instead of texture*/
-        Animation idleAnimation;
-        Animation movingRightAnimation;
-        Animation movingLeftAnimation;
+        Animation idleRight;
+        Animation idleLeft;
+        Animation moveRight;
+        Animation moveLeft;
+        Animation jumpRight;
+        Animation jumpLeft;
         Animation deathAnimation;
-        Animation jumpingAnimation;
+        public Boolean isFacingRight;
 
         public Boolean isFalling;
         public Boolean isOnPlatform;
         public Boolean isDead;
 
+        Boolean isMoving;
+        Boolean isIdle;
+        Boolean isJumping;
 
         /* Player lives. Can be moved to HUD class if we create one. */
         public int lives;
@@ -49,12 +53,12 @@ namespace Project2
 
         public int Width
         {
-            get { return playerTexture.Width; }
+            get { return idleRight.FrameWidth; }
         }
 
         public int Height
         {
-            get { return playerTexture.Height; }
+            get { return idleRight.FrameHeight; }
         }
 
         public Boolean end = false;
@@ -71,27 +75,34 @@ namespace Project2
             return new Vector2(mapWidth, mapHeight);
         }
 
-        public Player(int X, int Y, Game1 g, Texture2D idleTexture, Texture2D moveRight, Texture2D moveLeft, Texture2D jump, Texture2D death)
+        public Player(int X, int Y, Game1 g, Texture2D idleR, Texture2D idleL, Texture2D moveR, Texture2D moveL,
+            Texture2D jumpR, Texture2D jumpL, Texture2D death)
         {
             lives = 3;
             isDead = false;
             game = g;
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
-            playerTexture = idleTexture;
             isFalling = true;
             isOnPlatform = false;
             end = false;
 
-            Animation idleAnimation = new Animation();
-            Animation movingRightAnimation = new Animation();
-            Animation movingLeftAnimation = new Animation();
-            Animation deathAnimation = new Animation();
-            Animation jumpingAnimation = new Animation();
+            isFacingRight = true;
+
+            idleRight = new Animation();
+            idleLeft = new Animation();
+            moveRight = new Animation();
+            moveLeft = new Animation();
+            jumpRight = new Animation();
+            jumpLeft = new Animation();
+            deathAnimation = new Animation();
             // Initialize Animations here
             // Animation arguments -- Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount,
             //int frametime, Color color, float scale, bool looping)
-
+            idleRight.Initialize(idleR, Vector2.Zero, 64, 64, 2, 300, Color.White, 1, true);
+            idleLeft.Initialize(idleL, Vector2.Zero, 64, 64, 2, 300, Color.White, 1, true);
+            moveRight.Initialize(moveR, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true);
+            moveLeft.Initialize(moveL, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true);
             //playerAnimation.Initialize(playerTexture, Vector2.Zero, 32, 32, 
         }
 
@@ -104,9 +115,21 @@ namespace Project2
             this.velocity.Y = velocity;
         }
 
+        private void UpdateAnimations(GameTime gameTime)
+        {
+            idleLeft.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
+            idleRight.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
+            moveRight.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
+            moveLeft.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
+
+        }
         public void Update(GameTime gameTime, KeyboardState keyboard)
         {
             // Update:
+
+            /*update anim positions */
+            UpdateAnimations(gameTime);
+
             float time = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             if (!isOnPlatform)
@@ -127,6 +150,8 @@ namespace Project2
             if (velocity.X < 25 && velocity.X >= 0)
             {
                 velocity.X = 0;
+                isIdle = true;
+                isMoving = false;
             }
             if (velocity.X > 0)
             {
@@ -141,6 +166,8 @@ namespace Project2
             if (velocity.X < 25 && velocity.X >= 0)
             {
                 velocity.X = 0;
+                isIdle = true;
+                isMoving = false;
             }
 
 
@@ -148,6 +175,9 @@ namespace Project2
             {
                 if ((Math.Abs(velocity.X) < max_x_velocity))
                 {
+                    isMoving = true;
+                    isIdle = false;
+                    isFacingRight = true;
                     velocity.X += 50;
                 }
             }
@@ -156,6 +186,9 @@ namespace Project2
 
                 if ((Math.Abs(velocity.X) < max_x_velocity))
                 {
+                    isMoving= true;
+                    isIdle = false;
+                    isFacingRight = false;
                     velocity.X -= 50;
                 }
             }
@@ -186,13 +219,13 @@ namespace Project2
             if (position.X <= 0)
                 position.X = 0;
 
-            if (position.X >= mapWidth - playerTexture.Width)
-                position.X = mapWidth - playerTexture.Width;
+            if (position.X >= mapWidth - idleRight.FrameWidth)
+                position.X = mapWidth - idleRight.FrameWidth;
 
             if (position.Y <= 0)
                 position.Y = 0;
 
-            if (position.Y >= mapHeight - playerTexture.Height)
+            if (position.Y >= mapHeight - idleRight.FrameHeight)
             {
                 position.X = spawnPosition.X;
                 position.Y = spawnPosition.Y;
@@ -385,9 +418,32 @@ namespace Project2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(playerTexture, new Rectangle((int)position.X,
-                (int)position.Y,
-                playerTexture.Width, playerTexture.Height), Color.White);
+            if (isFacingRight)
+            {
+                if (isIdle)
+                {
+                    idleRight.Draw(spriteBatch);
+                }
+                if (isMoving)
+                {
+                    moveRight.Draw(spriteBatch);
+                }
+                //Draw animations right
+            }
+            else
+            {
+                if (isIdle)
+                {
+                    idleLeft.Draw(spriteBatch);
+                }
+                if (isMoving)
+                {
+                    moveLeft.Draw(spriteBatch);
+                }
+            }
+            //spriteBatch.Draw(playerTexture, new Rectangle((int)position.X,
+            //    (int)position.Y,
+            //    playerTexture.Width, playerTexture.Height), Color.White);
         }
 
     }

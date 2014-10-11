@@ -55,7 +55,7 @@ namespace Project2
         public void Initialize(Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount,
             int frametime, Color color, float scale, bool looping)
         {
-
+            Console.Write("\n is initialized \n");
             this.color = color;
             this.FrameWidth = frameWidth;
             this.FrameHeight = frameHeight;
@@ -75,8 +75,10 @@ namespace Project2
             Active = true;
         }
 
-        public void Update(GameTime gameTime)
+        public void Update(Vector2 position, GameTime gameTime)
         {
+
+            this.Position = position;
 
             if (Active == false)
                 return;

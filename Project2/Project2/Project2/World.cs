@@ -28,7 +28,14 @@ namespace Project2
 
         Viewport newView;
 
-        Texture2D playerTexture;
+        Texture2D playerIdleRight;
+        Texture2D playerIdleLeft;
+        Texture2D movingRightTexture;
+        Texture2D movingLeftTexture;
+        Texture2D jumpRight;
+        Texture2D jumpLeft;
+        Texture2D playerDeath;
+
         Texture2D tileTexture;
 
         List<MapTile> mapTiles;
@@ -47,9 +54,11 @@ namespace Project2
         public void LoadContent(ContentManager Content)
         {
 
-            playerTexture = Content.Load<Texture2D>("triangle");
+            playerIdleRight = Content.Load<Texture2D>("idleright2");
+            playerIdleLeft = Content.Load<Texture2D>("idleleft2");
             tileTexture = Content.Load<Texture2D>("cube");
-
+            movingRightTexture = Content.Load<Texture2D>("walkright2");
+            movingLeftTexture = Content.Load<Texture2D>("walkleft2");
             LoadMap(0);
         }
 
@@ -65,7 +74,8 @@ namespace Project2
             }
 
             /* So the player will begin on top of the blocks*/
-            player = new Player(0, newView.Height - 3 * tileTexture.Height, game, playerTexture, null, null, null, null);
+            player = new Player(0, newView.Height - 3 * tileTexture.Height, game,
+                playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, null);
 
             player.setBoundaries(boundaries.x, boundaries.y);
             camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
