@@ -249,7 +249,6 @@ namespace Project2
         {
             if (player.Intersects(tile))
             {
-                checkTile(mapTile);
 
                 int ydiff = (int)(tile.Y - player.Y);
                 int xdiff = (int)(tile.X - player.X);
@@ -263,7 +262,7 @@ namespace Project2
                 /* If player is colliding with the top left corner of tile*/
                 if (xdiff >= 0 && ydiff >= 0)
                 {
-
+                    checkTile(mapTile);
                     /* If player's difference from left of tile is greater than difference from top of tile,
                      * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Top - tile.Top))
@@ -304,7 +303,7 @@ namespace Project2
                 else if (xdiff <= 0 && ydiff >= 0)
                 {
 
-
+                    checkTile(mapTile);
                     /* If player's difference from right of tile is smaller than difference from top of tile,
                      * shift upwards*/
                     if (Math.Abs(player.Right - tile.Right) < Math.Abs(player.Top - tile.Top))
@@ -339,7 +338,7 @@ namespace Project2
                 /* If player is colliding with bottom-left corner of tile*/
                 else if (xdiff >= 0 && ydiff <= 0)
                 {
-
+                    checkTile(mapTile);
                     if (!mapTile.isBreakable)
                     {
 
@@ -369,7 +368,7 @@ namespace Project2
                 else if (xdiff <= 0 && ydiff <= 0)
                 {
 
-
+                    checkTile(mapTile);
                     /* Implement this where the player hits the tile */
                     if (!mapTile.isBreakable)
                     {
