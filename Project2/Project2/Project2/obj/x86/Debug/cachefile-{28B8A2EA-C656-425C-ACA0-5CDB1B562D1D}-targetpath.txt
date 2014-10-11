@@ -12,3 +12,7 @@ Content\LevelBoundary0.xnb
 Content\LevelBoundary1.xnb
 Content\LevelBoundary2.xnb
 Content\LevelTester2.xnb
+Content\idleleft2.xnb
+Content\idleright2.xnb
+Content\walkleft2.xnb
+Content\walkright2.xnb
