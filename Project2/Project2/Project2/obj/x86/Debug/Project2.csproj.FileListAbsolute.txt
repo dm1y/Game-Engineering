@@ -77,3 +77,7 @@ C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Pro
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\idleright2.xnb
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkleft2.xnb
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkright2.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\idleleft2.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\idleright2.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkleft2.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkright2.xnb
