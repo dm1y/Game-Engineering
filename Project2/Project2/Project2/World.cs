@@ -53,7 +53,7 @@ namespace Project2
 
         public void LoadContent(ContentManager Content)
         {
-
+            //Adding textures
             playerIdleRight = Content.Load<Texture2D>("idleright2");
             playerIdleLeft = Content.Load<Texture2D>("idleleft2");
             tileTexture = Content.Load<Texture2D>("cube");
