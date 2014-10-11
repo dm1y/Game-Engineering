@@ -45,11 +45,11 @@ namespace Project2
         public Vector2 position;
 
         float max_x_velocity = 300;
-        float max_y_velocity = 300;
+        float max_y_velocity = 1200;
 
         public Vector2 velocity;
         Vector2 slowdown = new Vector2(15, 0);
-        Vector2 gravity = new Vector2(0, 20);
+        Vector2 gravity = new Vector2(0, 25);
 
         public int Width
         {
@@ -285,6 +285,7 @@ namespace Project2
                         /* Implement this where the player hits the tile */
                         if (mapTile.isBouncy)
                         {
+                            velocity.Y = 0;
                             velocity.Y += -1000;
                         }
 
@@ -310,6 +311,7 @@ namespace Project2
                     {
                         if (mapTile.isBouncy)
                         {
+                            velocity.Y = 0;
                             velocity.Y += -1000;
                         }
                         else
