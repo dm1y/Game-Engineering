@@ -400,6 +400,7 @@ namespace Project2
         {
             if (mapTile.isCake)
             {
+                // TODO: Check transparency by checking alpha values.
                 end = true;
                 return;
             }
