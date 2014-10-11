@@ -222,8 +222,8 @@ namespace Project2
             if (position.X >= mapWidth - idleRight.FrameWidth)
                 position.X = mapWidth - idleRight.FrameWidth;
 
-            if (position.Y <= 0)
-                position.Y = 0;
+            //if (position.Y <= 0)
+                //position.Y = 0;
 
             if (position.Y >= mapHeight - idleRight.FrameHeight)
             {
