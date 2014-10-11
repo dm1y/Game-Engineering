@@ -201,7 +201,7 @@ namespace Project2
                 if (isOnPlatform)
                 {
 
-                    velocity.Y += -500;
+                    velocity.Y += -700;
                     isOnPlatform = false;
                 }
 
