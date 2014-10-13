@@ -30,7 +30,7 @@ public class LevelBuilder {
 
 		/* Ensures to fit the window size of 960 x 640 [CAPS] */
 		// int width = 29;
-		int height = 19;
+		int height = 9;
 
 		/* Used to actually give the positions of the map */
 		// int x_pos = 0;
