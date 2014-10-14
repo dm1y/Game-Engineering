@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\breakable.xnb</Output>
-      <Time>2014-10-14T13:35:07.2183332-07:00</Time>
+      <Time>2014-10-14T00:56:14.1448832-07:00</Time>
     </Item>
     <Item>
       <Source>unstable.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\unstable.xnb</Output>
-      <Time>2014-10-14T14:05:53.4608997-07:00</Time>
+      <Time>2014-10-14T00:56:14.1618844-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
