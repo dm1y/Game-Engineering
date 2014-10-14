@@ -56,12 +56,12 @@
       <Time>2014-10-11T11:04:52.0794169-07:00</Time>
     </Item>
     <Item>
-      <Source>passable.png</Source>
-      <Name>passable</Name>
+      <Source>breakable.png</Source>
+      <Name>breakable</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\passable.xnb</Output>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\breakable.xnb</Output>
       <Time>2014-10-11T11:04:35.9617095-07:00</Time>
     </Item>
     <Item>
@@ -110,13 +110,40 @@
       <Time>2014-10-11T10:45:46.7967307-07:00</Time>
     </Item>
     <Item>
+      <Source>background1.png</Source>
+      <Name>background1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background1.xnb</Output>
+      <Time>2014-10-13T22:20:32.4463977-07:00</Time>
+    </Item>
+    <Item>
+      <Source>background2.png</Source>
+      <Name>background2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background2.xnb</Output>
+      <Time>2014-10-13T22:20:32.4504004-07:00</Time>
+    </Item>
+    <Item>
+      <Source>unstable.png</Source>
+      <Name>unstable</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\unstable.xnb</Output>
+      <Time>2014-10-14T01:23:49.5734411-07:00</Time>
+    </Item>
+    <Item>
       <Source>LevelTester0.xml</Source>
       <Name>LevelTester0</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb</Output>
-      <Time>2014-10-11T11:37:30.2655013-07:00</Time>
+      <Time>2014-10-14T01:39:19.4888856-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester1.xml</Source>
@@ -125,7 +152,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb</Output>
-      <Time>2014-10-11T11:52:30.7387803-07:00</Time>
+      <Time>2014-10-14T01:40:26.1516383-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary0.xml</Source>
@@ -134,7 +161,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary0.xnb</Output>
-      <Time>2014-10-13T22:18:19.8780461-07:00</Time>
+      <Time>2014-10-13T23:44:51.3982913-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary1.xml</Source>
@@ -161,25 +188,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
-      <Time>2014-10-11T12:09:20.7133187-07:00</Time>
-    </Item>
-    <Item>
-      <Source>background1.png</Source>
-      <Name>background1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background1.xnb</Output>
-      <Time>2014-10-13T22:20:32.4463977-07:00</Time>
-    </Item>
-    <Item>
-      <Source>background2.png</Source>
-      <Name>background2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background2.xnb</Output>
-      <Time>2014-10-13T22:20:32.4504004-07:00</Time>
+      <Time>2014-10-14T01:41:09.0926869-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -196,7 +205,7 @@
     <Assemblies>
       <Assembly>
         <Key>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.dll</Key>
-        <Value>2014-10-13T22:18:04.7066145-07:00</Value>
+        <Value>2014-10-14T01:37:14.246189-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
