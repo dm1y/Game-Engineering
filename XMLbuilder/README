@@ -4,42 +4,55 @@ Additional stuff we do not need
 
 README 
 
-This is a very hard coded way to build an XML file from a text file. 
-This will probably only be used to create levels for our Project 2 only.  
+This program converts a text file into an XML file and is created in such 
+a way that it can only be used to create levels for our Project 2 only.  
 
-Note to group members: 
-Height of the game screen is 10 boxes so account for each line for the height.
-Width is 15, but you can exceed that to have the scroll effect. 
-Actually just double it by a lot. Build it so it actually looks like the level.
-(See below for more details).
+							--DIRECTIONS-- 
+To use, open the text file you want to convert. The program will output 
+the path in which the XML file is saved. Please read IMPORTANT NOTES  
+for directions on how to format the text file so the program will be 
+able to read and recognize the characters.  
 
-       ---------LEGEND --------
-       | x = normal blocks    | 
-       | c = cake             |
-       | t = trap blocks      |
-       | p = passable blocks  |
-       | d = bouncy blocks    |
-       ------------------------
+						 --IMPORTANT NOTES--
+Our current game window size is 960 x 640. The correlation of the 
+blocks/characters is 15 x 10 respectively, meaning that when creating 
+the width of the game, you would want to use multiples of 15 and that 
+you would want to keep the height to exactly 10 characters. 
 
-Any character not stated above represents a space.  
-We can also add more attributes later -- like moving platforms, visible/nonvisible 
-spikes/etc. 
+Use the legend below so you know which characters represent which 
+blocks. 
+				       ---------LEGEND --------
+       				   | x = normal blocks    | 
+       				   | c = cake             |
+			           | t = trap blocks      |			       
+       				   | p = passable blocks  |
+        			   | d = bouncy blocks    |
+       				   ------------------------
 
-Here is the current conversion from our tiles to our game window (width x height) : 
-                      (15 x 10) = 960 x 640. 
-If you want a bigger map, repeat it so the math will be simple for the setBoundaries method.
-Example: In the LevelTester2, I made it so it's (960*3 x 640).
-Or I can just tweak this code to account for the setBoundaries -- we'll discuss this later. 
+Any character not stated above represents a space. Please do not include 
+spaces in your text file as the program will not recognize a space is a space. 
 
-Example of the text file (15x10 -- standard game window size): 
+Example of the text file (15x10 -- 960 x 640 size): 
 
----------------
----------------
----------------
----------------
---------xxx----
---------x------
---------xpp----
---x-----x------
---x----dx-----c
-xxxxxxxxxxxxxtt
+0 ---------------
+1 ---------------
+2 ---------------
+3 ---------------
+4 --------xxx----
+5 --------x------
+6 --------xpp----
+7 --x-----x------
+8 --x----dx-----c
+9 xxxxxxxxxxxxxtt
+  012345678901234
+  					   --MORE NOTES ON THE MATH CONVERSION--
+As stated above,this is the current conversion from our tiles to our game window:
+							 (width x height) 
+				 characters/blocks     game window 
+                          (15 x 10) = (960 x 640) 
+                          
+If you want a bigger map, repeat the width so the math will be simple for the 
+setBoundaries method of the code.
+
+Example: In the LevelTester2, I made it so it's (960*5 x 640) so the maximum
+boundary size of the map is 4800 x 640.

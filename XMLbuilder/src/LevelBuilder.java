@@ -4,22 +4,26 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class LevelBuilder {
 
+	public LevelBuilder() {
+	}
+
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) throws NoSuchElementException {
+	@SuppressWarnings("resource")
+	public Path convertFile(File file) {
 
 		Scanner scan = null;
 
 		try {
-			scan = new Scanner(new File(args[0]));
+			scan = new Scanner(file);
 		} catch (FileNotFoundException e1) {
 			System.out.println("Error: File not found.");
 		}
@@ -94,5 +98,6 @@ public class LevelBuilder {
 			// e.printStackTrace();
 		}
 
+		return Paths.get("LevelOutput.XML");
 	}
 }
