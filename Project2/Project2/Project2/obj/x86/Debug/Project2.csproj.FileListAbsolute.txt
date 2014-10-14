@@ -45,7 +45,6 @@ C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Pro
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\WindowsGameLibrary1.dll
 C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\WindowsGameLibrary1.pdb
 C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\bounce.xnb
-C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\passable.xnb
 C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\trap.xnb
 C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb
 C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb
@@ -130,3 +129,7 @@ C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\WindowsGameLibrary1.pdb
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\breakable.xnb
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\unstable.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\tilebottom.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\breakable.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\unstable.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\leaves.xnb

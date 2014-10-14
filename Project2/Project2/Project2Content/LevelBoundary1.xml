@@ -5,5 +5,7 @@
     <x>4800</x>
     <y>640</y>
     <backgroundTexture>background2</backgroundTexture>
+    <hasTexture>true</hasTexture>
+    <texture>leaves</texture>
   </Asset>
 </XnaContent>

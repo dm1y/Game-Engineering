@@ -51,7 +51,7 @@ namespace Project2
             camera = c;
             newView = g.GraphicsDevice.Viewport;
             mapTiles = new List<MapTile>();
-            background = new ParallaxingBackground();
+            background = new ParallaxingBackground(g);
         }
 
         public void LoadContent(ContentManager Content)
@@ -71,8 +71,8 @@ namespace Project2
         {
             boundaries = game.Content.Load<LevelInfo>("LevelBoundary" + i);
 
-            //background.Initialize(game.Content.Load<Texture2D>(boundaries.backgroundTexture), 1,
-                //game.GraphicsDevice.Viewport.Width);
+            background.Initialize(game.Content.Load<Texture2D>(boundaries.backgroundTexture), 1,
+                boundaries.x, boundaries.texture, boundaries.hasTexture);
 
             MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
 
@@ -118,7 +118,7 @@ namespace Project2
 
         public void Update(GameTime gametime)
         {
-            //background.Update();
+            background.Update();
             //previousGamePadState = currentGamePadState;
             previousKeyboardState = currentKeyboardState;
 
@@ -204,7 +204,7 @@ namespace Project2
 
         public void Draw(SpriteBatch sb)
         {
-            //background.Draw(sb);
+            background.Draw(sb);
 
             foreach (MapTile tile in mapTiles)
             {
