@@ -99,10 +99,10 @@ namespace Project2
             // Initialize Animations here
             // Animation arguments -- Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount,
             //int frametime, Color color, float scale, bool looping)
-            idleRight.Initialize(idleR, Vector2.Zero, 64, 64, 2, 300, Color.White, 1, true);
-            idleLeft.Initialize(idleL, Vector2.Zero, 64, 64, 2, 300, Color.White, 1, true);
-            moveRight.Initialize(moveR, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true);
-            moveLeft.Initialize(moveL, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true);
+            idleRight.Initialize(idleR, Vector2.Zero, 64, 64, 2, 300, Color.White, 1, true, false);
+            idleLeft.Initialize(idleL, Vector2.Zero, 64, 64, 2, 300, Color.White, 1, true, false);
+            moveRight.Initialize(moveR, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true, false);
+            moveLeft.Initialize(moveL, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true, false);
             //playerAnimation.Initialize(playerTexture, Vector2.Zero, 32, 32, 
         }
 
@@ -247,7 +247,7 @@ namespace Project2
         //Check bug when player jumps first, then moves right/left. 
         public void CheckCollisionSide(Rectangle player, Rectangle tile, MapTile mapTile)
         {
-            if (player.Intersects(tile))
+            if (player.Intersects(tile) && mapTile.isActive)
             {
                 checkTile(mapTile);
 
@@ -259,10 +259,15 @@ namespace Project2
                 //if -x, -y - player is bottomright
                 //if +x, +y - player is topLeft
                 //if +x, -y - player is bottomleft
-
+                if (mapTile.isUnstable)
+                {
+                    mapTile.isActive = false;
+                    mapTile.PlayAnimationOnce();
+                }
                 /* If player is colliding with the top left corner of tile*/
                 if (xdiff >= 0 && ydiff >= 0)
                 {
+                    // Kills player, plays animation, if player's death animation is no longer active 
                     if (mapTile.isTrap)
                     {
                         position.X = spawnPosition.X;
@@ -272,13 +277,9 @@ namespace Project2
                      * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Top - tile.Top))
                     {
-                        if (!mapTile.isBreakable)
-                        {
                             min_translation = player.Right - tile.Left;
                             position.X -= min_translation;
                             velocity.X = 0;
-                        }
-
 
                     }
                     /* If player's difference from top of tile is greater than difference from left of tile,
@@ -341,21 +342,15 @@ namespace Project2
                      * shift to the right*/
                     else
                     {
-                        if (!mapTile.isBreakable)
-                        {
                             min_translation = player.Left - tile.Right;
                             position.X -= min_translation;
                             velocity.X = 0;
-                        }
 
                     }
                 }
                 /* If player is colliding with bottom-left corner of tile*/
                 else if (xdiff >= 0 && ydiff <= 0)
                 {
-                    if (!mapTile.isBreakable)
-                    {
-
                         /* If player's difference from left of tile is greater than difference from bottom of tile,
                          * shift to the left*/
                         if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Bottom - tile.Bottom))
@@ -370,20 +365,23 @@ namespace Project2
                         else
                         {
                             /* Implement this where the player hits the tile */
+                            if (mapTile.isBreakable)
+                            {
+                                mapTile.isActive = false;
+                                mapTile.PlayAnimationOnce();
+                            }
                             min_translation = player.Top - tile.Bottom;
                             position.Y -= min_translation;
                             velocity.Y = 0;
                             // TODO: Have the player phase through the tile when colliding from the bottom
 
                         }
-                    }
+                    
                 }
                 /* If player is colliding with bottom-right corner of tile*/
                 else if (xdiff <= 0 && ydiff <= 0)
                 {
                     /* Implement this where the player hits the tile */
-                    if (!mapTile.isBreakable)
-                    {
                         /* If player's difference from right of tile is greater than difference from bottom of tile,
                         * shift to the right*/
                         if (Math.Abs(player.Right - tile.Right) > Math.Abs(player.Bottom - tile.Bottom))
@@ -397,13 +395,19 @@ namespace Project2
                          * shift downwards*/
                         else
                         {
+                            if (mapTile.isBreakable)
+                            {
+                                mapTile.isActive = false;
+                                mapTile.PlayAnimationOnce();
+                            }
+
                             min_translation = player.Top - tile.Bottom;
                             position.Y -= min_translation;
                             velocity.Y = 0;
 
                         }
                         // TODO: Have the player phase through the tile when colliding from the bottom
-                    }
+
                 }
             }
         }

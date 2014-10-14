@@ -49,11 +49,13 @@ namespace Project2
         // Determines if the animation will keep playing or deactivate after one run
         public bool Looping;
 
+        public bool PlayFirstFrame;
+
         // Width of a given frame
         public Vector2 Position;
 
         public void Initialize(Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount,
-            int frametime, Color color, float scale, bool looping)
+            int frametime, Color color, float scale, bool looping, bool PlayFirstFrame )
         {
             this.color = color;
             this.FrameWidth = frameWidth;
@@ -61,6 +63,7 @@ namespace Project2
             this.frameCount = frameCount;
             this.frameTime = frametime;
             this.scale = scale;
+            this.PlayFirstFrame = PlayFirstFrame;
 
             Looping = looping;
             Position = position;
@@ -82,27 +85,37 @@ namespace Project2
             if (Active == false)
                 return;
 
+            // If block is not interactable, then it will always play the same frame
+            // if block IS interactable, play the first frame until it is touched, turn it off
             // Update the elapsed time
-            elapsedTime += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
-
-            // If the elapsed time is larger than the frame time
-            // we need to switch frames
-            if (elapsedTime > frameTime)
+            if (PlayFirstFrame)
             {
-                // Move to the next frame
-                currentFrame++;
+                currentFrame = 0;
+            }
 
-                // If the currentFrame is equal to frameCount reset currentFrame to zero
-                if (currentFrame == frameCount)
+            else
+            {
+                elapsedTime += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+                // If the elapsed time is larger than the frame time
+                // we need to switch frames
+                if (elapsedTime > frameTime)
                 {
-                    currentFrame = 0;
-                    // If we are not looping deactivate the animation
-                    if (Looping == false)
-                        Active = false;
-                }
+                    // Move to the next frame
+                    currentFrame++;
 
-                // Reset the elapsed time to zero
-                elapsedTime = 0;
+                    // If the currentFrame is equal to frameCount reset currentFrame to zero
+                    if (currentFrame == frameCount)
+                    {
+                        currentFrame = 0;
+                        // If we are not looping deactivate the animation
+                        if (Looping == false)
+                            Active = false;
+                    }
+
+                    // Reset the elapsed time to zero
+                    elapsedTime = 0;
+                }
             }
 
             // Grab the correct frame in the image strip by multiplying the currentFrame index by the frame width

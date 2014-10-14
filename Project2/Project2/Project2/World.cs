@@ -78,6 +78,7 @@ namespace Project2
 
             foreach (MapTileData d in data)
             {
+                // TODO: Add attribute for d.isUnstable to the second to last argument (placed before d.isCake) 
                 mapTiles.Add(new MapTile((int)d.mapPosition.X, (int)d.mapPosition.Y,
                     game.Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, d.isCake));
             }
@@ -140,6 +141,9 @@ namespace Project2
             if (currentKeyboardState.IsKeyDown(Keys.Escape))
                 game.Exit();
 
+            //TODO: If player is dead, reset the level. 
+            // ResetTiles();
+
             /* If player touches the cake, transition to new level / end the game */
             if (player.end)
             {
@@ -149,6 +153,18 @@ namespace Project2
                 changeLevel();
             }
 
+        }
+
+        public void ResetTiles()
+        {
+            foreach (MapTile tile in mapTiles)
+            {
+                if (tile.isActive == false)
+                {
+                    tile.isActive = true;
+                    tile.ResetAnimation();
+                }
+            }
         }
 
         public void UpdateCollisions()
