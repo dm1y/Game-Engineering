@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2014-10-11T10:45:46.7637087-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2014-09-28T12:11:16.3968255-07:00</Time>
     </Item>
     <Item>
       <Source>cube.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb</Output>
-      <Time>2014-10-11T11:04:41.0444547-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb</Output>
+      <Time>2014-10-14T00:56:14.1498851-07:00</Time>
     </Item>
     <Item>
       <Source>triangle.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb</Output>
-      <Time>2014-10-11T10:45:46.7917274-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb</Output>
+      <Time>2014-09-29T20:26:09.5917085-07:00</Time>
     </Item>
     <Item>
       <Source>cake.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cake.xnb</Output>
-      <Time>2014-10-11T11:04:46.9716104-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cake.xnb</Output>
+      <Time>2014-10-11T11:07:36.4781118-07:00</Time>
     </Item>
     <Item>
       <Source>startscreen.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\startscreen.xnb</Output>
-      <Time>2014-10-11T10:45:46.7887254-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\startscreen.xnb</Output>
+      <Time>2014-10-07T20:30:13.5929257-07:00</Time>
     </Item>
     <Item>
       <Source>bounce.png</Source>
@@ -52,17 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\bounce.xnb</Output>
-      <Time>2014-10-11T11:04:52.0794169-07:00</Time>
-    </Item>
-    <Item>
-      <Source>breakable.png</Source>
-      <Name>breakable</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\breakable.xnb</Output>
-      <Time>2014-10-11T11:04:35.9617095-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\bounce.xnb</Output>
+      <Time>2014-10-14T00:56:14.1399088-07:00</Time>
     </Item>
     <Item>
       <Source>trap.png</Source>
@@ -70,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\trap.xnb</Output>
-      <Time>2014-10-11T11:04:55.6393159-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\trap.xnb</Output>
+      <Time>2014-10-14T00:56:14.1548835-07:00</Time>
     </Item>
     <Item>
       <Source>idleleft2.png</Source>
@@ -79,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\idleleft2.xnb</Output>
-      <Time>2014-10-11T10:45:46.771714-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\idleleft2.xnb</Output>
+      <Time>2014-10-11T00:20:34.3356146-07:00</Time>
     </Item>
     <Item>
       <Source>idleright2.png</Source>
@@ -88,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\idleright2.xnb</Output>
-      <Time>2014-10-11T10:45:46.774716-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\idleright2.xnb</Output>
+      <Time>2014-10-11T00:20:34.3366153-07:00</Time>
     </Item>
     <Item>
       <Source>walkleft2.png</Source>
@@ -97,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkleft2.xnb</Output>
-      <Time>2014-10-11T10:45:46.7937287-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkleft2.xnb</Output>
+      <Time>2014-10-11T00:20:34.3466155-07:00</Time>
     </Item>
     <Item>
       <Source>walkright2.png</Source>
@@ -106,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkright2.xnb</Output>
-      <Time>2014-10-11T10:45:46.7967307-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\walkright2.xnb</Output>
+      <Time>2014-10-11T00:20:34.3486156-07:00</Time>
     </Item>
     <Item>
       <Source>background1.png</Source>
@@ -115,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background1.xnb</Output>
-      <Time>2014-10-13T22:20:32.4463977-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background1.xnb</Output>
+      <Time>2014-10-13T23:18:29.8211642-07:00</Time>
     </Item>
     <Item>
       <Source>background2.png</Source>
@@ -124,17 +115,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background2.xnb</Output>
-      <Time>2014-10-13T22:20:32.4504004-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background2.xnb</Output>
+      <Time>2014-10-13T23:18:29.8251614-07:00</Time>
     </Item>
     <Item>
-      <Source>unstable.png</Source>
-      <Name>unstable</Name>
+      <Source>tilebottom.png</Source>
+      <Name>tilebottom</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\unstable.xnb</Output>
-      <Time>2014-10-14T01:23:49.5734411-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\tilebottom.xnb</Output>
+      <Time>2014-10-14T00:56:14.134884-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester0.xml</Source>
@@ -142,8 +133,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb</Output>
-      <Time>2014-10-14T01:39:19.4888856-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb</Output>
+      <Time>2014-10-14T11:27:30.4811906-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester1.xml</Source>
@@ -151,8 +142,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb</Output>
-      <Time>2014-10-14T01:40:26.1516383-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb</Output>
+      <Time>2014-10-14T02:30:42.7994897-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary0.xml</Source>
@@ -160,8 +151,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary0.xnb</Output>
-      <Time>2014-10-13T23:44:51.3982913-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary0.xnb</Output>
+      <Time>2014-10-13T23:18:29.7961595-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary1.xml</Source>
@@ -169,8 +160,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary1.xnb</Output>
-      <Time>2014-10-13T22:18:35.0515036-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary1.xnb</Output>
+      <Time>2014-10-13T23:18:29.8011603-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary2.xml</Source>
@@ -178,8 +169,8 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary2.xnb</Output>
-      <Time>2014-10-13T22:18:42.9279315-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary2.xnb</Output>
+      <Time>2014-10-13T23:18:29.8091615-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester2.xml</Source>
@@ -187,8 +178,26 @@
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
-      <Time>2014-10-14T01:41:09.0926869-07:00</Time>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
+      <Time>2014-10-14T02:30:42.8184913-07:00</Time>
+    </Item>
+    <Item>
+      <Source>breakable.png</Source>
+      <Name>breakable</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\breakable.xnb</Output>
+      <Time>2014-10-14T00:56:14.1448832-07:00</Time>
+    </Item>
+    <Item>
+      <Source>unstable.png</Source>
+      <Name>unstable</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\unstable.xnb</Output>
+      <Time>2014-10-14T00:56:14.1618844-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -197,15 +206,15 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.dll</Key>
-        <Value>2014-10-14T01:37:14.246189-07:00</Value>
+        <Key>C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.dll</Key>
+        <Value>2014-10-14T02:30:43.2305147-07:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
@@ -232,8 +241,8 @@
         <Value>2011-09-01T16:22:30-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-08-20T19:48:32.1591695-07:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-09-28T12:43:42.961104-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

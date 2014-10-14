@@ -12,7 +12,7 @@ namespace Project2
     {
         Game game;
         
-        public Animation tileAnimation;
+        Animation tileAnimation;
         public Vector2 mapPositions;
         
         /* The different tile attributes */
@@ -37,8 +37,9 @@ namespace Project2
             Boolean breakable, Boolean trap, Boolean unstable, Boolean cake)
         {
             this.game = game;
-            mapPositions = new Vector2((X * Width), (game.GraphicsDevice.Viewport.Height 
-                - (Y * Height) - Height));
+            int dimension = tileTexture.Height;
+            mapPositions = new Vector2((X * dimension), (game.GraphicsDevice.Viewport.Height 
+                - (Y * dimension) - dimension));
             tileAnimation = new Animation();
             isBouncy = bounce;
             isBreakable = breakable;
@@ -46,33 +47,44 @@ namespace Project2
             isCake = cake;
             isActive = true;
 
+            Console.Write("\nMap Position: " + mapPositions);
             //Unstable tiles
             if (unstable)
             {
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1f, false, true);
+                //Console.Write("Unstable");
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1, false, true);
             }
 
             //Breakable tiles
             else if (breakable)
             {
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1f, false, true);
+                //Console.Write("Break");
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1, false, true);
 
             }
             //Bouncing tiles
             else if (isBouncy)
             {
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1f, true, false);
+                //Console.Write("Bounce");
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1, true, false);
 
             }
             //Normal tiles, trap tiles, and cake tiles only have one frame
             else
             {
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1f, true, false);
+                //Console.Write("NORM");
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1, true, false);
 
             }
             
         }
 
+        public void Update(GameTime gametime)
+        {
+            float animationFrameComp = Height / 2;
+            Vector2 scaledComp = new Vector2(animationFrameComp, animationFrameComp);
+            tileAnimation.Update(mapPositions + scaledComp, gametime);
+        }
         public void PlayAnimationOnce()
         {
             tileAnimation.PlayFirstFrame = false;

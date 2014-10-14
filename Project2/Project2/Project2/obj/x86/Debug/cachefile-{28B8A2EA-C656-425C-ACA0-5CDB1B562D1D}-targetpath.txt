@@ -4,7 +4,6 @@ Content\triangle.xnb
 Content\cake.xnb
 Content\startscreen.xnb
 Content\bounce.xnb
-Content\breakable.xnb
 Content\trap.xnb
 Content\idleleft2.xnb
 Content\idleright2.xnb
@@ -12,10 +11,12 @@ Content\walkleft2.xnb
 Content\walkright2.xnb
 Content\background1.xnb
 Content\background2.xnb
-Content\unstable.xnb
+Content\tilebottom.xnb
 Content\LevelTester0.xnb
 Content\LevelTester1.xnb
 Content\LevelBoundary0.xnb
 Content\LevelBoundary1.xnb
 Content\LevelBoundary2.xnb
 Content\LevelTester2.xnb
+Content\breakable.xnb
+Content\unstable.xnb

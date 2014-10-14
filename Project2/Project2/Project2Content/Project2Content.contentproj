@@ -89,11 +89,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="breakable.png">
-      <Name>breakable</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="trap.png">
       <Name>trap</Name>
       <Importer>TextureImporter</Importer>
@@ -163,6 +158,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="tilebottom.png">
+      <Name>tilebottom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="breakable.png">
+      <Name>breakable</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
     <Compile Include="unstable.png">
       <Name>unstable</Name>
       <Importer>TextureImporter</Importer>

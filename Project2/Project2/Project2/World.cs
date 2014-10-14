@@ -119,7 +119,6 @@ namespace Project2
         public void Update(GameTime gametime)
         {
             //background.Update();
-
             //previousGamePadState = currentGamePadState;
             previousKeyboardState = currentKeyboardState;
 
@@ -127,7 +126,10 @@ namespace Project2
             currentKeyboardState = Keyboard.GetState();
             //currentGamePadState = GamePad.GetState(PlayerIndex.One);
 
-
+            foreach (MapTile tile in mapTiles)
+            {
+                tile.Update(gametime);
+            }
             player.Update(gametime, currentKeyboardState);
             UpdateCollisions();
 

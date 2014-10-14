@@ -261,6 +261,7 @@ namespace Project2
                 //if +x, -y - player is bottomleft
                 if (mapTile.isUnstable)
                 {
+                    Console.Write("Unstable collision");
                     mapTile.isActive = false;
                     mapTile.PlayAnimationOnce();
                 }
