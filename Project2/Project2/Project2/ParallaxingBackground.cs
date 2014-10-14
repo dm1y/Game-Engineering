@@ -62,7 +62,7 @@ namespace Project2
 
                 // Divide the screen width by the texture width to determine the number of tiles necessary.
                 // Add 1 so there won't be a gap in the tiling
-                background_Pos = new Vector2[screenWidth / texture.Width];
+                background_Pos = new Vector2[screenWidth / texture.Width + 1];
 
                 // Sets the first positions of the parallaxing background
                 for (int i = 0; i < background_Pos.Length; i++)

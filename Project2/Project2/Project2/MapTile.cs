@@ -44,22 +44,23 @@ namespace Project2
             isBouncy = bounce;
             isBreakable = breakable;
             isTrap = trap;
+            isUnstable = unstable;
             isCake = cake;
             isActive = true;
 
-            Console.Write("\nMap Position: " + mapPositions);
+            //Console.Write("\nMap Position: " + mapPositions);
             //Unstable tiles
             if (unstable)
             {
                 //Console.Write("Unstable");
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1, false, true);
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 32, 70, Color.White, 1, false, true);
             }
 
             //Breakable tiles
             else if (breakable)
             {
                 //Console.Write("Break");
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1, false, true);
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 8, 70, Color.White, 1, false, true);
 
             }
             //Bouncing tiles

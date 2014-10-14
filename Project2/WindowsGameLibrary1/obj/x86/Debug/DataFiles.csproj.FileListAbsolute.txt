@@ -28,3 +28,9 @@ C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\Windows
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.dll
 C:\Users\willi_000\Documents\GitHub\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.pdb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.dll
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.pdb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\DataFiles.csprojResolveAssemblyReference.cache
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.dll
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.pdb
