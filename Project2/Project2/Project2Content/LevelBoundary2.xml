@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
   <!-- TODO: replace this Asset with your own XML asset data. -->
-  <Asset Type="Project2.Boundaries">
+  <Asset Type="Project2.LevelInfo">
     <x>4800</x>
     <y>640</y>
+    <backgroundTexture>background1</backgroundTexture>
   </Asset>
 </XnaContent>

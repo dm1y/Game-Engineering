@@ -16,10 +16,14 @@ namespace Project2
         // Background movement speed
         public int background_speed { set; get; }
 
-        public void Initialize(ContentManager content, String texturePath, int screenWidth, int speed)
+        public ParallaxingBackground()
+        {
+        }
+
+        public void Initialize(Texture2D texture, int speed, int screenWidth)
         {
             // Loads the background texture 
-            texture = content.Load<Texture2D>(texturePath);
+            this.texture = texture;
 
             this.background_speed = speed;
 
@@ -29,9 +33,9 @@ namespace Project2
 
             // Sets the first positions of the parallaxing background
             for (int i = 0; i < background_Pos.Length; i++)
-            {
+           {
                 //  Tiles need to be side by side in order to create a tiling effect
-                background_Pos[i] = new Vector2(i * texture.Width, -32);
+                background_Pos[i] = new Vector2(i * texture.Width, 0);
             }
         }
 
@@ -46,8 +50,8 @@ namespace Project2
                 if (background_speed <= 0)
                 {
                     // See if the texture is out of view and put that texture at the end of the screen
-                    if (background_Pos[i].X <= -texture.Width)
-                    {
+                   if (background_Pos[i].X <= -texture.Width)
+                   {
                         background_Pos[i].X = texture.Width * (background_Pos.Length - 1);
                     }
                 }

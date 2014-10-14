@@ -41,7 +41,9 @@ namespace Project2
         List<MapTile> mapTiles;
         int level_counter = 0;
 
-        public Boundaries boundaries { get; private set; }
+        public LevelInfo boundaries { get; private set; }
+
+        public ParallaxingBackground background; 
 
         public World(Game1 g, Camera c)
         {
@@ -49,6 +51,7 @@ namespace Project2
             camera = c;
             newView = g.GraphicsDevice.Viewport;
             mapTiles = new List<MapTile>();
+            background = new ParallaxingBackground();
         }
 
         public void LoadContent(ContentManager Content)
@@ -59,13 +62,19 @@ namespace Project2
             tileTexture = Content.Load<Texture2D>("cube");
             movingRightTexture = Content.Load<Texture2D>("walkright2");
             movingLeftTexture = Content.Load<Texture2D>("walkleft2");
+
+
             LoadMap(0);
         }
 
         public void LoadMap(int i)
         {
+            boundaries = game.Content.Load<LevelInfo>("LevelBoundary" + i);
+
+            //background.Initialize(game.Content.Load<Texture2D>(boundaries.backgroundTexture), 1,
+                //game.GraphicsDevice.Viewport.Width);
+
             MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
-            boundaries = game.Content.Load<Boundaries>("LevelBoundary" + i);
 
             foreach (MapTileData d in data)
             {
@@ -108,6 +117,7 @@ namespace Project2
 
         public void Update(GameTime gametime)
         {
+            //background.Update();
 
             //previousGamePadState = currentGamePadState;
             previousKeyboardState = currentKeyboardState;
@@ -152,8 +162,8 @@ namespace Project2
             foreach (MapTile tile in mapTiles)
             {
                 terrainHitBox = new Rectangle((int)(tile.mapPositions.X),
-                      (int)tile.mapPositions.Y,
-                    tile.Width, tile.Height);
+                      (int)tile.mapPositions.Y, tile.Width, tile.Height);
+
                 playerHitBox = player.getHitBox();
 
                 player.CheckCollisionSide(playerHitBox, terrainHitBox, tile);
@@ -164,6 +174,8 @@ namespace Project2
 
         public void Draw(SpriteBatch sb)
         {
+            //background.Draw(sb);
+
             foreach (MapTile tile in mapTiles)
             {
                 //Console.Write("drawing");
