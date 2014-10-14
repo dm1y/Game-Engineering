@@ -16,7 +16,6 @@ namespace Project2
         Vector2 playerPositionInWorldSpace;
         Vector2 boundaries;
 
-
         public Camera(Viewport newView)
         {
             view = newView;
@@ -105,14 +104,16 @@ namespace Project2
 
             playerPositionInWorldSpace = player.position;
 
+            center = new Vector2(playerPositionInWorldSpace.X - view.Width / 2, playerPositionInWorldSpace.Y - view.Height / 2);  
+
+            
             if (view.Width < boundaries.X)
             {
                 if (playerPositionInWorldSpace.X >= view.Width / 2)
                 {
-                    if (playerPositionInWorldSpace.X <= boundaries.X - view.Width)
+                    if (center.X < boundaries.X - view.Width)
                     {
-                        Position = playerPositionInWorldSpace * new Vector2(2, 0);
-                        //LookAt(playerPositionInWorldSpace * new Vector2(2,0));
+                        Position = center * new Vector2(2, 0);
                     }
                 }
                 else if (playerPositionInWorldSpace.Y <= boundaries.Y)

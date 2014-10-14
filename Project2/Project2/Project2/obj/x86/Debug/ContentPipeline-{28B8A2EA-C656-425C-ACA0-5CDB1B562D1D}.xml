@@ -116,7 +116,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb</Output>
-      <Time>2014-10-11T10:45:46.7567052-07:00</Time>
+      <Time>2014-10-11T11:37:30.2655013-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester1.xml</Source>
@@ -125,7 +125,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb</Output>
-      <Time>2014-10-11T10:45:46.7577054-07:00</Time>
+      <Time>2014-10-11T11:52:30.7387803-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary0.xml</Source>
@@ -134,7 +134,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary0.xnb</Output>
-      <Time>2014-10-11T11:05:34.6614328-07:00</Time>
+      <Time>2014-10-11T11:31:41.5306444-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary1.xml</Source>
@@ -143,7 +143,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary1.xnb</Output>
-      <Time>2014-10-11T11:05:04.1315819-07:00</Time>
+      <Time>2014-10-11T11:57:47.1801808-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary2.xml</Source>
@@ -152,7 +152,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary2.xnb</Output>
-      <Time>2014-10-11T11:05:08.8908499-07:00</Time>
+      <Time>2014-10-11T12:06:19.7197672-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester2.xml</Source>
@@ -161,7 +161,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
-      <Time>2014-10-11T10:45:46.7597072-07:00</Time>
+      <Time>2014-10-11T12:09:20.7133187-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
