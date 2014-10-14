@@ -46,7 +46,6 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
 public class GUI extends JPanel implements ActionListener {
-	static private final String newline = "\n";
 	JButton openButton, exitButton;
 	JTextArea log;
 	JFileChooser fc;
@@ -62,7 +61,7 @@ public class GUI extends JPanel implements ActionListener {
 		log.setMargin(new Insets(5, 5, 5, 5));
 		log.setEditable(false);
 
-		log.append("Note: Please be sure to convert a text file that is formatted like in the README.");
+		log.append("Note: Please be sure to convert a text file that is formatted like in the README. \n");
 		JScrollPane logScrollPane = new JScrollPane(log);
 
 		// Create a file chooser
@@ -120,10 +119,10 @@ public class GUI extends JPanel implements ActionListener {
 							+ path.toAbsolutePath() + "\n");
 				} else {
 					log.append("ERROR: " + file.getName()
-							+ " is not a .txt file.");
+							+ " is not a .txt file. \n");
 				}
 			} else {
-				log.append("Open command cancelled by user." + newline);
+				log.append("Open command cancelled by user. \n");
 			}
 			log.setCaretPosition(log.getDocument().getLength());
 		}
@@ -168,4 +167,5 @@ public class GUI extends JPanel implements ActionListener {
 			}
 		});
 	}
+
 }
