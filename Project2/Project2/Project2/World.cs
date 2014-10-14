@@ -77,10 +77,10 @@ namespace Project2
             MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
 
             foreach (MapTileData d in data)
-            {
-                // TODO: Add attribute for d.isUnstable to the second to last argument (placed before d.isCake) 
+            { 
                 mapTiles.Add(new MapTile((int)d.mapPosition.X, (int)d.mapPosition.Y,
-                    game.Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, d.isCake));
+                    game.Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, 
+                    d.isUnstable, d.isCake));
             }
 
             /* So the player will begin on top of the blocks*/
@@ -133,9 +133,7 @@ namespace Project2
 
             // Do stuff 
 
-            //camera.Limits = new Rectangle(0, 0, newView.X / 2, newView.Y / 2);
             camera.Update(gametime, player); //Update Camera
-
 
             // For convenience when testing, press [ESC] key to leave the game 
             if (currentKeyboardState.IsKeyDown(Keys.Escape))
@@ -143,6 +141,19 @@ namespace Project2
 
             //TODO: If player is dead, reset the level. 
             // ResetTiles();
+            /* In response to the above: Instead of the above since we have not
+             * created checkpoints, just call loadMap to reload the current level. 
+             * Example pseudo code: 
+             * if (player is dead) {
+             *  // set player is dead to false 
+             *  // play dead animation sequence if applicable 
+             *  // reset the camera with camera.ResetCamera();
+             *  // clear the current tiles with mapTiles.Clear();
+             *  // and reload the current map with LoadMap(level_counter);
+             * }
+             *      
+             * 
+             * */
 
             /* If player touches the cake, transition to new level / end the game */
             if (player.end)
@@ -155,6 +166,7 @@ namespace Project2
 
         }
 
+        /* This function isn't necessary if we're resetting the entire level instead of just the tile */
         public void ResetTiles()
         {
             foreach (MapTile tile in mapTiles)

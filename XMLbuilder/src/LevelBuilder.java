@@ -81,6 +81,8 @@ public class LevelBuilder {
 							+ "</isBouncy>");
 					writer.println("      <isBreakable>" + t.isBreakable
 							+ "</isBreakable>");
+					writer.println("      <isUnstable>" + t.isUnstable
+							+ "</isUnstable>");
 					writer.println("      <isCake>" + t.isCake + "</isCake>");
 					writer.println("      <mapPosition>" + t.xpos + " "
 							+ t.ypos + "</mapPosition>");

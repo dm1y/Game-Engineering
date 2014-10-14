@@ -5,6 +5,7 @@ public class Tile {
 	String isTrap;
 	String isBouncy;
 	String isBreakable;
+	String isUnstable;
 	String isCake;
 
 	/* Do not touch this part */
@@ -22,8 +23,8 @@ public class Tile {
 	public Tile(String x) {
 
 		/* Tweak this if you make changes */
-		if (x.equals("x") || x.equals("t") || x.equals("d") || x.equals("c")
-				|| x.equals("p")) {
+		if (x.equals("x") || x.equals("t") || x.equals("b") || x.equals("c")
+				|| x.equals("o") || x.equals("u")) {
 
 			/* Makes sure tile is viewed as a tile */
 			isTile = true;
@@ -35,15 +36,17 @@ public class Tile {
 				isBouncy = "false";
 				isBreakable = "false";
 				isCake = "false";
+				isUnstable = "false";
 			}
 
 			// If it is a bouncy tile
-			else if (x.equals("d")) {
+			else if (x.equals("b")) {
 				tileTexture = "bounce";
 				isTrap = "false";
 				isBouncy = "true";
 				isBreakable = "false";
 				isCake = "false";
+				isUnstable = "false";
 			}
 
 			// If it is a trap tile
@@ -53,23 +56,37 @@ public class Tile {
 				isBouncy = "false";
 				isBreakable = "false";
 				isCake = "false";
+				isUnstable = "false";
 			}
 
-			// If it is a passable tile
-			else if (x.equals("p")) {
-				tileTexture = "passable";
+			// If it is a breakable tile
+			else if (x.equals("o")) {
+				tileTexture = "breakable";
 				isTrap = "false";
 				isBouncy = "false";
 				isBreakable = "true";
 				isCake = "false";
+				isUnstable = "false";
 			}
 
+			// if it is a cake
 			else if (x.equals("c")) {
 				tileTexture = "cake";
 				isTrap = "false";
 				isBouncy = "false";
 				isBreakable = "false";
 				isCake = "true";
+				isUnstable = "false";
+			}
+
+			// if it is an unstable tile
+			else if (x.equals("u")) {
+				tileTexture = "unstable";
+				isTrap = "false";
+				isBouncy = "false";
+				isBreakable = "false";
+				isCake = "false";
+				isUnstable = "true";
 			}
 
 		} else {

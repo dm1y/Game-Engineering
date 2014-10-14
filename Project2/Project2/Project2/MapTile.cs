@@ -19,7 +19,6 @@ namespace Project2
         public Boolean isTrap;
         public Boolean isBouncy;
         public Boolean isBreakable;
-        //ADD BELOW TO XMLS//
         public Boolean isUnstable;
         public Boolean isCake;
         public Boolean isActive;
@@ -46,11 +45,13 @@ namespace Project2
             isTrap = trap;
             isCake = cake;
             isActive = true;
+
             //Unstable tiles
             if (unstable)
             {
                 tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1f, false, true);
             }
+
             //Breakable tiles
             else if (breakable)
             {

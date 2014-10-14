@@ -24,6 +24,7 @@ namespace Project2
         public Boolean isTrap;
         public Boolean isBouncy;
         public Boolean isBreakable;
+        public Boolean isUnstable;
         public Boolean isCake;
         public Vector2 mapPosition;
     }

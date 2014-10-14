@@ -40,9 +40,9 @@ Example of the text file (15x10 -- 960 x 640 size):
 3 ---------------
 4 --------xxx----
 5 --------x------
-6 --------xpp----
+6 --------xoo----
 7 --x-----x------
-8 --x----dx-----c
+8 --x----bx-----c
 9 xxxxxxxxxxxxxtt
   012345678901234
   
@@ -55,5 +55,5 @@ As stated above, this is the current conversion from our tiles to our game windo
 If you want a bigger map, repeat the width so the math will be simple for the 
 setBoundaries method of the code.
 
-Example: In the LevelTester2, I made it so it's (960*5 x 640) so the maximum
-boundary size of the map is 4800 x 640.
+Example: In the LevelTester2 in Project 2, I made it so it's (960*5 x 640) so 
+the maximum boundary size of the map is 4800 x 640.
