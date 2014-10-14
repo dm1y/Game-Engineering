@@ -21,7 +21,7 @@ public class LevelBuilder {
 		try {
 			scan = new Scanner(new File(args[0]));
 		} catch (FileNotFoundException e1) {
-			System.out.println("What the fuck did you do?");
+			System.out.println("Error: File not found.");
 		}
 
 		/* Data structures used to make things work */
