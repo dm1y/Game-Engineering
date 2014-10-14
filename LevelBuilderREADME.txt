@@ -32,19 +32,33 @@ blocks.
 Any character not stated above represents a space. Please do not include 
 spaces in your text file as the program will not recognize a space is a space. 
 
-Example of the text file (15x10 -- 960 x 640 size): 
+For the very first lines of the text file, include the tile names for the 
+texture following in this order: 
+normal blocks
+bounce blocks
+trap blocks
+breakable blocks
+unstable blocks
+cake blocks
 
-0 ---------------
-1 ---------------
-2 ---------------
-3 ---------------
-4 --------xxx----
-5 --------x------
-6 --------xoo----
-7 --x-----x------
-8 --x----bx-----c
-9 xxxxxxxxxxxxxtt
-  012345678901234
+Example of the text file (15x10 -- 960 x 640 size):
+ 
+cube
+bounce
+trap
+breakable
+unstable
+cake
+---------------
+---------------
+---------------
+---------------
+--------xxxu---
+--------x------
+--------xbb----
+--x-----x------
+--x----dx-----c
+xxxxxxxxxxxxxtt
   
   		  --MORE NOTES ON THE MATH CONVERSION--
 As stated above, this is the current conversion from our tiles to our game window:

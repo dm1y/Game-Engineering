@@ -32,6 +32,13 @@ public class LevelBuilder {
 		ArrayList<Tile> data = new ArrayList<>();
 		String line = null;
 
+		String cube = scan.nextLine();
+		String bounce = scan.nextLine();
+		String trap = scan.nextLine();
+		String br = scan.nextLine();
+		String unstable = scan.nextLine();
+		String cake = scan.nextLine();
+
 		/* Ensures to fit the window size of 960 x 640 [CAPS] */
 		int height = 9;
 		// int width = 14;
@@ -44,7 +51,8 @@ public class LevelBuilder {
 			for (int k = 0; k < line.length(); k++) {
 				String temp = "";
 				temp += line.charAt(k);
-				Tile tile = new Tile(temp);
+				Tile tile = new Tile(temp, cube, bounce, trap, br, unstable,
+						cake);
 				if (tile.isTile) {
 					tile.setCoordinates(k, j);
 				}

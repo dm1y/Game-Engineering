@@ -20,7 +20,9 @@ public class Tile {
 	}
 
 	/* Used to create each tile */
-	public Tile(String x) {
+	public Tile(String x, String cubeTexture, String bounceTexture,
+			String trapTexture, String breakableTexture,
+			String unstableTexture, String cakeTexture) {
 
 		/* Tweak this if you make changes */
 		if (x.equals("x") || x.equals("t") || x.equals("b") || x.equals("c")
@@ -31,7 +33,7 @@ public class Tile {
 
 			// If it is a normal tile
 			if (x.equals("x")) {
-				tileTexture = "cube";
+				tileTexture = cubeTexture;
 				isTrap = "false";
 				isBouncy = "false";
 				isBreakable = "false";
@@ -41,7 +43,7 @@ public class Tile {
 
 			// If it is a bouncy tile
 			else if (x.equals("b")) {
-				tileTexture = "bounce";
+				tileTexture = bounceTexture;
 				isTrap = "false";
 				isBouncy = "true";
 				isBreakable = "false";
@@ -51,7 +53,7 @@ public class Tile {
 
 			// If it is a trap tile
 			else if (x.equals("t")) {
-				tileTexture = "trap";
+				tileTexture = trapTexture;
 				isTrap = "true";
 				isBouncy = "false";
 				isBreakable = "false";
@@ -61,7 +63,7 @@ public class Tile {
 
 			// If it is a breakable tile
 			else if (x.equals("o")) {
-				tileTexture = "breakable";
+				tileTexture = breakableTexture;
 				isTrap = "false";
 				isBouncy = "false";
 				isBreakable = "true";
@@ -71,7 +73,7 @@ public class Tile {
 
 			// if it is a cake
 			else if (x.equals("c")) {
-				tileTexture = "cake";
+				tileTexture = cakeTexture;
 				isTrap = "false";
 				isBouncy = "false";
 				isBreakable = "false";
@@ -81,7 +83,7 @@ public class Tile {
 
 			// if it is an unstable tile
 			else if (x.equals("u")) {
-				tileTexture = "unstable";
+				tileTexture = unstableTexture;
 				isTrap = "false";
 				isBouncy = "false";
 				isBreakable = "false";
