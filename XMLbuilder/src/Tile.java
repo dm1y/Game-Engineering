@@ -1,22 +1,31 @@
 public class Tile {
 
+	/* Feel free to change this, but stay consistent in LevelBuilder */
 	String tileTexture;
 	String isTrap;
 	String isBouncy;
 	String isBreakable;
 	String isCake;
+
+	/* Do not touch this part */
 	int xpos;
 	int ypos;
 	boolean isTile;
 
+	/* Sets the x, y positions to the correct spot on the map */
 	public void setCoordinates(int x, int y) {
 		xpos = x;
 		ypos = y;
 	}
 
+	/* Used to create each tile */
 	public Tile(String x) {
+
+		/* Tweak this if you make changes */
 		if (x.equals("x") || x.equals("t") || x.equals("d") || x.equals("c")
 				|| x.equals("p")) {
+
+			/* Makes sure tile is viewed as a tile */
 			isTile = true;
 
 			// If it is a normal tile
@@ -62,7 +71,9 @@ public class Tile {
 				isBreakable = "false";
 				isCake = "true";
 			}
+
 		} else {
+			/* It is not a tile so information will not get printed */
 			isTile = false;
 		}
 	}

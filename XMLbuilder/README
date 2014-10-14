@@ -8,8 +8,8 @@ This is a very hard coded way to build an XML file from a text file.
 This will probably only be used to create levels for our Project 2 only.  
 
 Note to group members: 
-Height of the game screen is 20 boxes so account for each line for the height.
-Width is 30, but you can exceed that to have the scroll effect. 
+Height of the game screen is 10 boxes so account for each line for the height.
+Width is 15, but you can exceed that to have the scroll effect. 
 Actually just double it by a lot. Build it so it actually looks like the level.
 (See below for more details).
 
@@ -26,38 +26,20 @@ We can also add more attributes later -- like moving platforms, visible/nonvisib
 spikes/etc. 
 
 Here is the current conversion from our tiles to our game window (width x height) : 
-                      (30 x 20) = 960 x 640. 
+                      (15 x 10) = 960 x 640. 
 If you want a bigger map, repeat it so the math will be simple for the setBoundaries method.
 Example: In the LevelTester2, I made it so it's (960*3 x 640).
 Or I can just tweak this code to account for the setBoundaries -- we'll discuss this later. 
 
-Example of the text file (30x20 -- standard game window size): 
+Example of the text file (15x10 -- standard game window size): 
 
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
-------------------------------
----------------------pp-------
---------------pp--------------
---------xxxx-------------pp---
---------xx----------pp--------
--------dxx-----------------c--
-xxxxxxxxxxxxx--xxttxxxxxxxxxxx
-xxxxxxxxxxxxx--xxxxxxxxxxxxxxx
-xxxxxxxxxxxxx--xxxxxxxxxxxxxxx
-
-More examples: 
-test.txt for the input file (30*3 x 20 aka 960*3 x 640)
-LevelOutput.XML for the generated XML file. 
-
-UPDATED: 
-For the new program, resolution is 15 x 10. 
-So 15 tiles = 960 pixels and 10 tiles = 640 pixels.
+---------------
+---------------
+---------------
+---------------
+--------xxx----
+--------x------
+--------xpp----
+--x-----x------
+--x----dx-----c
+xxxxxxxxxxxxxtt

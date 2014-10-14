@@ -21,7 +21,7 @@ public class LevelBuilder {
 		try {
 			scan = new Scanner(new File(args[0]));
 		} catch (FileNotFoundException e1) {
-			System.out.println("Error: File not found.");
+			System.out.println("What the fuck did you do?");
 		}
 
 		/* Data structures used to make things work */
@@ -29,17 +29,12 @@ public class LevelBuilder {
 		String line = null;
 
 		/* Ensures to fit the window size of 960 x 640 [CAPS] */
-		// int width = 29;
 		int height = 9;
+		// int width = 14;
 
-		/* Used to actually give the positions of the map */
-		// int x_pos = 0;
-		// int y_pos = 0;
-
-		/* Counter to begin from the bottom of the map */
-		// int i = 0;
 		int j = height;
 
+		/* Do not tweak this */
 		while (scan.hasNextLine()) {
 			line = scan.nextLine();
 			for (int k = 0; k < line.length(); k++) {
@@ -54,8 +49,11 @@ public class LevelBuilder {
 			j--;
 		}
 
+		/* Prints everything out */
 		try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(
 				Paths.get("LevelOutput.XML"), Charset.forName("UTF-8")))) {
+
+			/* Header */
 			writer.println("<?xml version=" + "\"1.0\"" + " encoding="
 					+ "\"utf-8\"" + " ?>");
 			writer.println("<XnaContent>");
@@ -67,6 +65,11 @@ public class LevelBuilder {
 
 				if (t.isTile) {
 					writer.println("    <Item>");
+
+					/*
+					 * Feel free to change the names of tileTexture/etc but make
+					 * sure you stay consistent in closing the tags
+					 */
 					writer.println("      <tileTexture>" + t.tileTexture
 							+ "</tileTexture>");
 					writer.println("      <isTrap>" + t.isTrap + "</isTrap>");
@@ -77,10 +80,13 @@ public class LevelBuilder {
 					writer.println("      <isCake>" + t.isCake + "</isCake>");
 					writer.println("      <mapPosition>" + t.xpos + " "
 							+ t.ypos + "</mapPosition>");
+
+					/* End tag to categorize each item */
 					writer.println("    </Item>");
 				}
 			}
 
+			/* End header */
 			writer.println("  </Asset>");
 			writer.println("</XnaContent>");
 		} catch (IOException e) {
