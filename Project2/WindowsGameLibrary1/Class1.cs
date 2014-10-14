@@ -16,6 +16,8 @@ namespace Project2
         public int x;
         public int y;
         public String backgroundTexture;
+        public Boolean hasTexture;
+        public String texture;
     }
 
     public class MapTileData

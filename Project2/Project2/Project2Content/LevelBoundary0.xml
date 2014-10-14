@@ -5,5 +5,7 @@
     <x>960</x>
     <y>640</y>
     <backgroundTexture>background1</backgroundTexture>
+    <hasTexture>false</hasTexture>
+    <texture>null</texture>
   </Asset>
 </XnaContent>
