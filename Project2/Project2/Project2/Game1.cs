@@ -30,7 +30,8 @@ namespace Project2
         Screen currentScreen;
         StartScreen startScreen;
         GameOverScreen gameOverScreen;
-        Camera camera; 
+        Camera camera;
+        public Effect shader;
 
         World gameWorld;
 
@@ -78,6 +79,7 @@ namespace Project2
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            shader = Content.Load<Effect>("shader");
             
             //gameWorld.LoadContent(Content);
 
@@ -152,6 +154,7 @@ namespace Project2
                     if (gameWorld != null)
                     {
                         spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+                        shader.CurrentTechnique.Passes["Pass1"].Apply();
                         gameWorld.Draw(spriteBatch);
                         spriteBatch.End();
                     }
