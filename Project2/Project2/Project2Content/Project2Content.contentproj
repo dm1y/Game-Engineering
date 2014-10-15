@@ -84,11 +84,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bounce.png">
-      <Name>bounce</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="trap.png">
       <Name>trap</Name>
       <Importer>TextureImporter</Importer>
@@ -179,6 +174,13 @@
   <ItemGroup>
     <Compile Include="leaves.png">
       <Name>leaves</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bounce.png">
+      <Name>bounce</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

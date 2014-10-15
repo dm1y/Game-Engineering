@@ -67,7 +67,7 @@ namespace Project2
             else if (isBouncy)
             {
                 //Console.Write("Bounce");
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 100, Color.White, 1, true, false);
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 24, 50, Color.White, 1, true, false);
 
             }
             //Normal tiles, trap tiles, and cake tiles only have one frame
