@@ -37,6 +37,7 @@ namespace Project2
         Texture2D playerDeath;
 
         Texture2D tileTexture;
+        Song gameMusic;
 
         List<MapTile> mapTiles;
         int level_counter = 0;
@@ -63,8 +64,10 @@ namespace Project2
             movingRightTexture = Content.Load<Texture2D>("walkright2");
             movingLeftTexture = Content.Load<Texture2D>("walkleft2");
             playerDeath = Content.Load<Texture2D>("playerdeath");
+            gameMusic = Content.Load<Song>("Darkness_Pt_1");
 
             LoadMap(0);
+            PlayMusic(gameMusic);
         }
 
         public void LoadMap(int i)
@@ -89,6 +92,7 @@ namespace Project2
 
             player.setBoundaries(boundaries.x, boundaries.y);
             camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
+           
         }
 
         public void changeLevel()
@@ -121,6 +125,7 @@ namespace Project2
 
         public void Update(GameTime gametime)
         {
+            
             background.Update();
             //previousGamePadState = currentGamePadState;
             previousKeyboardState = currentKeyboardState;
