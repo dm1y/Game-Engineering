@@ -156,7 +156,7 @@ namespace Project2
                 game.Exit();
 
             // If player is dead, reset the level. 
-            if (player.isDead) {
+            if (player.CheckDeath() == true) {
                 player.isDead = false;
             // PLAY THE SEQUENCE HERE. 
                 LevelReset();

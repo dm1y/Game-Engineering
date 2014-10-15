@@ -272,7 +272,7 @@ namespace Project2
                 }
                 if (mapTile.isTrap)
                 {
-                    checkDeath();
+                    killPlayer();
                 }
 
                 /* If player is colliding with the top left corner of tile*/
@@ -418,7 +418,7 @@ namespace Project2
             }
         }
 
-        private void checkDeath()
+        private void killPlayer()
         {
             if (!isDead)
             {
@@ -427,6 +427,13 @@ namespace Project2
             }
         }
 
+        public Boolean CheckDeath()
+        {
+            if (deathAnimation.Active == false && isDead) {
+                return true;
+            }
+            return false;
+        }
 
         public Vector2 GetPosition()
         {

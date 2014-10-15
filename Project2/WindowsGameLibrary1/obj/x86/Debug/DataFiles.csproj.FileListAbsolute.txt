@@ -34,3 +34,9 @@ C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsG
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.dll
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.pdb
+C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.dll
+C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\bin\x86\Debug\WindowsGameLibrary1.pdb
+C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\DataFiles.csprojResolveAssemblyReference.cache
+C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.dll
+C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\WindowsGameLibrary1\obj\x86\Debug\WindowsGameLibrary1.pdb

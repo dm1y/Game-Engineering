@@ -4,3 +4,4 @@ C:\Users\William\Documents\GitHub\Game Engineering\Game-Engineering\Project2\Pro
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Project2\Project2\Project2Content\obj\x86\Debug\Project2Content.contentprojResolveAssemblyReference.cache
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2Content\obj\x86\Debug\Project2Content.contentprojResolveAssemblyReference.cache
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2Content\obj\x86\Debug\Project2Content.contentprojResolveAssemblyReference.cache
+C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2Content\obj\x86\Debug\Project2Content.contentprojResolveAssemblyReference.cache

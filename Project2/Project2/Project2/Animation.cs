@@ -77,6 +77,7 @@ namespace Project2
             Active = true;
         }
 
+       
         public void Update(Vector2 position, GameTime gameTime)
         {
 
