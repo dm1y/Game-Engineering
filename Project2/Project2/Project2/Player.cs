@@ -12,6 +12,7 @@ namespace Project2
     public class Player
     {
         public Game game;
+        World world;
 
         //Gameplay Mechanics//
 
@@ -76,11 +77,12 @@ namespace Project2
         }
 
         public Player(int X, int Y, Game1 g, Texture2D idleR, Texture2D idleL, Texture2D moveR, Texture2D moveL,
-            Texture2D jumpR, Texture2D jumpL, Texture2D death)
+            Texture2D jumpR, Texture2D jumpL, Texture2D death, World w)
         {
             lives = 3;
             isDead = false;
             game = g;
+            world = w;
             spawnPosition = new Vector2(X, Y);
             position = new Vector2(X, Y);
             isFalling = true;
@@ -464,6 +466,9 @@ namespace Project2
                 if (deathAnimation.Active)
                 {
                     deathAnimation.Draw(spriteBatch);
+                    
+                   
+                    //world.LevelReset();
                 }
             }
             //spriteBatch.Draw(playerTexture, new Rectangle((int)position.X,

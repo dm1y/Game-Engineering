@@ -85,7 +85,7 @@ namespace Project2
 
             /* So the player will begin on top of the blocks*/
             player = new Player(0, newView.Height - 3 * tileTexture.Height, game,
-                playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, playerDeath);
+                playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, playerDeath, this);
 
             player.setBoundaries(boundaries.x, boundaries.y);
             camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
@@ -93,6 +93,9 @@ namespace Project2
 
         public void changeLevel()
         {
+            camera.ResetCamera();
+            mapTiles.Clear();
+
             level_counter++;
 
             /* If the level is not the last level*/
@@ -141,37 +144,29 @@ namespace Project2
             if (currentKeyboardState.IsKeyDown(Keys.Escape))
                 game.Exit();
 
-            //TODO: If player is dead, reset the level. 
-            //if (player.isDead) {
-                //player.isDead = false;
-                //camera.ResetCamera();
-                //mapTiles.Clear();
-                //LoadMap(level_counter);
-            //}
+            // If player is dead, reset the level. 
+            if (player.isDead) {
+                player.isDead = false;
+            // PLAY THE SEQUENCE HERE. 
+                LevelReset();
+            }
             // ResetTiles();
-            /* In response to the above: Instead of the above since we have not
-             * created checkpoints, just call loadMap to reload the current level. 
-             * Example pseudo code: 
-             * if (player is dead) {
-             *  // set player is dead to false 
-             *  // play dead animation sequence if applicable 
-             *  // reset the camera with camera.ResetCamera();
-             *  // clear the current tiles with mapTiles.Clear();
-             *  // and reload the current map with LoadMap(level_counter);
-             * }
-             *      
-             * 
-             * */
 
             /* If player touches the cake, transition to new level / end the game */
             if (player.end)
             {
                 player.end = false;
-                camera.ResetCamera(); 
-                mapTiles.Clear();
                 changeLevel();
             }
 
+        }
+
+        /* Resets the current level */
+        public void LevelReset() 
+        {
+            camera.ResetCamera();
+            mapTiles.Clear();
+            LoadMap(level_counter);
         }
 
         /* This function isn't necessary if we're resetting the entire level instead of just the tile */
