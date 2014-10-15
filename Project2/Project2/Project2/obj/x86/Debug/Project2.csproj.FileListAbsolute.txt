@@ -164,3 +164,4 @@ C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.exe
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.pdb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\playerdeath.xnb

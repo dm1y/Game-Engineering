@@ -161,7 +161,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb</Output>
-      <Time>2014-10-14T14:48:03.2082419-07:00</Time>
+      <Time>2014-10-14T21:48:43.822222-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester1.xml</Source>
@@ -170,7 +170,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb</Output>
-      <Time>2014-10-14T14:48:03.2132413-07:00</Time>
+      <Time>2014-10-14T22:09:17.4749703-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary0.xml</Source>
@@ -179,7 +179,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary0.xnb</Output>
-      <Time>2014-10-14T14:48:03.1972409-07:00</Time>
+      <Time>2014-10-14T21:39:34.5711379-07:00</Time>
     </Item>
     <Item>
       <Source>LevelBoundary1.xml</Source>
@@ -197,7 +197,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary2.xnb</Output>
-      <Time>2014-10-14T14:48:03.2062414-07:00</Time>
+      <Time>2014-10-14T22:11:15.2622255-07:00</Time>
     </Item>
     <Item>
       <Source>LevelTester2.xml</Source>
@@ -207,6 +207,15 @@
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
       <Time>2014-10-14T14:48:03.2192424-07:00</Time>
+    </Item>
+    <Item>
+      <Source>playerdeath.png</Source>
+      <Name>playerdeath</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\playerdeath.xnb</Output>
+      <Time>2014-10-14T22:59:08.8692438-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -103,6 +103,7 @@ namespace Project2
             idleLeft.Initialize(idleL, Vector2.Zero, 64, 64, 2, 300, Color.White, 1, true, false);
             moveRight.Initialize(moveR, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true, false);
             moveLeft.Initialize(moveL, Vector2.Zero, 64, 64, 4, 100, Color.White, 1, true, false);
+            deathAnimation.Initialize(death, Vector2.Zero, 64, 64, 12, 50, Color.White, 1, false, false);
             //playerAnimation.Initialize(playerTexture, Vector2.Zero, 32, 32, 
         }
 
@@ -121,6 +122,7 @@ namespace Project2
             idleRight.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
             moveRight.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
             moveLeft.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
+            deathAnimation.Update(position + new Vector2(Width / 2, Height / 2), gameTime);
 
         }
         public void Update(GameTime gameTime, KeyboardState keyboard)
@@ -170,42 +172,42 @@ namespace Project2
                 isMoving = false;
             }
 
-
-            if (keyboard.IsKeyDown(Keys.Right))
+            if (!isDead)
             {
-                if ((Math.Abs(velocity.X) < max_x_velocity))
+                if (keyboard.IsKeyDown(Keys.Right))
                 {
-                    isMoving = true;
-                    isIdle = false;
-                    isFacingRight = true;
-                    velocity.X += 50;
+                    if ((Math.Abs(velocity.X) < max_x_velocity))
+                    {
+                        isMoving = true;
+                        isIdle = false;
+                        isFacingRight = true;
+                        velocity.X += 50;
+                    }
                 }
-            }
-            if (keyboard.IsKeyDown(Keys.Left))
-            {
-
-                if ((Math.Abs(velocity.X) < max_x_velocity))
-                {
-                    isMoving= true;
-                    isIdle = false;
-                    isFacingRight = false;
-                    velocity.X -= 50;
-                }
-            }
-            if (keyboard.IsKeyDown(Keys.Down))
-            {
-            }
-
-            if (keyboard.IsKeyDown(Keys.Up))
-            {
-                if (isOnPlatform)
+                if (keyboard.IsKeyDown(Keys.Left))
                 {
 
-                    velocity.Y += -700;
-                    isOnPlatform = false;
+                    if ((Math.Abs(velocity.X) < max_x_velocity))
+                    {
+                        isMoving = true;
+                        isIdle = false;
+                        isFacingRight = false;
+                        velocity.X -= 50;
+                    }
+                }
+                if (keyboard.IsKeyDown(Keys.Down))
+                {
                 }
 
+                if (keyboard.IsKeyDown(Keys.Up))
+                {
+                    if (isOnPlatform)
+                    {
 
+                        velocity.Y += -700;
+                        isOnPlatform = false;
+                    }
+                }
             }
             UpdatePosition(time);
             StayWithinBounds();
@@ -247,12 +249,13 @@ namespace Project2
         //Check bug when player jumps first, then moves right/left. 
         public void CheckCollisionSide(Rectangle player, Rectangle tile, MapTile mapTile)
         {
+
             if (player.Intersects(tile) && mapTile.isActive)
             {
                 checkTile(mapTile);
 
-                int ydiff = (int)(tile.Y - player.Y);
-                int xdiff = (int)(tile.X - player.X);
+                int ydiff = (int)(tile.Y - position.Y);
+                int xdiff = (int)(tile.X - position.X);
                 int min_translation;
 
                 //if -x, +y - player is topRight
@@ -261,19 +264,18 @@ namespace Project2
                 //if +x, -y - player is bottomleft
                 if (mapTile.isUnstable)
                 {
-                    Console.Write("Unstable collision");
                     mapTile.isActive = false;
                     mapTile.PlayAnimationOnce();
                 }
+                if (mapTile.isTrap)
+                {
+                    checkDeath();
+                }
+
                 /* If player is colliding with the top left corner of tile*/
                 if (xdiff >= 0 && ydiff >= 0)
                 {
                     // Kills player, plays animation, if player's death animation is no longer active 
-                    if (mapTile.isTrap)
-                    {
-                        position.X = spawnPosition.X;
-                        position.Y = spawnPosition.Y;
-                    }
                     /* If player's difference from left of tile is greater than difference from top of tile,
                      * shift to the left*/
                     if (Math.Abs(player.Left - tile.Left) > Math.Abs(player.Top - tile.Top))
@@ -287,11 +289,6 @@ namespace Project2
                      * shift upwards */
                     else
                     {
-                        if (mapTile.isTrap)
-                        {
-                            position.X = spawnPosition.X;
-                            position.Y = spawnPosition.Y;
-                        }
 
                         /* Implement this where the player hits the tile */
                         if (mapTile.isBouncy)
@@ -319,12 +316,6 @@ namespace Project2
                      * shift upwards*/
                     if (Math.Abs(player.Right - tile.Right) < Math.Abs(player.Top - tile.Top))
                     {
-                        if (mapTile.isTrap)
-                        {
-                            position.X = spawnPosition.X;
-                            position.Y = spawnPosition.Y;
-                        }
-
                         if (mapTile.isBouncy)
                         {
                             velocity.Y = 0;
@@ -424,6 +415,14 @@ namespace Project2
             }
         }
 
+        private void checkDeath()
+        {
+            if (!isDead)
+            {
+                isDead = true;
+                deathAnimation.Active = true;
+            }
+        }
         public Vector2 GetPosition()
         {
             return position;
@@ -431,27 +430,37 @@ namespace Project2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (isFacingRight)
+            if (!isDead)
             {
-                if (isIdle)
+                if (isFacingRight)
                 {
-                    idleRight.Draw(spriteBatch);
+                    if (isIdle)
+                    {
+                        idleRight.Draw(spriteBatch);
+                    }
+                    if (isMoving)
+                    {
+                        moveRight.Draw(spriteBatch);
+                    }
+                    //Draw animations right
                 }
-                if (isMoving)
+                else
                 {
-                    moveRight.Draw(spriteBatch);
+                    if (isIdle)
+                    {
+                        idleLeft.Draw(spriteBatch);
+                    }
+                    if (isMoving)
+                    {
+                        moveLeft.Draw(spriteBatch);
+                    }
                 }
-                //Draw animations right
             }
             else
             {
-                if (isIdle)
+                if (deathAnimation.Active)
                 {
-                    idleLeft.Draw(spriteBatch);
-                }
-                if (isMoving)
-                {
-                    moveLeft.Draw(spriteBatch);
+                    deathAnimation.Draw(spriteBatch);
                 }
             }
             //spriteBatch.Draw(playerTexture, new Rectangle((int)position.X,

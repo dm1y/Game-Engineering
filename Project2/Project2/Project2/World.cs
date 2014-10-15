@@ -62,7 +62,7 @@ namespace Project2
             tileTexture = Content.Load<Texture2D>("cube");
             movingRightTexture = Content.Load<Texture2D>("walkright2");
             movingLeftTexture = Content.Load<Texture2D>("walkleft2");
-
+            playerDeath = Content.Load<Texture2D>("playerdeath");
 
             LoadMap(0);
         }
@@ -85,7 +85,7 @@ namespace Project2
 
             /* So the player will begin on top of the blocks*/
             player = new Player(0, newView.Height - 3 * tileTexture.Height, game,
-                playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, null);
+                playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, playerDeath);
 
             player.setBoundaries(boundaries.x, boundaries.y);
             camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
@@ -185,7 +185,7 @@ namespace Project2
         {
 
             Rectangle terrainHitBox;
-            Rectangle playerHitBox;
+            Rectangle playerHitBox = player.getHitBox();
 
             player.isOnPlatform = false;
 
@@ -194,9 +194,8 @@ namespace Project2
                 terrainHitBox = new Rectangle((int)(tile.mapPositions.X),
                       (int)tile.mapPositions.Y, tile.Width, tile.Height);
 
-                playerHitBox = player.getHitBox();
-
                 player.CheckCollisionSide(playerHitBox, terrainHitBox, tile);
+                playerHitBox = player.getHitBox();
 
             }
         }
