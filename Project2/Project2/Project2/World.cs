@@ -43,7 +43,8 @@ namespace Project2
 
         public LevelInfo boundaries { get; private set; }
 
-        public ParallaxingBackground background; 
+        public ParallaxingBackground background;
+        Boolean isNewLevel;
 
         public World(Game1 g, Camera c)
         {
@@ -52,6 +53,7 @@ namespace Project2
             newView = g.GraphicsDevice.Viewport;
             mapTiles = new List<MapTile>();
             background = new ParallaxingBackground(g);
+            isNewLevel = true;
         }
 
         public void LoadContent(ContentManager Content)
@@ -71,8 +73,11 @@ namespace Project2
         {
             boundaries = game.Content.Load<LevelInfo>("LevelBoundary" + i);
 
-            background.Initialize(game.Content.Load<Texture2D>(boundaries.backgroundTexture), 1,
-                boundaries.x, boundaries.texture, boundaries.hasTexture);
+            if (isNewLevel)
+            {
+                background.Initialize(game.Content.Load<Texture2D>(boundaries.backgroundTexture), 1,
+                    boundaries.x, boundaries.texture, boundaries.hasTexture);
+            }
 
             MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
 
@@ -93,6 +98,7 @@ namespace Project2
 
         public void changeLevel()
         {
+            isNewLevel = true;
             camera.ResetCamera();
             mapTiles.Clear();
 
@@ -164,6 +170,7 @@ namespace Project2
         /* Resets the current level */
         public void LevelReset() 
         {
+            isNewLevel = false;
             camera.ResetCamera();
             mapTiles.Clear();
             LoadMap(level_counter);
