@@ -45,10 +45,12 @@ namespace Project2
         {
 
 
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, game.shader);
+
 
 
             if (texture != null)
+                //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, game.shader);
+                spriteBatch.Begin();
                 
                 spriteBatch.Draw(texture, new Vector2(spriteBatch.GraphicsDevice.Viewport.X, spriteBatch.GraphicsDevice.Viewport.Y), Color.White);
             
