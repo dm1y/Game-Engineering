@@ -80,6 +80,10 @@ namespace Project2
             
         }
 
+        public int GetAnimationFrame()
+        {
+            return tileAnimation.GetCurrentFrame();
+        }
         public void Update(GameTime gametime)
         {
             float animationFrameComp = Height / 2;

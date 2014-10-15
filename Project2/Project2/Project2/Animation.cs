@@ -77,7 +77,11 @@ namespace Project2
             Active = true;
         }
 
-       
+        //Can be used to manually set where an animation stops
+        public int GetCurrentFrame()
+        {
+            return currentFrame;
+        }
         public void Update(Vector2 position, GameTime gameTime)
         {
 

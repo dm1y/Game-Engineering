@@ -267,7 +267,11 @@ namespace Project2
                 //if +x, -y - player is bottomleft
                 if (mapTile.isUnstable)
                 {
-                    mapTile.isActive = false;
+                    //Play 
+                    if (mapTile.GetAnimationFrame() == 24)
+                    {
+                        mapTile.isActive = false;
+                    }
                     mapTile.PlayAnimationOnce();
                 }
                 if (mapTile.isTrap)
