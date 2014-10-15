@@ -12,5 +12,5 @@ cake
 --x-----------xxtxx----------xx---x----------x-------------------------xx--
 --x----xxtxx-------------------------------------xtttxtx---xx----------xx--
 --x--------------------------------------------------------------x-----xx--
--bx-------------------------------------------------------------------dxx--
-xxxttttttttttt--ttttttttttttttddttttttttttttttt--------tttttttttttttttxxxtt
+-bx-------------------------------------------------------------------bxx--
+xxxttttttttttt--ttttttttttttttbbttttttttttttttt--------tttttttttttttttxxxtt

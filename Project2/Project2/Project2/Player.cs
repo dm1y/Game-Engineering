@@ -96,6 +96,7 @@ namespace Project2
             jumpRight = new Animation();
             jumpLeft = new Animation();
             deathAnimation = new Animation();
+
             // Initialize Animations here
             // Animation arguments -- Texture2D texture, Vector2 position, int frameWidth, int frameHeight, int frameCount,
             //int frametime, Color color, float scale, bool looping)
@@ -419,10 +420,12 @@ namespace Project2
         {
             if (!isDead)
             {
-                isDead = true;
                 deathAnimation.Active = true;
+                isDead = true;
             }
         }
+
+
         public Vector2 GetPosition()
         {
             return position;

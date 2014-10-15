@@ -142,6 +142,12 @@ namespace Project2
                 game.Exit();
 
             //TODO: If player is dead, reset the level. 
+            //if (player.isDead) {
+                //player.isDead = false;
+                //camera.ResetCamera();
+                //mapTiles.Clear();
+                //LoadMap(level_counter);
+            //}
             // ResetTiles();
             /* In response to the above: Instead of the above since we have not
              * created checkpoints, just call loadMap to reload the current level. 
@@ -161,7 +167,7 @@ namespace Project2
             if (player.end)
             {
                 player.end = false;
-                camera.ResetCamera(); //Testing
+                camera.ResetCamera(); 
                 mapTiles.Clear();
                 changeLevel();
             }
@@ -207,13 +213,10 @@ namespace Project2
 
             foreach (MapTile tile in mapTiles)
             {
-                //Console.Write("drawing");
                 tile.Draw(sb);
             }
 
             player.Draw(sb);
-            // Do stuff
-
         }
 
     }

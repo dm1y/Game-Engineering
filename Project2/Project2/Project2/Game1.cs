@@ -25,7 +25,7 @@ namespace Project2
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         public GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        public SpriteBatch spriteBatch;
 
         Screen currentScreen;
         StartScreen startScreen;

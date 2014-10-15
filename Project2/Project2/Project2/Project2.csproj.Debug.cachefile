@@ -3,7 +3,6 @@ Content\cube.xnb
 Content\triangle.xnb
 Content\cake.xnb
 Content\startscreen.xnb
-Content\bounce.xnb
 Content\trap.xnb
 Content\idleleft2.xnb
 Content\idleright2.xnb
@@ -15,10 +14,13 @@ Content\tilebottom.xnb
 Content\breakable.xnb
 Content\unstable.xnb
 Content\leaves.xnb
+Content\bounce.xnb
+Content\playerdeath.xnb
 Content\LevelTester0.xnb
 Content\LevelTester1.xnb
 Content\LevelBoundary0.xnb
 Content\LevelBoundary1.xnb
 Content\LevelBoundary2.xnb
 Content\LevelTester2.xnb
-Content\playerdeath.xnb
+Content\background3.xnb
+Content\killertexture.xnb

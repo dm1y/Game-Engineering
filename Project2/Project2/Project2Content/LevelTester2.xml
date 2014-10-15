@@ -443,6 +443,15 @@
       <mapPosition>2 1</mapPosition>
     </Item>
     <Item>
+      <tileTexture>bounce</tileTexture>
+      <isTrap>false</isTrap>
+      <isBouncy>true</isBouncy>
+      <isBreakable>false</isBreakable>
+      <isUnstable>false</isUnstable>
+      <isCake>false</isCake>
+      <mapPosition>70 1</mapPosition>
+    </Item>
+    <Item>
       <tileTexture>cube</tileTexture>
       <isTrap>false</isTrap>
       <isBouncy>false</isBouncy>
@@ -711,6 +720,24 @@
       <isUnstable>false</isUnstable>
       <isCake>false</isCake>
       <mapPosition>29 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>bounce</tileTexture>
+      <isTrap>false</isTrap>
+      <isBouncy>true</isBouncy>
+      <isBreakable>false</isBreakable>
+      <isUnstable>false</isUnstable>
+      <isCake>false</isCake>
+      <mapPosition>30 0</mapPosition>
+    </Item>
+    <Item>
+      <tileTexture>bounce</tileTexture>
+      <isTrap>false</isTrap>
+      <isBouncy>true</isBouncy>
+      <isBreakable>false</isBreakable>
+      <isUnstable>false</isUnstable>
+      <isCake>false</isCake>
+      <mapPosition>31 0</mapPosition>
     </Item>
     <Item>
       <tileTexture>trap</tileTexture>

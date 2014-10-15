@@ -4,8 +4,8 @@
   <Asset Type="Project2.LevelInfo">
     <x>4800</x>
     <y>640</y>
-    <backgroundTexture>background1</backgroundTexture>
-    <hasTexture>false</hasTexture>
-    <texture>no</texture>
+    <backgroundTexture>background3</backgroundTexture>
+    <hasTexture>true</hasTexture>
+    <texture>killertexture</texture>
   </Asset>
 </XnaContent>
