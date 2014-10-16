@@ -177,8 +177,6 @@ C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background3.xnb
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\killertexture.xnb
 C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\shader.xnb
-C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1.xnb
-C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1.wma
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\SpriteFont1.xnb
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\cube.xnb
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\triangle.xnb
@@ -221,3 +219,10 @@ C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\shader.xnb
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1.xnb
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1.wma
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\jump.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1v2.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1v2.wma
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Goblin.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\meow.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\collapsing.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\fan.xnb

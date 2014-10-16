@@ -37,7 +37,17 @@ namespace Project2
         Texture2D playerDeath;
 
         Texture2D tileTexture;
-        Song gameMusic;
+       public Song gameMusic;
+        public SoundEffect jumpSound;
+        public SoundEffectInstance jumpSoundInstance;
+        public SoundEffect laughSound;
+        public SoundEffectInstance laughSoundInstance;
+        public SoundEffect deathSound;
+        public SoundEffectInstance deathSoundInstance;
+        public SoundEffect collapseSound;
+        public SoundEffectInstance collapseSoundInstance;
+        public SoundEffect fanSound;
+        public SoundEffectInstance fanSoundInstance;
 
         List<MapTile> mapTiles;
         int level_counter = 0;
@@ -66,14 +76,26 @@ namespace Project2
             movingRightTexture = Content.Load<Texture2D>("walkright2");
             movingLeftTexture = Content.Load<Texture2D>("walkleft2");
             playerDeath = Content.Load<Texture2D>("playerdeath");
-            gameMusic = Content.Load<Song>("Darkness_Pt_1");
+            gameMusic = Content.Load<Song>("Darkness_Pt_1v2");
+            jumpSound = Content.Load<SoundEffect>("jump");
+            jumpSoundInstance = jumpSound.CreateInstance();
+            laughSound = Content.Load<SoundEffect>("Goblin");
+            laughSoundInstance = laughSound.CreateInstance();
+            deathSound = Content.Load<SoundEffect>("meow");
+            deathSoundInstance = deathSound.CreateInstance();
+            collapseSound = Content.Load<SoundEffect>("collapsing");
+            collapseSoundInstance = collapseSound.CreateInstance();
+            fanSound = Content.Load<SoundEffect>("fan");
+            fanSoundInstance = fanSound.CreateInstance();
 
             LoadMap(0);
             PlayMusic(gameMusic);
+            MediaPlayer.Volume = 0.7f;
         }
 
         public void LoadMap(int i)
         {
+            
             boundaries = game.Content.Load<LevelInfo>("LevelBoundary" + i);
 
             if (isNewLevel)
@@ -97,6 +119,9 @@ namespace Project2
 
             player.setBoundaries(boundaries.x, boundaries.y);
             camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
+            deathSoundInstance.Stop(); //stop death sound
+            
+            //PlayMusic(gameMusic);
            
         }
 
@@ -110,9 +135,14 @@ namespace Project2
 
             /* If the level is not the last level*/
             if (level_counter < 3)
+            {
+                
                 LoadMap(level_counter);
+                
+            }
             else
                 game.EndGame();
+            
         }
 
         private void PlayMusic(Song song)
@@ -157,6 +187,7 @@ namespace Project2
 
             // If player is dead, reset the level. 
             if (player.CheckDeath() == true) {
+                
                 player.isDead = false;
             // PLAY THE SEQUENCE HERE. 
                 LevelReset();
@@ -166,7 +197,9 @@ namespace Project2
             /* If player touches the cake, transition to new level / end the game */
             if (player.end)
             {
+                laughSoundInstance.Play();
                 player.end = false;
+                
                 changeLevel();
             }
 

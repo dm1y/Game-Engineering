@@ -209,6 +209,8 @@ namespace Project2
 
                         velocity.Y += -700;
                         isOnPlatform = false;
+                        world.jumpSoundInstance.Play();
+                        world.jumpSoundInstance.Volume = 1.0f;
                     }
                 }
             }
@@ -275,6 +277,7 @@ namespace Project2
                 {
                     //Play 
                     mapTile.PlayAnimationOnce();
+                    world.collapseSoundInstance.Play();  //collapsing sound
                 }
                 if (mapTile.isTrap)
                 {
@@ -302,12 +305,15 @@ namespace Project2
                         /* Implement this where the player hits the tile */
                         if (mapTile.isBouncy)
                         {
+                            world.fanSoundInstance.Play();
                             velocity.Y = 0;
                             velocity.Y += -1000;
+                            
                         }
 
                         else
                         {
+                            world.fanSoundInstance.Stop();
                             min_translation = player.Bottom - tile.Top;
                             position.Y -= min_translation;
                             isOnPlatform = true;
@@ -428,6 +434,7 @@ namespace Project2
         {
             if (!isDead)
             {
+                world.deathSoundInstance.Play(); //Death Sound
                 deathAnimation.Active = true;
                 isDead = true;
             }

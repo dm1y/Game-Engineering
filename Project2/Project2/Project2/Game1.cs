@@ -138,11 +138,7 @@ namespace Project2
 
             // TODO: Add your drawing code here
             
-            //spriteBatch.Begin();
-            //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.transform); 
-
-            //spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, gameWorld.camera.transform); 
-            //gameWorld.Draw(spriteBatch);
+            
 
             switch (currentScreen)
             {
@@ -170,6 +166,7 @@ namespace Project2
         public void StartGame()
         {
            // gameWorld = new World(this,viewPort);  //Added viewport //was GraphicsDevice.Viewport
+            
 
             gameWorld = new World(this, camera);
             
@@ -183,6 +180,7 @@ namespace Project2
 
         public void EndGame()
         {
+            MediaPlayer.Stop(); //Stops gameMusic from playing
             gameOverScreen = new GameOverScreen(this);
             currentScreen = Screen.GameOverScreen;
 
