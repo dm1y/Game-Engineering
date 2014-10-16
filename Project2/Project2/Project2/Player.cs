@@ -45,7 +45,7 @@ namespace Project2
         public Vector2 spawnPosition;  //changed to public..might change back
         public Vector2 position;
 
-        float max_x_velocity = 300;
+        float max_x_velocity = 400;
         float max_y_velocity = 1200;
 
         public Vector2 velocity;
@@ -252,7 +252,13 @@ namespace Project2
         //Check bug when player jumps first, then moves right/left. 
         public void CheckCollisionSide(Rectangle player, Rectangle tile, MapTile mapTile)
         {
-
+            if (mapTile.isUnstable && mapTile.HasPlayedAnimation())
+            {
+                if (mapTile.GetAnimationFrame() == 24)
+                {
+                    mapTile.isActive = false;
+                }
+            }
             if (player.Intersects(tile) && mapTile.isActive)
             {
                 checkTile(mapTile);
@@ -268,10 +274,6 @@ namespace Project2
                 if (mapTile.isUnstable)
                 {
                     //Play 
-                    if (mapTile.GetAnimationFrame() == 24)
-                    {
-                        mapTile.isActive = false;
-                    }
                     mapTile.PlayAnimationOnce();
                 }
                 if (mapTile.isTrap)

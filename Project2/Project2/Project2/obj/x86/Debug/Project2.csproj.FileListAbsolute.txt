@@ -216,3 +216,8 @@ C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineeri
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.exe
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.pdb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\background3.xnb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\killertexture.xnb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\shader.xnb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1.xnb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1.wma

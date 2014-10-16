@@ -95,6 +95,14 @@ namespace Project2
             tileAnimation.PlayFirstFrame = false;
         }
 
+        public Boolean HasPlayedAnimation()
+        {
+            if (tileAnimation.PlayFirstFrame == false)
+            {
+                return true;
+            }
+            return false;
+        }
         public void ResetAnimation()
         {
             tileAnimation.PlayFirstFrame = true;
