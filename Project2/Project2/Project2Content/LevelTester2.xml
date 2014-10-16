@@ -146,15 +146,6 @@
       <mapPosition>20 7</mapPosition>
     </Item>
     <Item>
-      <tileTexture>breakable</tileTexture>
-      <isTrap>false</isTrap>
-      <isBouncy>false</isBouncy>
-      <isBreakable>true</isBreakable>
-      <isUnstable>false</isUnstable>
-      <isCake>false</isCake>
-      <mapPosition>71 7</mapPosition>
-    </Item>
-    <Item>
       <tileTexture>cube</tileTexture>
       <isTrap>false</isTrap>
       <isBouncy>false</isBouncy>
