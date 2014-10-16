@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\trap.xnb</Output>
-      <Time>2014-10-14T14:48:03.2742448-07:00</Time>
+      <Time>2014-10-16T00:51:13.8762262-07:00</Time>
     </Item>
     <Item>
       <Source>idleleft2.png</Source>
@@ -233,7 +233,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
-      <Time>2014-10-15T08:46:09.8477886-07:00</Time>
+      <Time>2014-10-16T01:04:49.8775789-07:00</Time>
     </Item>
     <Item>
       <Source>shader.fx</Source>

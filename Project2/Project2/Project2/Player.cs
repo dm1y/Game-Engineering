@@ -45,7 +45,7 @@ namespace Project2
         public Vector2 spawnPosition;  //changed to public..might change back
         public Vector2 position;
 
-        float max_x_velocity = 400;
+        float max_x_velocity = 350;
         float max_y_velocity = 1200;
 
         public Vector2 velocity;
