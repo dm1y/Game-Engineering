@@ -15,6 +15,14 @@ namespace Project2
     {
         private Game1 game;
         private KeyboardState lastState;
+        private Texture2D startSelect;
+        private Texture2D quitSelect;
+        private int selection;
+        private SoundEffect selectSound;
+        private SoundEffectInstance selectInstance;
+        private SoundEffect menuEnter;
+        private SoundEffectInstance menuInstance;
+
         private Texture2D texture; /* Place holder if you want to have a picture for the start game screen */
         private SpriteFont font; /* Place holder if you want to have text display instructions */
 
@@ -22,8 +30,12 @@ namespace Project2
         {
             this.game = game;
             lastState = Keyboard.GetState();
-            texture = game.Content.Load<Texture2D>("startscreen");
-            font = game.Content.Load<SpriteFont>("SpriteFont1");
+            startSelect = game.Content.Load<Texture2D>("startselect");
+            quitSelect = game.Content.Load<Texture2D>("quitselect");
+            selectSound = game.Content.Load<SoundEffect>("menuselect");
+            selectInstance = selectSound.CreateInstance();
+            menuEnter = game.Content.Load<SoundEffect>("menuenter");
+            menuInstance = menuEnter.CreateInstance();
         }
 
         public void Update()
@@ -32,11 +44,29 @@ namespace Project2
 
             /* Starts the game */
             if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
-                game.StartGame();
+            {
+                if (selection == 0)
+                {
+                    menuInstance.Play();
+                    game.StartGame();
+                }
+                else if (selection == 1)
+                {
+                    menuInstance.Play();
+                    game.Exit();
+                }
+            }
 
-            /* Exits the game */
-            else if (keyboardState.IsKeyDown(Keys.Escape) && lastState.IsKeyUp(Keys.Escape))
-                game.Exit();
+            if (keyboardState.IsKeyDown(Keys.Up)) {
+                selection = 0;
+                selectInstance.Play();
+            }
+
+            if (keyboardState.IsKeyDown(Keys.Down))
+            {
+                selection = 1;
+                selectInstance.Play();
+            }
 
             lastState = keyboardState;
         }
@@ -44,17 +74,19 @@ namespace Project2
         public void Draw(SpriteBatch spriteBatch)
         {
 
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, game.shader);
+            //Draw select on start
+            if (selection == 0) 
+            {
+                spriteBatch.Draw(startSelect, new Vector2(0, 0), Color.White);
+            }
 
-
-
-
-            if (texture != null)
-                spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, game.shader);
-                //spriteBatch.Begin();
-                
-                spriteBatch.Draw(texture, new Vector2(spriteBatch.GraphicsDevice.Viewport.X, spriteBatch.GraphicsDevice.Viewport.Y), Color.White);
-            
-            spriteBatch.End();
+            //Draw select on quit
+            else if (selection == 1)
+            {
+                spriteBatch.Draw(quitSelect, new Vector2(0, 0), Color.White);
+            }
+                spriteBatch.End();
             // Used as placeholders 
 
             // Used if you want to draw the instructions on 

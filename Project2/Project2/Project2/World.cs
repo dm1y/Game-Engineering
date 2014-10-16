@@ -46,8 +46,8 @@ namespace Project2
         public SoundEffectInstance deathSoundInstance;
         public SoundEffect collapseSound;
         public SoundEffectInstance collapseSoundInstance;
-        public SoundEffect fanSound;
-        public SoundEffectInstance fanSoundInstance;
+        public SoundEffect bounceSound;
+        public SoundEffectInstance bounceSoundInstance;
 
         List<MapTile> mapTiles;
         int level_counter = 0;
@@ -85,8 +85,8 @@ namespace Project2
             deathSoundInstance = deathSound.CreateInstance();
             collapseSound = Content.Load<SoundEffect>("collapsing");
             collapseSoundInstance = collapseSound.CreateInstance();
-            fanSound = Content.Load<SoundEffect>("fan");
-            fanSoundInstance = fanSound.CreateInstance();
+            bounceSound = Content.Load<SoundEffect>("bouncesound");
+            bounceSoundInstance = bounceSound.CreateInstance();
 
             LoadMap(0);
             PlayMusic(gameMusic);

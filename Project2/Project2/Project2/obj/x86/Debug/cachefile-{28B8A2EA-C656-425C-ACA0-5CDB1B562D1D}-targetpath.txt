@@ -26,9 +26,14 @@ Content\LevelBoundary2.xnb
 Content\LevelTester2.xnb
 Content\shader.xnb
 Content\jump.xnb
-Content\Darkness_Pt_1v2.xnb
-Content\Darkness_Pt_1v2.wma
 Content\Goblin.xnb
 Content\meow.xnb
 Content\collapsing.xnb
 Content\fan.xnb
+Content\Darkness_Pt_1v2.xnb
+Content\Darkness_Pt_1v2.wma
+Content\menuenter.xnb
+Content\menuselect.xnb
+Content\quitselect.xnb
+Content\startselect.xnb
+Content\bouncesound.xnb

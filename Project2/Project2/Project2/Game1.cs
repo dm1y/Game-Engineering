@@ -166,7 +166,8 @@ namespace Project2
         public void StartGame()
         {
            // gameWorld = new World(this,viewPort);  //Added viewport //was GraphicsDevice.Viewport
-            
+            startScreen = null;
+            gameOverScreen = null;
 
             gameWorld = new World(this, camera);
             
@@ -174,8 +175,6 @@ namespace Project2
 
             currentScreen = Screen.World;
 
-            startScreen = null;
-            gameOverScreen = null;
         }
 
         public void EndGame()

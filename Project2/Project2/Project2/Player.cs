@@ -305,7 +305,7 @@ namespace Project2
                         /* Implement this where the player hits the tile */
                         if (mapTile.isBouncy)
                         {
-                            world.fanSoundInstance.Play();
+                            world.bounceSoundInstance.Play();
                             velocity.Y = 0;
                             velocity.Y += -1000;
                             
@@ -313,7 +313,7 @@ namespace Project2
 
                         else
                         {
-                            world.fanSoundInstance.Stop();
+                            world.bounceSoundInstance.Stop();
                             min_translation = player.Bottom - tile.Top;
                             position.Y -= min_translation;
                             isOnPlatform = true;
