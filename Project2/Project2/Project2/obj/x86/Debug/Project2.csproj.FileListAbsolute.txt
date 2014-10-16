@@ -236,3 +236,8 @@ C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\quitselect.xnb
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\startselect.xnb
 C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\bouncesound.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\quitselect.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\startselect.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\menuenter.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\menuselect.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\bouncesound.xnb

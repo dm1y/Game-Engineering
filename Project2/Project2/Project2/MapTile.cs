@@ -21,6 +21,8 @@ namespace Project2
         public Boolean isBreakable;
         public Boolean isUnstable;
         public Boolean isCake;
+        public Boolean isKey;
+        public Boolean isLock;
         public Boolean isActive;
 
         public int Width

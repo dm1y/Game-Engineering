@@ -240,6 +240,10 @@ namespace Project2
                 terrainHitBox = new Rectangle((int)(tile.mapPositions.X),
                       (int)tile.mapPositions.Y, tile.Width, tile.Height);
 
+                if (player.hasKey && tile.isLock)
+                {
+                    //turn block off, maybe play animation for it
+                }
                 player.CheckCollisionSide(playerHitBox, terrainHitBox, tile);
                 playerHitBox = player.getHitBox();
 

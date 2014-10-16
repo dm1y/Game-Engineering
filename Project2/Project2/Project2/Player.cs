@@ -34,6 +34,9 @@ namespace Project2
         public Boolean isOnPlatform;
         public Boolean isDead;
 
+        //For key block
+        public Boolean hasKey;
+
         Boolean isMoving;
         Boolean isIdle;
         Boolean isJumping;
@@ -88,6 +91,7 @@ namespace Project2
             isFalling = true;
             isOnPlatform = false;
             end = false;
+            hasKey = false;
 
             isFacingRight = true;
 
@@ -422,7 +426,10 @@ namespace Project2
         private void checkTile(MapTile mapTile)
         {
             // TODO: Check transparency by checking alpha values.
-
+            if (mapTile.isKey)
+            {
+                //turn on isKey
+            }
             if (mapTile.isCake)
             {
                 end = true;
