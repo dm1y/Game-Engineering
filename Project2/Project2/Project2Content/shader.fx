@@ -4,11 +4,11 @@ float frequency : register(C0);
 float4 PixelShaderFunction(float2 uv: TEXCOORD0) : COLOR0
 {
 	
-	float4 color = tex2D( input , uv.xy); 
-	color.b = color.b/2;
-	color.g = color.g/2;
-	color.r = color.r/2;
-	return color;
+	float4 color = tex2D(input, uv);
+	color -= tex2D(input, uv - 0.002) * 2.5f;
+	color += tex2D(input, uv + 0.002) * 2.5f;
+
+    return color;
     
 }
 //Start Screen
