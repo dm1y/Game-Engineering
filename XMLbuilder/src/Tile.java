@@ -6,6 +6,9 @@ public class Tile {
 	String isBouncy;
 	String isBreakable;
 	String isUnstable;
+	String isSaw;
+	String isLock;
+	String isKey;
 	String isCake;
 
 	/* Do not touch this part */
@@ -22,11 +25,13 @@ public class Tile {
 	/* Used to create each tile */
 	public Tile(String x, String cubeTexture, String bounceTexture,
 			String trapTexture, String breakableTexture,
-			String unstableTexture, String cakeTexture) {
+			String unstableTexture, String cakeTexture, String sawTexture,
+			String lockTexture, String keyTexture) {
 
 		/* Tweak this if you make changes */
 		if (x.equals("x") || x.equals("t") || x.equals("b") || x.equals("c")
-				|| x.equals("o") || x.equals("u")) {
+				|| x.equals("o") || x.equals("u") || x.equals("k")
+				|| x.equals("m") || x.equals("s")) {
 
 			/* Makes sure tile is viewed as a tile */
 			isTile = true;
@@ -39,6 +44,9 @@ public class Tile {
 				isBreakable = "false";
 				isCake = "false";
 				isUnstable = "false";
+				isSaw = "false";
+				isLock = "false";
+				isKey = "false";
 			}
 
 			// If it is a bouncy tile
@@ -49,6 +57,9 @@ public class Tile {
 				isBreakable = "false";
 				isCake = "false";
 				isUnstable = "false";
+				isSaw = "false";
+				isLock = "false";
+				isKey = "false";
 			}
 
 			// If it is a trap tile
@@ -59,6 +70,9 @@ public class Tile {
 				isBreakable = "false";
 				isCake = "false";
 				isUnstable = "false";
+				isSaw = "false";
+				isLock = "false";
+				isKey = "false";
 			}
 
 			// If it is a breakable tile
@@ -69,6 +83,9 @@ public class Tile {
 				isBreakable = "true";
 				isCake = "false";
 				isUnstable = "false";
+				isSaw = "false";
+				isLock = "false";
+				isKey = "false";
 			}
 
 			// if it is a cake
@@ -79,6 +96,9 @@ public class Tile {
 				isBreakable = "false";
 				isCake = "true";
 				isUnstable = "false";
+				isSaw = "false";
+				isLock = "false";
+				isKey = "false";
 			}
 
 			// if it is an unstable tile
@@ -89,17 +109,54 @@ public class Tile {
 				isBreakable = "false";
 				isCake = "false";
 				isUnstable = "true";
+				isSaw = "false";
+				isLock = "false";
+				isKey = "false";
+			}
+
+			// if it is a saw tile
+			else if (x.equals("s")) {
+				tileTexture = sawTexture;
+				isTrap = "false";
+				isBouncy = "false";
+				isBreakable = "false";
+				isCake = "false";
+				isUnstable = "false";
+				isSaw = "true";
+				isLock = "false";
+				isKey = "false";
+			}
+
+			// if it is a lock tile
+			else if (x.equals("m")) {
+				tileTexture = lockTexture;
+				isTrap = "false";
+				isBouncy = "false";
+				isBreakable = "false";
+				isCake = "false";
+				isUnstable = "false";
+				isSaw = "false";
+				isLock = "true";
+				isKey = "false";
+			}
+
+			// if it is a key tile
+			else if (x.equals("k")) {
+				tileTexture = keyTexture;
+				isTrap = "false";
+				isBouncy = "false";
+				isBreakable = "false";
+				isCake = "false";
+				isUnstable = "false";
+				isSaw = "false";
+				isLock = "false";
+				isKey = "true";
 			}
 
 		} else {
 			/* It is not a tile so information will not get printed */
 			isTile = false;
 		}
-	}
-
-	@Override
-	public String toString() {
-		return tileTexture + " " + isTrap + " " + isBouncy + " " + isBreakable;
 	}
 
 }

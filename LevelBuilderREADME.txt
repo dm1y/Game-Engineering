@@ -1,6 +1,5 @@
 Author: Diana Ly
 CS420 - Game Engineering
-Additional things we don't necessarily need 
 
 README 
 
@@ -25,9 +24,13 @@ blocks.
        	         | x = normal blocks    | 
        	         | c = cake             |
 	         | t = trap blocks      |			       
-       	         | p = passable blocks  |
+       	         | o = breakable blocks |
                  | d = bouncy blocks    |
-       	          ------------------------
+                 | u = unstable blocks  | 
+                 | s = saw blocks       |
+                 | k = key blocks       |
+                 | m = lock blocks      |
+ 	         ------------------------
 
 Any character not stated above represents a space. Please do not include 
 spaces in your text file as the program will not recognize a space is a space. 
@@ -39,25 +42,31 @@ bounce blocks
 trap blocks
 breakable blocks
 unstable blocks
+saw blocks
+lock blocks
+key blocks
 cake blocks
 
 Example of the text file (15x10 -- 960 x 640 size):
  
-cube
-bounce
-trap
-breakable
-unstable
-cake
+cubeTexture
+bounceTexture
+trapTexture
+breakableTexture
+unstableTexture
+sawTexture
+lockTexture
+keyTexture
+cakeTexture
 ---------------
 ---------------
 ---------------
 ---------------
---------xxxu---
+----s---xxxu---
 --------x------
---------xbb----
---x-----x------
---x----dx-----c
+--------xoo----
+--x-----x-----m
+--x----bxk----c
 xxxxxxxxxxxxxtt
   
   		  --MORE NOTES ON THE MATH CONVERSION--

@@ -20,6 +20,9 @@ Content\background3.xnb
 Content\killertexture.xnb
 Content\quitselect.xnb
 Content\startselect.xnb
+Content\key.xnb
+Content\lock.xnb
+Content\saw.xnb
 Content\LevelTester0.xnb
 Content\LevelTester1.xnb
 Content\LevelBoundary0.xnb

@@ -37,6 +37,9 @@ public class LevelBuilder {
 		String trap = scan.nextLine();
 		String br = scan.nextLine();
 		String unstable = scan.nextLine();
+		String saw = scan.nextLine();
+		String lock = scan.nextLine();
+		String key = scan.nextLine();
 		String cake = scan.nextLine();
 
 		/* Ensures to fit the window size of 960 x 640 [CAPS] */
@@ -52,7 +55,7 @@ public class LevelBuilder {
 				String temp = "";
 				temp += line.charAt(k);
 				Tile tile = new Tile(temp, cube, bounce, trap, br, unstable,
-						cake);
+						cake, saw, lock, key);
 				if (tile.isTile) {
 					tile.setCoordinates(k, j);
 				}
@@ -91,6 +94,9 @@ public class LevelBuilder {
 							+ "</isBreakable>");
 					writer.println("      <isUnstable>" + t.isUnstable
 							+ "</isUnstable>");
+					writer.println("      <isSaw>" + t.isSaw + "</isSaw>");
+					writer.println("      <isLock>" + t.isLock + "</isLock>");
+					writer.println("      <isKey>" + t.isKey + "</isKey>");
 					writer.println("      <isCake>" + t.isCake + "</isCake>");
 					writer.println("      <mapPosition>" + t.xpos + " "
 							+ t.ypos + "</mapPosition>");

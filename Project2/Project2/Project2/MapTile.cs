@@ -43,7 +43,8 @@ namespace Project2
         }
 
         public MapTile(int X, int Y, Texture2D tileTexture, Game game, Boolean bounce, 
-            Boolean breakable, Boolean trap, Boolean unstable, Boolean cake, Boolean saw)
+            Boolean breakable, Boolean trap, Boolean unstable, Boolean cake, Boolean saw, 
+            Boolean l, Boolean key, Boolean active)
         {
             this.game = game;
             int dimension = tileTexture.Height;
@@ -56,6 +57,8 @@ namespace Project2
             isUnstable = unstable;
             isCake = cake;
             isSaw = saw;
+            isLock = l;
+            isKey = key;
             isActive = true;
             moveDirection = new Vector2(0, 0);
             //Console.Write("\nMap Position: " + mapPositions);
@@ -87,7 +90,8 @@ namespace Project2
                 originPosition = new Vector2(mapPositions.X, mapPositions.Y);
                 endPosition = new Vector2(mapPositions.X + tileTexture.Height * 4, mapPositions.Y);
                 shift = new Vector2(0, 0);
-            }
+            } 
+
             //Normal tiles, trap tiles, and cake tiles only have one frame
             else
             {
