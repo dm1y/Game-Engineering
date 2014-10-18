@@ -283,7 +283,7 @@ namespace Project2
                     mapTile.PlayAnimationOnce();
                     world.collapseSoundInstance.Play();  //collapsing sound
                 }
-                if (mapTile.isTrap)
+                if (mapTile.isTrap || mapTile.isSaw)
                 {
                     killPlayer();
                 }

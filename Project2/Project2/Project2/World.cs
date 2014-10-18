@@ -110,9 +110,11 @@ namespace Project2
             { 
                 mapTiles.Add(new MapTile((int)d.mapPosition.X, (int)d.mapPosition.Y,
                     game.Content.Load<Texture2D>(d.tileTexture), game, d.isBouncy, d.isBreakable, d.isTrap, 
-                    d.isUnstable, d.isCake));
+                    d.isUnstable, d.isCake, false));
             }
 
+            //TODO: Remove this when adding actual saw blocks
+            mapTiles.Add(new MapTile((int)5, 4, game.Content.Load<Texture2D>("trap"), game, false, false, false, false, false, true));
             /* So the player will begin on top of the blocks*/
             player = new Player(0, newView.Height - 3 * tileTexture.Height, game,
                 playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, playerDeath, this);
