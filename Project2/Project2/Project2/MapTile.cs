@@ -85,7 +85,7 @@ namespace Project2
             }
             else if (isSaw)
             {
-                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 1, 50, Color.White, 1, true, false);
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 8, 20, Color.White, 1, true, false);
                 moveDirection = new Vector2(1, 0);
                 originPosition = new Vector2(mapPositions.X, mapPositions.Y);
                 endPosition = new Vector2(mapPositions.X + tileTexture.Height * 4, mapPositions.Y);
