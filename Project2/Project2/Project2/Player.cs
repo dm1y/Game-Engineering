@@ -48,7 +48,7 @@ namespace Project2
         public Vector2 spawnPosition;  //changed to public..might change back
         public Vector2 position;
 
-        float max_x_velocity = 350;
+        float max_x_velocity = 325;
         float max_y_velocity = 1200;
 
         public Vector2 velocity;
@@ -252,7 +252,7 @@ namespace Project2
 
         public Rectangle getHitBox()
         {
-            return new Rectangle((int)position.X, (int)position.Y, Width, Height);
+           return new Rectangle((int)position.X, (int)position.Y, Width, Height);
         }
 
         //Check bug when player jumps first, then moves right/left. 
@@ -321,7 +321,10 @@ namespace Project2
                             min_translation = player.Bottom - tile.Top;
                             position.Y -= min_translation;
                             isOnPlatform = true;
-                            velocity.Y = 0;
+                            if (velocity.Y > 0)
+                            {
+                                velocity.Y = 0;
+                            }
 
                         }
 
@@ -337,6 +340,7 @@ namespace Project2
                     {
                         if (mapTile.isBouncy)
                         {
+                            world.bounceSoundInstance.Play();
                             velocity.Y = 0;
                             velocity.Y += -1000;
                         }
@@ -345,7 +349,10 @@ namespace Project2
                             min_translation = player.Bottom - tile.Top;
                             position.Y -= min_translation;
                             isOnPlatform = true;
-                            velocity.Y = 0;
+                            if (velocity.Y > 0)
+                            {
+                                velocity.Y = 0;
+                            }
                         }
 
                     }
@@ -462,6 +469,7 @@ namespace Project2
 
         public void Draw(SpriteBatch spriteBatch)
         {
+
             if (!isDead)
             {
                 if (isFacingRight)

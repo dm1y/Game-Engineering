@@ -270,3 +270,6 @@ C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineeri
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\bouncesound.xnb
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1v2.xnb
 C:\Users\William\Documents\Visual Studio 2012\Projects\Platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1v2.wma
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\key.xnb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\lock.xnb
+C:\Users\willi_000\Documents\GitHub\Project 2\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\saw.xnb
