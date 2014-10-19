@@ -150,7 +150,7 @@ namespace Project2
                     if (gameWorld != null)
                     {
                         spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
-                        shader.CurrentTechnique.Passes["Pass1"].Apply();
+                        //shader.CurrentTechnique.Passes["Pass1"].Apply();
                         gameWorld.Draw(spriteBatch);
                         spriteBatch.End();
                     }
