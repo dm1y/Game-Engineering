@@ -162,6 +162,7 @@ namespace Project2
                 isIdle = true;
                 isMoving = false;
             }
+
             if (velocity.X > 0)
             {
 
