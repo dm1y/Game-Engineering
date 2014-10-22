@@ -30,7 +30,7 @@ namespace Project2
         Screen currentScreen;
         StartScreen startScreen;
         GameOverScreen gameOverScreen;
-        Camera camera;
+        public Camera camera;
         public Effect shader;
 
         World gameWorld;
@@ -149,10 +149,10 @@ namespace Project2
                 case Screen.World:
                     if (gameWorld != null)
                     {
-                        spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+                        spriteBatch.Begin();
                         //shader.CurrentTechnique.Passes["Pass1"].Apply();
                         gameWorld.Draw(spriteBatch);
-                        spriteBatch.End();
+                       // spriteBatch.End();
                     }
                     break;
                 case Screen.GameOverScreen:

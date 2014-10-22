@@ -149,6 +149,7 @@ namespace Project2
            
             //spriteBatch.Draw(tileTexture, new Rectangle((int)mapPositions.X, (int)mapPositions.Y,
             //    tileTexture.Width, tileTexture.Height), Color.White);
+            
             tileAnimation.Draw(spriteBatch);
         }
     }

@@ -138,6 +138,7 @@ namespace Project2
         {
             if (Active)
             {
+                
                 spriteBatch.Draw(spriteStrip, destinationRect, sourceRect, color);
             }
         }

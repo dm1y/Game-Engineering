@@ -166,6 +166,7 @@ namespace Project2
         {
             
             background.Update();
+            
             //previousGamePadState = currentGamePadState;
             previousKeyboardState = currentKeyboardState;
 
@@ -256,14 +257,43 @@ namespace Project2
 
         public void Draw(SpriteBatch sb)
         {
-            background.Draw(sb);
+            
+            sb.End();
 
+            game.shader.CurrentTechnique = game.shader.Techniques["FunkyBlur"];
+            //sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+            //game.shader.CurrentTechnique.Passes["Pass1"].Apply();
+           
+                
+            //    background.Draw(sb);
+                
+            //    sb.End();
+            //    sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+            //    game.shader.CurrentTechnique.Passes["Pass2"].Apply();
+            //    background.Draw(sb);
+            //    sb.End();
+            foreach (EffectPass pass in game.shader.CurrentTechnique.Passes)
+            {
+                sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+                
+                pass.Apply();
+                background.Draw(sb);
+                sb.End();
+                
+                
+            }
+                
+            
+            
+            sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
             foreach (MapTile tile in mapTiles)
             {
                 tile.Draw(sb);
             }
+            
 
             player.Draw(sb);
+            sb.End();
         }
 
     }
