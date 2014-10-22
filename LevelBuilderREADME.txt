@@ -25,7 +25,7 @@ blocks.
        	         | c = cake             |
 	         | t = trap blocks      |			       
        	         | o = breakable blocks |
-                 | d = bouncy blocks    |
+                 | b = bouncy blocks    |
                  | u = unstable blocks  | 
                  | s = saw blocks       |
                  | k = key blocks       |
