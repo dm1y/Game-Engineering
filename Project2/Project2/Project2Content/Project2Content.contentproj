@@ -294,15 +294,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="lock.png">
-      <Name>lock</Name>
+    <Compile Include="saw.png">
+      <Name>saw</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="saw.png">
-      <Name>saw</Name>
+    <Compile Include="lock.png">
+      <Name>lock</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
