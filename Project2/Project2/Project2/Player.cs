@@ -436,6 +436,11 @@ namespace Project2
             // TODO: Check transparency by checking alpha values.
             if (mapTile.isKey)
             {
+                hasKey = true;
+                mapTile.isActive = false;
+                //world.removeTile(mapTile);
+                //mapTile.
+
                 //turn on isKey
             }
             if (mapTile.isCake)

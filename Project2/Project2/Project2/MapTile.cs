@@ -92,7 +92,7 @@ namespace Project2
                 shift = new Vector2(0, 0);
             } 
 
-            //Normal tiles, trap tiles, and cake tiles only have one frame
+            //Normal tiles, trap tiles, lock tiles, key tiles, and cake tiles only have one frame
             else
             {
                 //Console.Write("NORM");
