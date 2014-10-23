@@ -17,14 +17,12 @@ namespace Project2
         private KeyboardState lastState;
         private Texture2D startSelect;
         private Texture2D quitSelect;
+        // TODO: Create a texture2D for instructionSelect 
         private int selection;
         private SoundEffect selectSound;
         private SoundEffectInstance selectInstance;
         private SoundEffect menuEnter;
         private SoundEffectInstance menuInstance;
-
-        private Texture2D texture; /* Place holder if you want to have a picture for the start game screen */
-        private SpriteFont font; /* Place holder if you want to have text display instructions */
 
         public StartScreen(Game1 game)
         {
@@ -55,6 +53,15 @@ namespace Project2
                     menuInstance.Play();
                     game.Exit();
                 }
+
+                // TODO: Add this as a selection 
+
+                // Uncomment this when created. 
+                //else if (selection == 2)
+                //{
+                //    menuInstance.Play();
+                //    game.GetInstructions();
+                //}
             }
 
             if (keyboardState.IsKeyDown(Keys.Up)) {
@@ -87,21 +94,9 @@ namespace Project2
                 spriteBatch.Draw(quitSelect, new Vector2(0, 0), Color.White);
             }
                 spriteBatch.End();
-            // Used as placeholders 
 
-            // Used if you want to draw the instructions on 
-            //spriteBatch.DrawString(font, "START SCREEN ",
-            //   new Vector2(game.GraphicsDevice.Viewport.Width / 2, game.GraphicsDevice.Viewport.Height / 2),
-            //   Color.Black);
-            
-            
-            
-            
+            // TODO: Draw select on instruction
 
-            // Used if you want to draw the instructions on 
-             //spriteBatch.DrawString(font, "PRESS [ENTER] TO START \n PRESS [ESC] TO EXIT",
-                //new Vector2(game.GraphicsDevice.Viewport.Width, game.GraphicsDevice.Viewport.Height),
-                //Color.GhostWhite); 
         }
     }
 }

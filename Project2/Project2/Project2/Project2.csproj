@@ -74,7 +74,8 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="Camera.cs" />
-    <Compile Include="GameOverScreen.cs" />
+    <Compile Include="EndGameScreen.cs" />
+    <Compile Include="InstructionScreen.cs" />
     <Compile Include="MapTile.cs" />
     <Compile Include="ParallaxingBackground.cs" />
     <Compile Include="Player.cs" />

@@ -12,13 +12,13 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Project2
 {
-    public class GameOverScreen
+    public class EndGameScreen
     {
         private Game1 game;
         private KeyboardState lastState;
-        private Texture2D texture; /* Place holder if you want to have a picture for the start game screen */
+        private Texture2D texture; 
 
-        public GameOverScreen(Game1 game)
+        public EndGameScreen(Game1 game)
         {
             this.game = game;
             lastState = Keyboard.GetState();

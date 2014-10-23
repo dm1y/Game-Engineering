@@ -73,13 +73,17 @@ namespace Project2
 
         public void LoadContent(ContentManager Content)
         {
-            //Adding textures
+            // Adding textures
+            tileTexture = Content.Load<Texture2D>("cube");
+
+            // Textures for player 
             playerIdleRight = Content.Load<Texture2D>("idleright2");
             playerIdleLeft = Content.Load<Texture2D>("idleleft2");
-            tileTexture = Content.Load<Texture2D>("cube");
             movingRightTexture = Content.Load<Texture2D>("walkright2");
             movingLeftTexture = Content.Load<Texture2D>("walkleft2");
             playerDeath = Content.Load<Texture2D>("playerdeath");
+
+            // Music and sound effects 
             gameMusic = Content.Load<Song>("Darkness_Pt_1v2");
             jumpSound = Content.Load<SoundEffect>("jump");
             jumpSoundInstance = jumpSound.CreateInstance();
@@ -182,9 +186,7 @@ namespace Project2
             player.Update(gametime, currentKeyboardState);
             UpdateCollisions();
 
-            // Do stuff 
-
-            camera.Update(gametime, player); //Update Camera
+            camera.Update(gametime, player);
 
             // For convenience when testing, press [ESC] key to leave the game 
             if (currentKeyboardState.IsKeyDown(Keys.Escape))

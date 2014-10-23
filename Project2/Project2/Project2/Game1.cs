@@ -16,7 +16,7 @@ namespace Project2
     {
         StartScreen,
         World, /* This will be the GamePlayScreen */
-        GameOverScreen,
+        InstructionScreen,
         EndGameScreen
     }
     /// <summary>
@@ -29,7 +29,8 @@ namespace Project2
 
         Screen currentScreen;
         StartScreen startScreen;
-        GameOverScreen gameOverScreen;
+        EndGameScreen endScreen;
+        InstructionScreen instructionScreen;
         public Camera camera;
         public Effect shader;
 
@@ -115,13 +116,17 @@ namespace Project2
                     if (startScreen != null)
                         startScreen.Update();
                     break;
+                case Screen.InstructionScreen:
+                    if (instructionScreen != null)
+                        instructionScreen.Update();
+                    break;
                 case Screen.World:
                     if (gameWorld != null)
                         gameWorld.Update(gameTime);
                     break;
-                case Screen.GameOverScreen:
-                    if (gameOverScreen != null)
-                        gameOverScreen.Update();
+                case Screen.EndGameScreen:
+                    if (endScreen != null)
+                        endScreen.Update();
                     break;
             }
 
@@ -146,6 +151,10 @@ namespace Project2
                     if (startScreen != null)
                         startScreen.Draw(spriteBatch);
                     break;
+                case Screen.InstructionScreen:
+                    if (instructionScreen != null)
+                        instructionScreen.Draw(spriteBatch);
+                    break;
                 case Screen.World:
                     if (gameWorld != null)
                     {
@@ -155,8 +164,8 @@ namespace Project2
                        // spriteBatch.End();
                     }
                     break;
-                case Screen.GameOverScreen:
-                    gameOverScreen.Draw(spriteBatch);
+                case Screen.EndGameScreen:
+                    endScreen.Draw(spriteBatch);
                     break;
             }
            
@@ -165,9 +174,9 @@ namespace Project2
 
         public void StartGame()
         {
-           // gameWorld = new World(this,viewPort);  //Added viewport //was GraphicsDevice.Viewport
             startScreen = null;
-            gameOverScreen = null;
+            endScreen = null;
+            instructionScreen = null; 
 
             gameWorld = new World(this, camera);
             
@@ -176,24 +185,38 @@ namespace Project2
             currentScreen = Screen.World;
         }
 
+        public void GetInstructions()
+        {
+            instructionScreen = new InstructionScreen(this);
+
+            currentScreen = Screen.InstructionScreen;
+
+            startScreen = null;
+            endScreen = null;
+            gameWorld = null;
+        }
+
         public void ReturnToMenu()
         {
             startScreen = new StartScreen(this);
 
             currentScreen = Screen.StartScreen;
 
-            gameOverScreen = null;
-            gameWorld = null; 
+            endScreen = null;
+            gameWorld = null;
+            instructionScreen = null;
         }
 
         public void EndGame()
         {
             MediaPlayer.Stop(); //Stops gameMusic from playing
-            gameOverScreen = new GameOverScreen(this);
-            currentScreen = Screen.GameOverScreen;
+
+            endScreen = new EndGameScreen(this);
+            currentScreen = Screen.EndGameScreen;
 
             gameWorld = null;
             startScreen = null;
+            instructionScreen = null;
         }
     }
 }
