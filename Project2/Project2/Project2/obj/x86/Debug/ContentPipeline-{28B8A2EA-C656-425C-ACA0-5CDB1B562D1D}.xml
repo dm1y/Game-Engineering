@@ -389,6 +389,15 @@
       <Extra>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1v2.wma</Extra>
       <Time>2014-10-15T19:17:17.0789573-07:00</Time>
     </Item>
+    <Item>
+      <Source>endcard.png</Source>
+      <Name>endcard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\endcard.xnb</Output>
+      <Time>2014-10-23T00:56:30.2953132-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{28B8A2EA-C656-425C-ACA0-5CDB1B562D1D}</ContentProjectGUID>

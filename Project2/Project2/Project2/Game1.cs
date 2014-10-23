@@ -174,7 +174,16 @@ namespace Project2
             gameWorld.LoadContent(this.Content);
 
             currentScreen = Screen.World;
+        }
 
+        public void ReturnToMenu()
+        {
+            startScreen = new StartScreen(this);
+
+            currentScreen = Screen.StartScreen;
+
+            gameOverScreen = null;
+            gameWorld = null; 
         }
 
         public void EndGame()
