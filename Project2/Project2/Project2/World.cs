@@ -37,7 +37,7 @@ namespace Project2
         Texture2D playerDeath;
 
         Texture2D tileTexture;
-       public Song gameMusic;
+        public Song gameMusic;
         public SoundEffect jumpSound;
         public SoundEffectInstance jumpSoundInstance;
         public SoundEffect laughSound;
@@ -48,6 +48,10 @@ namespace Project2
         public SoundEffectInstance collapseSoundInstance;
         public SoundEffect bounceSound;
         public SoundEffectInstance bounceSoundInstance;
+        public SoundEffect keySound;
+        public SoundEffectInstance keySoundInstance;
+        public SoundEffect breakSound;
+        public SoundEffectInstance breakSoundInstance;
 
         List<MapTile> mapTiles;
         int level_counter = 0;
@@ -87,6 +91,10 @@ namespace Project2
             collapseSoundInstance = collapseSound.CreateInstance();
             bounceSound = Content.Load<SoundEffect>("bouncesound");
             bounceSoundInstance = bounceSound.CreateInstance();
+            keySound = Content.Load<SoundEffect>("keyget");
+            keySoundInstance = keySound.CreateInstance();
+            breakSound = Content.Load<SoundEffect>("wallbreak");
+            breakSoundInstance = breakSound.CreateInstance();
 
             LoadMap(0);
             PlayMusic(gameMusic);
@@ -113,6 +121,9 @@ namespace Project2
                     d.isUnstable, d.isCake, d.isSaw, d.isLock, d.isKey, false));
             }
 
+            //TODO: Remove this when adding actual saw blocks
+            //mapTiles.Add(new MapTile((int)5, 4, game.Content.Load<Texture2D>("saw"), game, false, false, false, false, false, true));
+
             /* So the player will begin on top of the blocks*/
             player = new Player(0, newView.Height - 3 * tileTexture.Height, game,
                 playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, playerDeath, this);
@@ -123,18 +134,6 @@ namespace Project2
             
             //PlayMusic(gameMusic);
            
-        }
-
-        public void removeTile(MapTile x)
-        {
-            mapTiles.Remove(x);
-            //mapTiles.RemoveAt(i);
-
-            //foreach (MapTile tile in mapTiles)
-            //{
-            //    if (tile.isLock)
-            //        mapTiles.Remove(tile);
-            //}
         }
 
         public void changeLevel()
@@ -256,10 +255,7 @@ namespace Project2
                 if (player.hasKey && tile.isLock)
                 {
                     //turn block off, maybe play animation for it
-                    tile.isActive = false;
-                    tile.PlayAnimationOnce();
                 }
-
                 player.CheckCollisionSide(playerHitBox, terrainHitBox, tile);
                 playerHitBox = player.getHitBox();
 

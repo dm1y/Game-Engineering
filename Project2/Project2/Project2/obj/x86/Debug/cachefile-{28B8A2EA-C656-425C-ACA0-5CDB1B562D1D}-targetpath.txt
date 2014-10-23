@@ -38,5 +38,7 @@ Content\fan.xnb
 Content\menuenter.xnb
 Content\menuselect.xnb
 Content\bouncesound.xnb
+Content\keyget.xnb
+Content\wallbreak.xnb
 Content\Darkness_Pt_1v2.xnb
 Content\Darkness_Pt_1v2.wma

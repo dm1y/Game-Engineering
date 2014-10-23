@@ -266,8 +266,14 @@ namespace Project2
                     mapTile.isActive = false;
                 }
             }
+            if (hasKey && mapTile.isLock && mapTile.isActive)
+            {
+                mapTile.isActive = false;
+                mapTile.PlayAnimationOnce();
+            }
             if (player.Intersects(tile) && mapTile.isActive)
             {
+
                 checkTile(mapTile);
 
                 int ydiff = (int)(tile.Y - position.Y);
@@ -386,12 +392,17 @@ namespace Project2
                             /* Implement this where the player hits the tile */
                             if (mapTile.isBreakable)
                             {
+                                world.breakSound.Play();
                                 mapTile.isActive = false;
                                 mapTile.PlayAnimationOnce();
                             }
                             min_translation = player.Top - tile.Bottom;
                             position.Y -= min_translation;
-                            velocity.Y = 0;
+                            //velocity.Y = 0;
+                            if (velocity.Y < 0)
+                            {
+                                velocity.Y = 0;
+                            }
                             // TODO: Have the player phase through the tile when colliding from the bottom
 
                         }
@@ -416,6 +427,7 @@ namespace Project2
                         {
                             if (mapTile.isBreakable)
                             {
+                                world.breakSound.Play();
                                 mapTile.isActive = false;
                                 mapTile.PlayAnimationOnce();
                             }
@@ -436,12 +448,10 @@ namespace Project2
             // TODO: Check transparency by checking alpha values.
             if (mapTile.isKey)
             {
+                world.keySoundInstance.Play();
                 hasKey = true;
                 mapTile.isActive = false;
                 mapTile.PlayAnimationOnce();
-                //world.removeTile(mapTile);
-                //mapTile.
-
                 //turn on isKey
             }
             if (mapTile.isCake)
