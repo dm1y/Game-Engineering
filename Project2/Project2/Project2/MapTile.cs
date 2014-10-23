@@ -61,7 +61,7 @@ namespace Project2
             isKey = key;
             isActive = true;
             moveDirection = new Vector2(0, 0);
-            //Console.Write("\nMap Position: " + mapPositions);
+
             //Unstable tiles
             if (unstable)
             {
@@ -90,9 +90,20 @@ namespace Project2
                 originPosition = new Vector2(mapPositions.X, mapPositions.Y);
                 endPosition = new Vector2(mapPositions.X + tileTexture.Height * 4, mapPositions.Y);
                 shift = new Vector2(0, 0);
-            } 
+            }
 
-            //Normal tiles, trap tiles, lock tiles, key tiles, and cake tiles only have one frame
+            else if (isLock)
+            {
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 2, 15, Color.White, 1, false, true);
+            }
+
+            else if (isKey)
+            {
+                tileAnimation.Initialize(tileTexture, mapPositions, 64, 64, 2, 15, Color.White, 1, false, true);
+            }
+
+
+            //Normal tiles, trap tiles, and cake tiles only have one frame
             else
             {
                 //Console.Write("NORM");
@@ -106,6 +117,7 @@ namespace Project2
         {
             return tileAnimation.GetCurrentFrame();
         }
+
         public void Update(GameTime gametime)
         {
             float animationFrameComp = Height / 2;
@@ -124,6 +136,7 @@ namespace Project2
             }
                 tileAnimation.Update(mapPositions + scaledComp, gametime);
         }
+
         public void PlayAnimationOnce()
         {
             tileAnimation.PlayFirstFrame = false;
@@ -137,6 +150,7 @@ namespace Project2
             }
             return false;
         }
+
         public void ResetAnimation()
         {
             tileAnimation.PlayFirstFrame = true;

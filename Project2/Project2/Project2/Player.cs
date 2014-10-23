@@ -438,6 +438,7 @@ namespace Project2
             {
                 hasKey = true;
                 mapTile.isActive = false;
+                mapTile.PlayAnimationOnce();
                 //world.removeTile(mapTile);
                 //mapTile.
 

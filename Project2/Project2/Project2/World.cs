@@ -257,6 +257,7 @@ namespace Project2
                 {
                     //turn block off, maybe play animation for it
                     tile.isActive = false;
+                    tile.PlayAnimationOnce();
                 }
 
                 player.CheckCollisionSide(playerHitBox, terrainHitBox, tile);
