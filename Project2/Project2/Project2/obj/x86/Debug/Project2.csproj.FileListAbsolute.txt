@@ -330,3 +330,5 @@ C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Proje
 C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.exe
 C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Project2\obj\x86\Debug\Project2.pdb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\keyget.xnb
+C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\wallbreak.xnb

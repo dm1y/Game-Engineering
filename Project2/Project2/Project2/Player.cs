@@ -33,6 +33,7 @@ namespace Project2
         public Boolean isFalling;
         public Boolean isOnPlatform;
         public Boolean isDead;
+        public Boolean hasFallenToDeath;
 
         //For key block
         public Boolean hasKey;
@@ -92,6 +93,7 @@ namespace Project2
             isOnPlatform = false;
             end = false;
             hasKey = false;
+            hasFallenToDeath = false;
 
             isFacingRight = true;
 
@@ -239,8 +241,7 @@ namespace Project2
 
             if (position.Y >= mapHeight - idleRight.FrameHeight)
             {
-                position.X = spawnPosition.X;
-                position.Y = spawnPosition.Y;
+                hasFallenToDeath = true;
             }
         }
 

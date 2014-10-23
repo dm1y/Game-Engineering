@@ -121,9 +121,6 @@ namespace Project2
                     d.isUnstable, d.isCake, d.isSaw, d.isLock, d.isKey, false));
             }
 
-            //TODO: Remove this when adding actual saw blocks
-            //mapTiles.Add(new MapTile((int)5, 4, game.Content.Load<Texture2D>("saw"), game, false, false, false, false, false, true));
-
             /* So the player will begin on top of the blocks*/
             player = new Player(0, newView.Height - 3 * tileTexture.Height, game,
                 playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, playerDeath, this);
@@ -146,11 +143,7 @@ namespace Project2
 
             /* If the level is not the last level*/
             if (level_counter < 3)
-            {
-                
                 LoadMap(level_counter);
-                
-            }
             else
                 game.EndGame();
             
@@ -198,13 +191,11 @@ namespace Project2
                 game.Exit();
 
             // If player is dead, reset the level. 
-            if (player.CheckDeath() == true) {
-                
+            if (player.CheckDeath() || player.hasFallenToDeath) {
                 player.isDead = false;
-            // PLAY THE SEQUENCE HERE. 
+                player.hasFallenToDeath = false;
                 LevelReset();
             }
-            // ResetTiles();
 
             /* If player touches the cake, transition to new level / end the game */
             if (player.end)
@@ -224,19 +215,6 @@ namespace Project2
             camera.ResetCamera();
             mapTiles.Clear();
             LoadMap(level_counter);
-        }
-
-        /* This function isn't necessary if we're resetting the entire level instead of just the tile */
-        public void ResetTiles()
-        {
-            foreach (MapTile tile in mapTiles)
-            {
-                if (tile.isActive == false)
-                {
-                    tile.isActive = true;
-                    tile.ResetAnimation();
-                }
-            }
         }
 
         public void UpdateCollisions()
