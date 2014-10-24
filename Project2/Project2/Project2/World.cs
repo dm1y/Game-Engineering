@@ -59,7 +59,7 @@ namespace Project2
         List<MapTile> mapTiles;
         int level_counter = 0;
 
-        public LevelInfo boundaries { get; private set; }
+        public LevelInfo levelinfo { get; private set; }
 
         public ParallaxingBackground background;
         String shader1, shader2;
@@ -123,17 +123,17 @@ namespace Project2
         public void LoadMap(int i)
         {
             
-            boundaries = game.Content.Load<LevelInfo>("LevelBoundary" + i);
-            shader1 = boundaries.shader1;
-            shader2 = boundaries.shader2;
+            levelinfo = game.Content.Load<LevelInfo>("LevelInfo" + i);
+            shader1 = levelinfo.shader1;
+            shader2 = levelinfo.shader2;
 
             if (isNewLevel)
             {
-                background.Initialize(game.Content.Load<Texture2D>(boundaries.backgroundTexture), 1,
-                    boundaries.x, boundaries.texture, boundaries.hasTexture);
+                background.Initialize(game.Content.Load<Texture2D>(levelinfo.backgroundTexture), 1,
+                    levelinfo.x, levelinfo.texture, levelinfo.hasTexture);
             }
 
-            MapTileData[] data = game.Content.Load<MapTileData[]>("LevelTester" + i);
+            MapTileData[] data = game.Content.Load<MapTileData[]>("Level" + i);
 
             foreach (MapTileData d in data)
             { 
@@ -146,8 +146,8 @@ namespace Project2
             player = new Player(0, newView.Height - 3 * tileTexture.Height, game,
                 playerIdleRight, playerIdleLeft, movingRightTexture, movingLeftTexture, null, null, playerDeath, this);
 
-            player.setBoundaries(boundaries.x, boundaries.y);
-            camera.setBoundaries(boundaries.x, boundaries.y); // Passes in Map Boundaries to Camera
+            player.setBoundaries(levelinfo.x, levelinfo.y);
+            camera.setBoundaries(levelinfo.x, levelinfo.y); // Passes in Map Boundaries to Camera
             deathSoundInstance.Stop(); //stop death sound
             
             //PlayMusic(gameMusic);

@@ -49,8 +49,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelTester0.xml">
-      <Name>LevelTester0</Name>
+    <Compile Include="Level0.xml">
+      <Name>Level0</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
       <SubType>Designer</SubType>
@@ -77,8 +77,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelTester1.xml">
-      <Name>LevelTester1</Name>
+    <Compile Include="Level1.xml">
+      <Name>Level1</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
@@ -91,29 +91,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelBoundary0.xml">
-      <Name>LevelBoundary0</Name>
+    <Compile Include="LevelInfo0.xml">
+      <Name>LevelInfo0</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelBoundary1.xml">
-      <Name>LevelBoundary1</Name>
+    <Compile Include="LevelInfo1.xml">
+      <Name>LevelInfo1</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelBoundary2.xml">
-      <Name>LevelBoundary2</Name>
+    <Compile Include="LevelInfo2.xml">
+      <Name>LevelInfo2</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LevelTester2.xml">
-      <Name>LevelTester2</Name>
+    <Compile Include="Level2.xml">
+      <Name>Level2</Name>
       <Importer>XmlImporter</Importer>
       <Processor>PassThroughProcessor</Processor>
     </Compile>

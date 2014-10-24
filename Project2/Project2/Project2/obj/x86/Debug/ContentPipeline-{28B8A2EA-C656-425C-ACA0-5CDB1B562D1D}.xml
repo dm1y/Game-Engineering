@@ -236,60 +236,6 @@
       <Time>2014-10-23T00:56:30.2953132-07:00</Time>
     </Item>
     <Item>
-      <Source>LevelTester0.xml</Source>
-      <Name>LevelTester0</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester0.xnb</Output>
-      <Time>2014-10-23T00:17:01.5284039-07:00</Time>
-    </Item>
-    <Item>
-      <Source>LevelTester1.xml</Source>
-      <Name>LevelTester1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester1.xnb</Output>
-      <Time>2014-10-23T00:17:01.5394136-07:00</Time>
-    </Item>
-    <Item>
-      <Source>LevelBoundary0.xml</Source>
-      <Name>LevelBoundary0</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary0.xnb</Output>
-      <Time>2014-10-24T14:27:32.3400324-07:00</Time>
-    </Item>
-    <Item>
-      <Source>LevelBoundary1.xml</Source>
-      <Name>LevelBoundary1</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary1.xnb</Output>
-      <Time>2014-10-24T14:27:29.3086292-07:00</Time>
-    </Item>
-    <Item>
-      <Source>LevelBoundary2.xml</Source>
-      <Name>LevelBoundary2</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelBoundary2.xnb</Output>
-      <Time>2014-10-24T14:27:26.9178885-07:00</Time>
-    </Item>
-    <Item>
-      <Source>LevelTester2.xml</Source>
-      <Name>LevelTester2</Name>
-      <Importer>XmlImporter</Importer>
-      <Processor>PassThroughProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelTester2.xnb</Output>
-      <Time>2014-10-18T04:39:17.9878889-07:00</Time>
-    </Item>
-    <Item>
       <Source>shader.fx</Source>
       <Name>shader</Name>
       <Importer>EffectImporter</Importer>
@@ -397,6 +343,60 @@
       <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1v2.xnb</Output>
       <Extra>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Darkness_Pt_1v2.wma</Extra>
       <Time>2014-10-15T19:17:17.0789573-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Level0.xml</Source>
+      <Name>Level0</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Level0.xnb</Output>
+      <Time>2014-10-23T00:17:01.5284039-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Level1.xml</Source>
+      <Name>Level1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Level1.xnb</Output>
+      <Time>2014-10-23T00:17:01.5394136-07:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelInfo0.xml</Source>
+      <Name>LevelInfo0</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelInfo0.xnb</Output>
+      <Time>2014-10-24T14:27:32.3400324-07:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelInfo1.xml</Source>
+      <Name>LevelInfo1</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelInfo1.xnb</Output>
+      <Time>2014-10-24T14:27:29.3086292-07:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelInfo2.xml</Source>
+      <Name>LevelInfo2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelInfo2.xnb</Output>
+      <Time>2014-10-24T14:27:26.9178885-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Level2.xml</Source>
+      <Name>Level2</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Level2.xnb</Output>
+      <Time>2014-10-24T14:43:57.4387912-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
