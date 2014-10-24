@@ -158,10 +158,9 @@ namespace Project2
                 case Screen.World:
                     if (gameWorld != null)
                     {
-                        spriteBatch.Begin();
-                        //shader.CurrentTechnique.Passes["Pass1"].Apply();
+                        
                         gameWorld.Draw(spriteBatch);
-                       // spriteBatch.End();
+                       
                     }
                     break;
                 case Screen.EndGameScreen:

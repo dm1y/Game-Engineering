@@ -21,9 +21,7 @@ float4 PixelShaderFunction2(float2 uv : TEXCOORD0) : COLOR0
 	return rColor;
 	
 }
-
-
-//sampler2D input : register(s0); 
+ 
 
 #define WEIGHT_COUNT 6
 
