@@ -33,7 +33,7 @@ namespace Project2
 
             if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
             {
-                game.ReturnToMenu();
+                game.StartGame();
             }
 
             lastState = keyboardState;
@@ -42,13 +42,14 @@ namespace Project2
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
+            // Uncomment this once instruction texture is set. 
             //if (texture != null)
             //    spriteBatch.Draw(texture, new Vector2(0f, 0f), Color.White);
 
             //Used as a placeholder for now 
-            spriteBatch.DrawString(font, "PRESS [ENTER] TO RETURN \n [PLACEHOLDER FOR INSTRUCTIONS]",
-            new Vector2(game.GraphicsDevice.Viewport.Width, game.GraphicsDevice.Viewport.Height),
-            Color.GhostWhite); 
+            spriteBatch.DrawString(font, "PRESS [ENTER] TO START GAME \n [PLACEHOLDER FOR INSTRUCTIONS]",
+            new Vector2(game.GraphicsDevice.Viewport.Width /2, game.GraphicsDevice.Viewport.Height/2),
+            Color.Aqua); 
 
             spriteBatch.End();
         }

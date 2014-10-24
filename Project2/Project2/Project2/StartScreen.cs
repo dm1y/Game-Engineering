@@ -46,7 +46,8 @@ namespace Project2
                 if (selection == 0)
                 {
                     menuInstance.Play();
-                    game.StartGame();
+                    //game.StartGame();
+                    game.GetInstructions();
                 }
                 else if (selection == 1)
                 {
