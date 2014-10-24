@@ -123,5 +123,25 @@ namespace Project2
                 }
             }
         }
+        public void Draw(Texture2D renderTexture, SpriteBatch sb)
+        {
+            /* Repeats the fixed background */
+            foreach (Vector2 pos in positions)
+            {
+                sb.Draw(renderTexture, pos, Color.White);
+            }
+
+            /* Parallaxing moving effect for the second layer of the background 
+             if applicable */
+            if (hasEffect)
+            {
+                for (int i = 0; i < background_Pos.Length; i++)
+                {
+                    sb.Draw(texture, background_Pos[i], Color.White);
+                }
+            }
+            
+
+        }
     }
 }

@@ -82,6 +82,7 @@ namespace Project2
         {
 
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, game.shader);
+            game.shader.CurrentTechnique.Passes["Pass4"].Apply();
             //Draw select on start
             if (selection == 0) 
             {

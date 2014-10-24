@@ -103,8 +103,14 @@ namespace Project2
             breakSound = Content.Load<SoundEffect>("wallbreak");
             breakSoundInstance = breakSound.CreateInstance();
             PresentationParameters pp = game.graphics.GraphicsDevice.PresentationParameters;
-            renderTarget = new RenderTarget2D(game.graphics.GraphicsDevice, pp.BackBufferWidth, pp.BackBufferHeight);
-
+            //renderTarget = new RenderTarget2D(game.graphics.GraphicsDevice, pp.BackBufferWidth, pp.BackBufferHeight);
+            renderTarget = new RenderTarget2D(
+                game.graphics.GraphicsDevice,
+                game.graphics.GraphicsDevice.PresentationParameters.BackBufferWidth,
+                game.graphics.GraphicsDevice.PresentationParameters.BackBufferHeight,
+                false,
+                game.graphics.GraphicsDevice.PresentationParameters.BackBufferFormat,
+                DepthFormat.Depth24);
             LoadMap(0);
             PlayMusic(gameMusic);
             MediaPlayer.Volume = 0.7f;
@@ -253,22 +259,23 @@ namespace Project2
             
             
             sb.End();
-           
-            game.graphics.GraphicsDevice.SetRenderTarget(renderTarget);
-            sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+            
+            
+            
+                game.graphics.GraphicsDevice.SetRenderTarget(renderTarget);
+                sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+               
             game.shader.CurrentTechnique.Passes["Pass1"].Apply();
 
-           
-                
                 background.Draw(sb);
+
                 
-               // sb.End();
                 game.graphics.GraphicsDevice.SetRenderTarget(null);
                 EffectLayer1 = (Texture2D)renderTarget;
-                //sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+               
                 game.shader.CurrentTechnique.Passes["Pass2"].Apply();
-                background.Draw(EffectLayer1,sb); //Custom Draw to renderedTexture for multi-pass shading
-                
+                background.Draw(EffectLayer1, sb); //Custom Draw to renderedTexture for multi-pass shading
+
                 sb.End();
             
                 
