@@ -24,6 +24,12 @@ Content\key.xnb
 Content\saw.xnb
 Content\lock.xnb
 Content\endcard.xnb
+Content\Level0.xnb
+Content\Level1.xnb
+Content\LevelInfo0.xnb
+Content\LevelInfo1.xnb
+Content\LevelInfo2.xnb
+Content\Level2.xnb
 Content\shader.xnb
 Content\jump.xnb
 Content\Goblin.xnb
@@ -37,9 +43,3 @@ Content\keyget.xnb
 Content\wallbreak.xnb
 Content\Darkness_Pt_1v2.xnb
 Content\Darkness_Pt_1v2.wma
-Content\Level0.xnb
-Content\Level1.xnb
-Content\LevelInfo0.xnb
-Content\LevelInfo1.xnb
-Content\LevelInfo2.xnb
-Content\Level2.xnb

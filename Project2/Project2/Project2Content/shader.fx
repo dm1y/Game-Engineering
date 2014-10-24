@@ -35,7 +35,7 @@ float weight[WEIGHT_COUNT] = {
 };
 
 float colorIntensity = 1.0f;
-float intensity = 1.0f;
+float intensity = 0.7f;
 float2 pixelAspect = {1.0/1280, 1.0/768};
 
 	float4 PS_BlurHorizontal(in float2 uv : TEXCOORD) : COLOR 
