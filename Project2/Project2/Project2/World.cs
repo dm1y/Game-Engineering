@@ -62,6 +62,8 @@ namespace Project2
         public LevelInfo boundaries { get; private set; }
 
         public ParallaxingBackground background;
+        String shader1, shader2;
+
         Boolean isNewLevel;
 
         public World(Game1 g, Camera c)
@@ -122,6 +124,8 @@ namespace Project2
         {
             
             boundaries = game.Content.Load<LevelInfo>("LevelBoundary" + i);
+            shader1 = boundaries.shader1;
+            shader2 = boundaries.shader2;
 
             if (isNewLevel)
             {
@@ -268,7 +272,7 @@ namespace Project2
                 //sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
                 // sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null);
 
-                game.shader.CurrentTechnique.Passes["Pass1"].Apply();
+                game.shader.CurrentTechnique.Passes[shader1].Apply();
 
                 background.Draw(sb);
 
@@ -277,7 +281,7 @@ namespace Project2
                 EffectLayer1 = (Texture2D)renderTarget;
                 
                
-                 game.shader.CurrentTechnique.Passes["Pass2"].Apply();
+                 game.shader.CurrentTechnique.Passes[shader2].Apply();
                 background.Draw(EffectLayer1, sb); //Custom Draw to renderedTexture for multi-pass shading
 
                 sb.End();

@@ -7,5 +7,7 @@
     <backgroundTexture>background1</backgroundTexture>
     <hasTexture>false</hasTexture>
     <texture>null</texture>
+    <shader1>Pass1</shader1>
+    <shader2>Pass2</shader2>
   </Asset>
 </XnaContent>

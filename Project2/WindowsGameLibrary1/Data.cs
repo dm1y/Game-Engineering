@@ -18,6 +18,8 @@ namespace Project2
         public String backgroundTexture;
         public Boolean hasTexture;
         public String texture;
+        public String shader1;
+        public String shader2; 
     }
 
     public class MapTileData
