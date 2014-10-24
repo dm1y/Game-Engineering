@@ -17,7 +17,6 @@ namespace Project2
         private KeyboardState lastState;
         private Texture2D startSelect;
         private Texture2D quitSelect;
-        // TODO: Create a texture2D for instructionSelect 
         private int selection;
         private SoundEffect selectSound;
         private SoundEffectInstance selectInstance;
@@ -46,7 +45,6 @@ namespace Project2
                 if (selection == 0)
                 {
                     menuInstance.Play();
-                    //game.StartGame();
                     game.GetInstructions();
                 }
                 else if (selection == 1)
@@ -54,15 +52,6 @@ namespace Project2
                     menuInstance.Play();
                     game.Exit();
                 }
-
-                // TODO: Add this as a selection 
-
-                // Uncomment this when created. 
-                //else if (selection == 2)
-                //{
-                //    menuInstance.Play();
-                //    game.GetInstructions();
-                //}
             }
 
             if (keyboardState.IsKeyDown(Keys.Up)) {
@@ -84,6 +73,7 @@ namespace Project2
 
             spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, game.shader);
             game.shader.CurrentTechnique.Passes["Pass4"].Apply();
+
             //Draw select on start
             if (selection == 0) 
             {
@@ -96,9 +86,6 @@ namespace Project2
                 spriteBatch.Draw(quitSelect, new Vector2(0, 0), Color.White);
             }
                 spriteBatch.End();
-
-            // TODO: Draw select on instruction
-
         }
     }
 }

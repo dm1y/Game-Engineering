@@ -61,7 +61,9 @@ namespace Project2
             isKey = key;
             isActive = true;
             moveDirection = new Vector2(0, 0);
+            
             //Console.Write("\nMap Position: " + mapPositions);
+
             //Unstable tiles
             if (unstable)
             {

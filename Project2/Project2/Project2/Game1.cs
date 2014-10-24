@@ -58,17 +58,11 @@ namespace Project2
         {
             // TODO: Add your initialization logic here
             
-            // Unnecessary Code 
-            //gameWorld = new World(this); 
-            //gameWorld.LoadContent(this.Content);
             camera = new Camera(this.graphics.GraphicsDevice.Viewport);
             
-
             base.Initialize();
-            startScreen = new StartScreen(this);
-            
-            //StartGame();
 
+            startScreen = new StartScreen(this);
             currentScreen = Screen.StartScreen;
         }
 
@@ -82,8 +76,6 @@ namespace Project2
             spriteBatch = new SpriteBatch(GraphicsDevice);
             shader = Content.Load<Effect>("shader");
             
-            //gameWorld.LoadContent(Content);
-
             // TODO: use this.Content to load your game content here
         }
 
@@ -107,7 +99,6 @@ namespace Project2
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             
-            // gameWorld.Update(gameTime);
             // TODO: Add your update logic here
             
             switch (currentScreen)
@@ -143,8 +134,6 @@ namespace Project2
 
             // TODO: Add your drawing code here
             
-            
-
             switch (currentScreen)
             {
                 case Screen.StartScreen:
