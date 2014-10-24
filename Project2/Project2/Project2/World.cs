@@ -17,6 +17,8 @@ namespace Project2
 
         public Game1 game;
 
+        RenderTarget2D renderTarget;
+
         //// ---- MOVEMENT ---- //
         KeyboardState currentKeyboardState;
         KeyboardState previousKeyboardState;
@@ -35,6 +37,7 @@ namespace Project2
         Texture2D jumpRight;
         Texture2D jumpLeft;
         Texture2D playerDeath;
+        public Texture2D EffectLayer1;
 
         Texture2D tileTexture;
         public Song gameMusic;
@@ -99,6 +102,8 @@ namespace Project2
             keySoundInstance = keySound.CreateInstance();
             breakSound = Content.Load<SoundEffect>("wallbreak");
             breakSoundInstance = breakSound.CreateInstance();
+            PresentationParameters pp = game.graphics.GraphicsDevice.PresentationParameters;
+            renderTarget = new RenderTarget2D(game.graphics.GraphicsDevice, pp.BackBufferWidth, pp.BackBufferHeight);
 
             LoadMap(0);
             PlayMusic(gameMusic);
@@ -246,30 +251,26 @@ namespace Project2
         public void Draw(SpriteBatch sb)
         {
             
+            
             sb.End();
+           
+            game.graphics.GraphicsDevice.SetRenderTarget(renderTarget);
+            sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+            game.shader.CurrentTechnique.Passes["Pass1"].Apply();
 
-            game.shader.CurrentTechnique = game.shader.Techniques["FunkyBlur"];
-            //sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
-            //game.shader.CurrentTechnique.Passes["Pass1"].Apply();
            
                 
-            //    background.Draw(sb);
-                
-            //    sb.End();
-            //    sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
-            //    game.shader.CurrentTechnique.Passes["Pass2"].Apply();
-            //    background.Draw(sb);
-            //    sb.End();
-            foreach (EffectPass pass in game.shader.CurrentTechnique.Passes)
-            {
-                sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
-                
-                pass.Apply();
                 background.Draw(sb);
+                
+               // sb.End();
+                game.graphics.GraphicsDevice.SetRenderTarget(null);
+                EffectLayer1 = (Texture2D)renderTarget;
+                //sb.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, null, null, null, null, camera.GetViewMatrix());
+                game.shader.CurrentTechnique.Passes["Pass2"].Apply();
+                background.Draw(EffectLayer1,sb); //Custom Draw to renderedTexture for multi-pass shading
+                
                 sb.End();
-                
-                
-            }
+            
                 
             
             

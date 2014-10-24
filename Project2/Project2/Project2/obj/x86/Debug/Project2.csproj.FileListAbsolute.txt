@@ -333,3 +333,6 @@ C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Proje
 C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\keyget.xnb
 C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\wallbreak.xnb
 C:\Users\Diana\Documents\GitHub\cs420\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\endcard.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\endcard.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\keyget.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\wallbreak.xnb

@@ -23,6 +23,7 @@ Content\startselect.xnb
 Content\key.xnb
 Content\saw.xnb
 Content\lock.xnb
+Content\endcard.xnb
 Content\LevelTester0.xnb
 Content\LevelTester1.xnb
 Content\LevelBoundary0.xnb
@@ -41,5 +42,4 @@ Content\bouncesound.xnb
 Content\keyget.xnb
 Content\wallbreak.xnb
 Content\Darkness_Pt_1v2.xnb
-Content\endcard.xnb
 Content\Darkness_Pt_1v2.wma
