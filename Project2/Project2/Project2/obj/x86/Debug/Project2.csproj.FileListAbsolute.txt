@@ -338,3 +338,4 @@ C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Proje
 C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\LevelInfo2.xnb
 C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\Level2.xnb
 C:\Users\willi_000\Documents\platformer\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\instructions.xnb
+C:\Users\ccclayton\Documents\Game Development\Game-Engineering\Game-Engineering\Project2\Project2\Project2\bin\x86\Debug\Content\instructions.xnb

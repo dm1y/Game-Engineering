@@ -131,15 +131,7 @@ namespace Project2
                 sb.Draw(renderTexture, pos, Color.White);
             }
 
-            /* Parallaxing moving effect for the second layer of the background 
-             if applicable */
-            if (hasEffect)
-            {
-                for (int i = 0; i < background_Pos.Length; i++)
-                {
-                    sb.Draw(texture, background_Pos[i], Color.White);
-                }
-            }
+          
             
 
         }
