@@ -16,14 +16,14 @@ namespace Project2
     {
         private Game1 game;
         private KeyboardState lastState;
-        //private Texture2D texture; 
+        private Texture2D texture; 
         private SpriteFont font; /* Place holder if you want to have text display instructions */
 
         public InstructionScreen(Game1 game)
         {
             this.game = game;
             lastState = Keyboard.GetState();
-            //texture = game.Content.Load<Texture2D>("");
+            texture = game.Content.Load<Texture2D>("instructions");
             font = game.Content.Load<SpriteFont>("SpriteFont1");
         }
 
@@ -32,7 +32,7 @@ namespace Project2
             KeyboardState keyboardState = Keyboard.GetState();
 
             if (keyboardState.IsKeyDown(Keys.Enter) && lastState.IsKeyUp(Keys.Enter))
-            {
+            {   
                 game.StartGame();
             }
 
@@ -47,10 +47,11 @@ namespace Project2
             //    spriteBatch.Draw(texture, new Vector2(0f, 0f), Color.White);
 
             //Used as a placeholder for now 
-            spriteBatch.DrawString(font, "PRESS [ENTER] TO START GAME \n [PLACEHOLDER FOR INSTRUCTIONS]",
-            new Vector2(game.GraphicsDevice.Viewport.Width /2, game.GraphicsDevice.Viewport.Height/2),
-            Color.Aqua); 
+            //spriteBatch.DrawString(font, "PRESS [ENTER] TO START GAME \n [PLACEHOLDER FOR INSTRUCTIONS]",
+            //new Vector2(game.GraphicsDevice.Viewport.Width /2, game.GraphicsDevice.Viewport.Height/2),
+            //Color.Aqua); 
 
+            spriteBatch.Draw(texture, new Vector2(0, 0), Color.White);
             spriteBatch.End();
         }
     }

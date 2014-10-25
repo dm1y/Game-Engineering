@@ -43,3 +43,4 @@ Content\keyget.xnb
 Content\wallbreak.xnb
 Content\Darkness_Pt_1v2.xnb
 Content\Darkness_Pt_1v2.wma
+Content\instructions.xnb
