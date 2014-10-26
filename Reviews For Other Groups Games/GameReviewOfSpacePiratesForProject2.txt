@@ -1,0 +1,41 @@
+Diana Ly
+CS420
+Game Review on Space Pirate 
+10/24/2014
+
+Space Pirate is a 2D platformer created by USF students David Haro, Susie 
+Reynolds, and Bryan Relampagos. The objective of the game is to attain the 
+treasure chest found near the end of each level while dodging or attacking 
+flying enemies and bullets. 
+
+THE PROS 
+One of the things I enjoyed about this game was the sprites -- the main 
+character especially -- as they were handmade. The music suited the game 
+well as it gave it a playful touch. The menu contained instructions on how 
+to play so I didn't have to fumble figuring out what the controls were. Some 
+nice features were having a health bar which decreases after getting attacked 
+by the enemy, a score keeper which increases when attacking an enemy or 
+attaining the gold coins, and background that moves with the player. 
+
+One of my favorite features would have to be the variety among the different 
+platforms and enemies. There were normal, moving, and falling types of platforms 
+which made the game difficult in level three. The non-stationary enemies moved left
+to right, but did not have the same speed. Some were faster than others which made 
+things interesting in level 2. Although the first two levels were a bit too easy 
+which made it a little dull, the third level definitely made the game more 
+challenging and thus enjoyable. 
+
+THE CONS
+What I did not enjoy about the game was how the player was not kept within the bounds 
+of the game window in regards to the left and right sides. I feel like this game can be 
+improved if a setting was added to have the player stay within the bounds of the game 
+window width-wise only. The height is fine. Needing to exit out of the game to manually 
+change the levels was also tedious and annoying after the second time to play the second 
+and third levels, so changing the flow of the game to have the levels change to the next 
+one automatically would also be a great improvement. There was also a bug (not sure if 
+deliberate) where the trajectory of the bullets would alter with the movement of the 
+game window in regards to when the camera follows the player, meaning that the bullets 
+would never hit the player when jumping to get the treasure chest. 
+
+Despite the inconvenience of needing to exit the game to play a different level and to 
+restart the game, I did like the it overall and found it fun to play.
